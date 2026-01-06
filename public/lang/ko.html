@@ -3,199 +3,783 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoxAssist AI - AI 통화비서 플랫폼</title>
+    <title>CallMind AI - AI 통화비서 플랫폼</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        /* 헤더 축소 */
+        header { padding: 0.5rem 0; }
+        
+        /* 히어로 섹션 축소 */
+        .hero-section { padding: 2rem 0 !important; }
+        .hero-title { font-size: 2rem !important; line-height: 1.2; }
+        .hero-subtitle { font-size: 1rem !important; margin-bottom: 1.5rem !important; }
+        .hero-btn { padding: 0.6rem 1.5rem !important; font-size: 0.875rem !important; }
+        .stat-number { font-size: 1.75rem !important; }
+        .stat-label { font-size: 0.75rem !important; }
+        
+        /* 섹션 제목 축소 */
+        .section-title { font-size: 1.75rem !important; margin-bottom: 0.75rem !important; }
+        .section-subtitle { font-size: 0.95rem !important; }
+        
+        /* 카드 축소 */
+        .industry-card { padding: 1rem !important; }
+        .industry-card h3 { font-size: 1.1rem !important; }
+        .industry-card p { font-size: 0.8rem !important; margin-bottom: 0.5rem !important; }
+        .industry-card li { font-size: 0.75rem !important; }
+        .industry-icon { width: 3rem !important; height: 3rem !important; font-size: 1.25rem !important; }
+        
+        /* 섹션 패딩 축소 */
+        section { padding: 2rem 0 !important; }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 1.5rem !important; }
+            .hero-subtitle { font-size: 0.875rem !important; }
+            .stat-number { font-size: 1.5rem !important; }
+            section { padding: 1.5rem 0 !important; }
+        }
+        
+        /* 챗봇 스타일 - 순수 CSS */
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+        .chatbot-toggle:hover { transform: scale(1.05); }
+        .chatbot-toggle i { color: white; font-size: 24px; }
+        
+        /* 챗봇 패널 - 체크박스로 제어 */
+        #chatbot-checkbox { display: none; }
+        
+        .chatbot-panel {
+            position: fixed;
+            bottom: -100%;
+            right: 0;
+            width: 400px;
+            max-width: 100vw;
+            height: 70vh;
+            background: white;
+            box-shadow: -2px 0 20px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: bottom 0.3s ease;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #chatbot-checkbox:checked ~ .chatbot-panel {
+            bottom: 0;
+        }
+        
+        .chatbot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chatbot-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        
+        /* FAQ 아코디언 - 순수 CSS */
+        .faq-category {
+            margin-bottom: 1rem;
+        }
+        
+        .faq-category-title {
+            font-weight: bold;
+            color: #764ba2;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .faq-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .faq-checkbox { display: none; }
+        
+        .faq-question {
+            padding: 0.75rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .faq-question:hover {
+            background: #f3f4f6;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 0.75rem;
+            font-size: 0.75rem;
+            color: #4b5563;
+            background: #f9fafb;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-checkbox:checked ~ .faq-answer {
+            max-height: 500px;
+            padding: 0.75rem;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s;
+            font-size: 0.75rem;
+        }
+        
+        .faq-checkbox:checked + label .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot-panel {
+                width: 100vw;
+                height: 75vh;
+            }
+            .chatbot-toggle {
+                width: 52px;
+                height: 52px;
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- 헤더 -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <nav class="max-w-7xl mx-auto px-4 py-2">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-2">
-                    <i class="fas fa-phone-volume text-purple-600 text-xl"></i>
-                    <span class="font-bold text-lg text-gray-900">VoxAssist AI</span>
+                    <i class="fas fa-phone-volume text-purple-600 text-lg"></i>
+                    <span class="font-bold text-base text-gray-900">CallMind AI</span>
                 </div>
                 
-                <div class="hidden md:flex space-x-6">
+                <div class="hidden md:flex space-x-4 text-sm">
                     <a href="#features" class="text-gray-700 hover:text-purple-600">핵심 기능</a>
-                    <a href="#industries" class="text-gray-700 hover:text-purple-600">산업별 솔루션</a>
+                    <a href="#industries" class="text-gray-700 hover:text-purple-600">산업별 특화</a>
                     <a href="#pricing" class="text-gray-700 hover:text-purple-600">요금제</a>
-                    <a href="#demo" class="text-gray-700 hover:text-purple-600">데모</a>
                 </div>
                 
-                <div class="flex items-center space-x-3">
-                    <div class="relative">
-                        <select class="appearance-none bg-gray-100 border-0 rounded-lg px-3 py-2 pr-8 text-sm cursor-pointer" onchange="window.location.href='/lang/' + this.value + '.html'">
-                            <option value="ko" selected>🇰🇷 한국어</option>
-                            <option value="en">🇺🇸 English</option>
-                            <option value="zh-CN">🇨🇳 简体中文</option>
-                            <option value="zh-TW">🇹🇼 繁體中文</option>
-                            <option value="hi">🇮🇳 हिन्दी</option>
-                            <option value="es">🇪🇸 Español</option>
-                            <option value="fr">🇫🇷 Français</option>
-                            <option value="ar">🇸🇦 العربية</option>
-                            <option value="bn">🇧🇩 বাংলা</option>
-                            <option value="ru">🇷🇺 Русский</option>
-                            <option value="pt">🇧🇷 Português</option>
-                            <option value="ja">🇯🇵 日本語</option>
-                        </select>
-                        <i class="fas fa-chevron-down absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xs pointer-events-none"></i>
-                    </div>
-                    <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 text-sm">시작하기</button>
+                <div class="flex items-center space-x-2">
+                    <select class="appearance-none bg-gray-100 border-0 rounded-lg px-2 py-1 pr-6 text-xs cursor-pointer" onchange="window.location.href='/lang/' + this.value + '.html'">
+                        <option value="ko" selected>🇰🇷 한국어</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="zh-CN">🇨🇳 简体中文</option>
+                        <option value="zh-TW">🇹🇼 繁體中文</option>
+                        <option value="hi">🇮🇳 हिन्दी</option>
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="fr">🇫🇷 Français</option>
+                        <option value="ar">🇸🇦 العربية</option>
+                        <option value="bn">🇧🇩 বাংলা</option>
+                        <option value="ru">🇷🇺 Русский</option>
+                        <option value="pt">🇧🇷 Português</option>
+                        <option value="ja">🇯🇵 日本語</option>
+                    </select>
+                    <button class="bg-purple-600 text-white px-3 py-1.5 rounded-lg hover:bg-purple-700 text-xs">시작하기</button>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- 히어로 섹션 -->
-    <section class="hero-section gradient-bg text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="hero-section gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                <h1 class="hero-title font-bold mb-3">
                     AI가 대신하는<br/>똑똑한 통화 비서
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-purple-100">
+                <p class="hero-subtitle text-purple-100">
                     전화·음성·메신저 대화를 AI가 실시간으로 응대·요약·기록·분석
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition w-full sm:w-auto">
-                        <i class="fas fa-rocket mr-2"></i>무료로 시작하기
+                <div class="flex flex-col sm:flex-row gap-2 justify-center items-center mb-4">
+                    <button class="hero-btn bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition w-full sm:w-auto">
+                        <i class="fas fa-rocket mr-1"></i>무료로 시작하기
                     </button>
-                    <button class="bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-800 transition w-full sm:w-auto">
-                        <i class="fas fa-play-circle mr-2"></i>데모 보기
+                    <button class="hero-btn bg-purple-700 text-white rounded-lg font-semibold hover:bg-purple-800 transition w-full sm:w-auto">
+                        <i class="fas fa-play-circle mr-1"></i>데모 보기
                     </button>
                 </div>
                 
-                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
                     <div class="text-center">
-                        <div class="text-4xl font-bold">12+</div>
-                        <div class="text-purple-200">지원 언어</div>
+                        <div class="stat-number font-bold">12+</div>
+                        <div class="stat-label text-purple-200">지원 언어</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold">99.9%</div>
-                        <div class="text-purple-200">인식 정확도</div>
+                        <div class="stat-number font-bold">99.9%</div>
+                        <div class="stat-label text-purple-200">인식 정확도</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold">24/7</div>
-                        <div class="text-purple-200">무중단 서비스</div>
+                        <div class="stat-number font-bold">24/7</div>
+                        <div class="stat-label text-purple-200">무중단 서비스</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold">&lt; 1초</div>
-                        <div class="text-purple-200">응답 속도</div>
+                        <div class="stat-number font-bold">&lt; 1초</div>
+                        <div class="stat-label text-purple-200">응답 속도</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 산업별 솔루션 섹션 -->
-    <section id="industries" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">산업별 특화 솔루션</h2>
-                <p class="text-xl text-gray-600">직군에 최적화된 AI 통화비서</p>
+    <!-- 핵심 기능 -->
+    <section id="features" class="bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-4">
+                <h2 class="section-title font-bold text-gray-900">핵심 기능</h2>
+                <p class="section-subtitle text-gray-600">통화의 모든 순간을 AI가 관리합니다</p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 간병인 -->
-                <div class="industry-card bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition cursor-pointer" onclick="showIndustryDetail('caregiver')">
-                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-heart text-white text-2xl"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gradient-to-br from-purple-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center mb-2">
+                        <i class="fas fa-robot text-white text-lg"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">간병인</h3>
-                    <p class="text-gray-600 mb-4">보호자 통화 자동 요약, 응급 상황 감지, 분쟁 예방</p>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>통화 내용 자동 요약 전송</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>위험 키워드 즉시 알림</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>구두 합의 자동 기록</li>
+                    <h3 class="text-base font-bold text-gray-900 mb-1">AI 통화 응대</h3>
+                    <p class="text-xs text-gray-600">AI가 직접 전화를 받아 자연스럽게 대화합니다</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mb-2">
+                        <i class="fas fa-file-alt text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-1">자동 녹취·요약</h3>
+                    <p class="text-xs text-gray-600">통화를 실시간 텍스트화하고 핵심 내용을 자동 요약</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center mb-2">
+                        <i class="fas fa-handshake text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-1">AI 협상 비서</h3>
+                    <p class="text-xs text-gray-600">실시간 협상 전략 제안과 성공 확률 분석</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-yellow-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center mb-2">
+                        <i class="fas fa-globe text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-1">다국어 지원</h3>
+                    <p class="text-xs text-gray-600">12개 언어 지원 및 실시간 번역</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-red-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center mb-2">
+                        <i class="fas fa-shield-alt text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-1">법적 증빙</h3>
+                    <p class="text-xs text-gray-600">타임스탬프와 해시값으로 안전하게 보관</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center mb-2">
+                        <i class="fas fa-cogs text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 mb-1">업무 자동화</h3>
+                    <p class="text-xs text-gray-600">회의록, 계약서, 제안서 자동 생성</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 산업별 특화 솔루션 -->
+    <section id="industries" class="bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-4">
+                <h2 class="section-title font-bold text-gray-900">산업별 특화 솔루션</h2>
+                <p class="section-subtitle text-gray-600">직군에 최적화된 AI 통화비서</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- 간병인 -->
+                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="industry-icon bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center mb-2">
+                        <i class="fas fa-heart text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-1">간병인</h3>
+                    <p class="text-gray-600 mb-2">보호자 통화 자동 요약, 응급 상황 감지</p>
+                    <ul class="space-y-1">
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>통화 내용 자동 요약 전송</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>위험 키워드 즉시 알림</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>구두 합의 자동 기록</li>
                     </ul>
                 </div>
                 
                 <!-- 건설현장 -->
-                <div class="industry-card bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition cursor-pointer" onclick="showIndustryDetail('construction')">
-                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-hard-hat text-white text-2xl"></i>
+                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="industry-icon bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-2">
+                        <i class="fas fa-hard-hat text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">건설현장</h3>
-                    <p class="text-gray-600 mb-4">작업 중 통화 대신 AI 응대, 안전 우선</p>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>작업 중 자동 응대</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>작업 지시 자동 정리</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>긴급도 자동 판단</li>
+                    <h3 class="font-bold text-gray-900 mb-1">건설현장</h3>
+                    <p class="text-gray-600 mb-2">작업 중 통화 대신 AI 응대, 안전 우선</p>
+                    <ul class="space-y-1">
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>작업 중 자동 응대</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>작업 지시 자동 정리</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>긴급도 자동 판단</li>
                     </ul>
                 </div>
                 
-                <!-- 택배/배송 -->
-                <div class="industry-card bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition cursor-pointer" onclick="showIndustryDetail('delivery')">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-truck text-white text-2xl"></i>
+                <!-- 택배·배송 -->
+                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="industry-icon bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-2">
+                        <i class="fas fa-truck text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">택배·배송</h3>
-                    <p class="text-gray-600 mb-4">운전 중 안전 통화, 반복 문의 자동 처리</p>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>배송 상태 자동 응답</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>부재 처리 자동 안내</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>배송 분쟁 증빙</li>
+                    <h3 class="font-bold text-gray-900 mb-1">택배·배송</h3>
+                    <p class="text-gray-600 mb-2">운전 중 안전 통화, 반복 문의 자동 처리</p>
+                    <ul class="space-y-1">
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>배송 상태 자동 응답</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>부재 처리 자동 안내</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>배송 분쟁 증빙</li>
                     </ul>
                 </div>
                 
                 <!-- 자영업 -->
-                <div class="industry-card bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition cursor-pointer" onclick="showIndustryDetail('business')">
-                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-store text-white text-2xl"></i>
+                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="industry-icon bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-2">
+                        <i class="fas fa-store text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">자영업</h3>
-                    <p class="text-gray-600 mb-4">예약 접수, 고객 문의 자동 처리</p>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>24시간 예약 접수</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>메뉴/가격 자동 안내</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>단골 고객 자동 인식</li>
+                    <h3 class="font-bold text-gray-900 mb-1">자영업</h3>
+                    <p class="text-gray-600 mb-2">예약 접수, 고객 문의 자동 처리</p>
+                    <ul class="space-y-1">
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>24시간 예약 접수</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>메뉴/가격 자동 안내</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>단골 고객 자동 인식</li>
                     </ul>
                 </div>
                 
                 <!-- 프리랜서·영업 -->
-                <div class="industry-card bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition cursor-pointer" onclick="showIndustryDetail('sales')">
-                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-briefcase text-white text-2xl"></i>
+                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="industry-icon bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mb-2">
+                        <i class="fas fa-briefcase text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">프리랜서·영업</h3>
-                    <p class="text-gray-600 mb-4">통화 분석, 협상 전략, 고객 관리</p>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>협상 전략 실시간 제안</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>고객별 통화 히스토리</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>CRM 자동 연동</li>
+                    <h3 class="font-bold text-gray-900 mb-1">프리랜서·영업</h3>
+                    <p class="text-gray-600 mb-2">통화 분석, 협상 전략, 고객 관리</p>
+                    <ul class="space-y-1">
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>협상 전략 실시간 제안</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>고객별 통화 히스토리</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>CRM 자동 연동</li>
                     </ul>
                 </div>
                 
                 <!-- 공장·제조 -->
-                <div class="industry-card bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition cursor-pointer" onclick="showIndustryDetail('factory')">
-                    <div class="w-16 h-16 bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl flex items-center justify-center mb-4">
-                        <i class="fas fa-industry text-white text-2xl"></i>
+                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
+                    <div class="industry-icon bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl flex items-center justify-center mb-2">
+                        <i class="fas fa-industry text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">공장·제조</h3>
-                    <p class="text-gray-600 mb-4">설비 이상 감지, 교대 인수인계</p>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>설비 고장 키워드 감지</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>교대 근무 인수인계</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>작업 연속성 유지</li>
+                    <h3 class="font-bold text-gray-900 mb-1">공장·제조</h3>
+                    <p class="text-gray-600 mb-2">설비 이상 감지, 교대 인수인계</p>
+                    <ul class="space-y-1">
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>설비 고장 키워드 감지</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>교대 근무 인수인계</li>
+                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>작업 연속성 유지</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 산업별 상세 모달은 JavaScript로 처리 -->
+    <!-- 요금제 -->
+    <section id="pricing" class="bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-4">
+                <h2 class="section-title font-bold text-gray-900">요금제</h2>
+                <p class="section-subtitle text-gray-600">필요에 맞는 플랜을 선택하세요</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-4">
+                <!-- Free -->
+                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Free</h3>
+                    <div class="text-2xl font-bold text-gray-900 mb-2">$0<span class="text-sm text-gray-600">/월</span></div>
+                    <ul class="space-y-1.5 mb-4 text-xs">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>월 30분 통화</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>기본 요약 기능</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>7일 보관</li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-800 py-2 rounded-lg font-semibold hover:bg-gray-300 transition text-sm">시작하기</button>
+                </div>
+                
+                <!-- Pro -->
+                <div class="bg-white p-4 rounded-xl shadow-lg border-2 border-purple-600 relative">
+                    <div class="absolute -top-2.5 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-3 py-0.5 rounded-full text-xs">인기</div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Pro</h3>
+                    <div class="text-2xl font-bold text-gray-900 mb-2">$15<span class="text-sm text-gray-600">/월</span></div>
+                    <ul class="space-y-1.5 mb-4 text-xs">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>무제한 통화</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>고급 요약·검색</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>감정 분석</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>1년 보관</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition text-sm">시작하기</button>
+                </div>
+                
+                <!-- Premium -->
+                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Premium</h3>
+                    <div class="text-2xl font-bold text-gray-900 mb-2">$25<span class="text-sm text-gray-600">/월</span></div>
+                    <ul class="space-y-1.5 mb-4 text-xs">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>Pro의 모든 기능</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>AI 통화 응대</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>협상 AI</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>무제한 보관</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition text-sm">시작하기</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- 챗봇 아이콘 -->
-    <div class="chatbot-icon" onclick="toggleChatbot()">
+    <!-- 푸터 -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-6 text-sm">
+                <div>
+                    <div class="flex items-center space-x-2 mb-3">
+                        <i class="fas fa-phone-volume text-purple-400"></i>
+                        <span class="font-bold">CallMind AI</span>
+                    </div>
+                    <p class="text-gray-400 text-xs">AI 기반 통화 비서 플랫폼</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2 text-sm">제품</h4>
+                    <ul class="space-y-1.5 text-gray-400 text-xs">
+                        <li><a href="#" class="hover:text-white">기능</a></li>
+                        <li><a href="#" class="hover:text-white">요금제</a></li>
+                        <li><a href="#" class="hover:text-white">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2 text-sm">회사</h4>
+                    <ul class="space-y-1.5 text-gray-400 text-xs">
+                        <li><a href="#" class="hover:text-white">소개</a></li>
+                        <li><a href="#" class="hover:text-white">블로그</a></li>
+                        <li><a href="#" class="hover:text-white">채용</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2 text-sm">지원</h4>
+                    <ul class="space-y-1.5 text-gray-400 text-xs">
+                        <li><a href="#" class="hover:text-white">고객센터</a></li>
+                        <li><a href="#" class="hover:text-white">문서</a></li>
+                        <li><a href="#" class="hover:text-white">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400 text-xs">
+                <p>&copy; 2024 CallMind AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 챗봇 토글 버튼 -->
+    <label for="chatbot-checkbox" class="chatbot-toggle">
         <i class="fas fa-comments"></i>
-    </div>
+    </label>
+
+    <!-- 챗봇 체크박스 (숨김) -->
+    <input type="checkbox" id="chatbot-checkbox">
 
     <!-- 챗봇 패널 -->
-    <div class="chatbot-panel" id="chatbotPanel"></div>
-
-    <script src="/static/app.js"></script>
+    <div class="chatbot-panel">
+        <div class="chatbot-header">
+            <div>
+                <div class="font-semibold text-sm">FAQ 도우미</div>
+                <div class="text-xs text-purple-200">자주 묻는 질문</div>
+            </div>
+            <label for="chatbot-checkbox" class="cursor-pointer hover:text-gray-200">
+                <i class="fas fa-times text-lg"></i>
+            </label>
+        </div>
+        
+        <div class="chatbot-content">
+            <!-- 기본 서비스 안내 -->
+            <div class="faq-category">
+                <div class="faq-category-title">
+                    <i class="fas fa-info-circle mr-1 text-xs"></i>기본 서비스 안내
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq1" class="faq-checkbox">
+                    <label for="faq1" class="faq-question">
+                        <span>이 서비스는 무엇인가요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        AI 통화비서는 전화·음성·메신저 대화를 AI가 대신 응대하거나 기록하고, 통화 내용을 자동 요약·저장·분석해주는 서비스입니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq2" class="faq-checkbox">
+                    <label for="faq2" class="faq-question">
+                        <span>어떤 상황에서 사용하면 좋나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        영업 통화, 고객 상담, 계약 협의, 해외 통화, 통화 기록 관리가 필요한 모든 상황에서 활용할 수 있습니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq3" class="faq-checkbox">
+                    <label for="faq3" class="faq-question">
+                        <span>AI가 실제 전화를 받아주나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        네. 가상 번호를 통해 AI가 직접 전화를 수신하고 사람처럼 대화할 수 있습니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq4" class="faq-checkbox">
+                    <label for="faq4" class="faq-question">
+                        <span>사람이 통화할 때도 사용 가능한가요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        가능합니다. 사용자가 통화하면 AI가 동시에 녹취·요약·분석을 수행합니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq5" class="faq-checkbox">
+                    <label for="faq5" class="faq-question">
+                        <span>통화 내용은 자동으로 저장되나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        녹취 동의가 설정된 경우 모든 통화는 자동으로 저장됩니다.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 통화 녹취·요약 기능 -->
+            <div class="faq-category">
+                <div class="faq-category-title">
+                    <i class="fas fa-microphone mr-1 text-xs"></i>통화 녹취·요약 기능
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq6" class="faq-checkbox">
+                    <label for="faq6" class="faq-question">
+                        <span>통화는 어떻게 기록되나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        음성은 실시간으로 텍스트로 변환되며, 원본 음성과 함께 저장됩니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq7" class="faq-checkbox">
+                    <label for="faq7" class="faq-question">
+                        <span>통화 요약은 어떤 형태인가요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        핵심 내용 3~5줄 요약과 함께 주요 합의사항, 액션 아이템이 자동 정리됩니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq8" class="faq-checkbox">
+                    <label for="faq8" class="faq-question">
+                        <span>여러 사람이 통화해도 구분되나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        네. 화자 분리 기능으로 누가 어떤 말을 했는지 구분됩니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq9" class="faq-checkbox">
+                    <label for="faq9" class="faq-question">
+                        <span>감정 분석도 되나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        네. 분노, 중립, 만족 등 감정 상태를 자동 분석합니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq10" class="faq-checkbox">
+                    <label for="faq10" class="faq-question">
+                        <span>이전 통화를 다시 찾을 수 있나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        "지난달 계약 이야기한 통화"처럼 자연어로 검색할 수 있습니다.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI 협상 비서 관련 -->
+            <div class="faq-category">
+                <div class="faq-category-title">
+                    <i class="fas fa-handshake mr-1 text-xs"></i>AI 협상 비서 관련
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq11" class="faq-checkbox">
+                    <label for="faq11" class="faq-question">
+                        <span>AI 협상 비서는 어떤 역할을 하나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        통화 중 상대 발언을 분석해 협상 전략, 추천 멘트, 위험 경고를 제공합니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq12" class="faq-checkbox">
+                    <label for="faq12" class="faq-question">
+                        <span>협상 중 상대방에게 AI가 보이나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        아닙니다. 협상 가이드는 사용자에게만 비공개로 표시됩니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq13" class="faq-checkbox">
+                    <label for="faq13" class="faq-question">
+                        <span>가격 협상도 도와주나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        네. 가격·일정·조건을 종합 분석해 최적의 대안을 제안합니다.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 보안·법적 -->
+            <div class="faq-category">
+                <div class="faq-category-title">
+                    <i class="fas fa-shield-alt mr-1 text-xs"></i>보안·법적
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq14" class="faq-checkbox">
+                    <label for="faq14" class="faq-question">
+                        <span>통화 녹취는 합법인가요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        국가별 녹취법에 따라 자동 안내 멘트가 적용됩니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq15" class="faq-checkbox">
+                    <label for="faq15" class="faq-question">
+                        <span>데이터는 안전하게 저장되나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        모든 데이터는 암호화되어 저장됩니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq16" class="faq-checkbox">
+                    <label for="faq16" class="faq-question">
+                        <span>법적 증빙으로 사용 가능한가요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        타임스탬프와 해시값이 포함되어 증빙 자료로 활용할 수 있습니다.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 요금·운영 -->
+            <div class="faq-category">
+                <div class="faq-category-title">
+                    <i class="fas fa-dollar-sign mr-1 text-xs"></i>요금·운영
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq17" class="faq-checkbox">
+                    <label for="faq17" class="faq-question">
+                        <span>무료로도 사용할 수 있나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        기본 요약 기능은 무료 요금제에서 제공됩니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq18" class="faq-checkbox">
+                    <label for="faq18" class="faq-question">
+                        <span>기업용 요금제는 어떻게 되나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        사용자 수와 기능에 따라 맞춤형 요금제가 제공됩니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq19" class="faq-checkbox">
+                    <label for="faq19" class="faq-question">
+                        <span>콜센터에도 적용 가능한가요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        가능합니다. 상담 자동화 및 품질 관리 기능을 제공합니다.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <input type="checkbox" id="faq20" class="faq-checkbox">
+                    <label for="faq20" class="faq-question">
+                        <span>도입하려면 어떻게 시작하나요?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-answer">
+                        회원가입 후 가상 번호를 생성하면 바로 사용할 수 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
