@@ -1,14 +1,13 @@
 import { Hono } from 'hono'
 import { cors } from 'hono/cors'
-import { serveStatic } from 'hono/cloudflare-workers'
 
 const app = new Hono()
 
 // Enable CORS for API routes
 app.use('/api/*', cors())
 
-// Serve static files - Cloudflare Pages uses root path
-app.use('/*', serveStatic())
+// Note: Cloudflare Pages automatically serves static files from dist/
+// No need for serveStatic middleware in wrangler pages dev
 
 // API Routes
 app.get('/api/health', (c) => {
