@@ -6,18 +6,25 @@
     <title>CallMind AI - AI通话助手平台</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media (max-width: 640px) {
+            .mobile-compact { font-size: 0.875rem; }
+            .mobile-title { font-size: 1rem !important; }
+            .mobile-btn { font-size: 0.75rem; padding: 0.5rem 1rem; }
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <i class="fas fa-phone-volume text-purple-600 text-xl"></i>
-                <span class="font-bold text-xl">CallMind AI</span>
+                <i class="fas fa-phone-volume text-purple-600 text-base sm:text-xl"></i>
+                <span class="font-bold text-base sm:text-xl mobile-title">CallMind AI</span>
             </div>
-            <nav class="flex items-center space-x-6">
+            <nav class="hidden md:flex items-center space-x-6">
                 <a href="#features" class="text-gray-700 hover:text-purple-600">核心功能</a>
                 <a href="#industries" class="text-gray-700 hover:text-purple-600">行业解决方案</a>
-                <select onchange="window.location.href='/lang/'+this.value+'.html'" class="border rounded px-2 py-1">
+                <select onchange="window.location.href='/lang/'+this.value+'.html'" class="border rounded px-2 py-1 text-sm">
                     <option value="ko">🇰🇷 한국어</option>
                     <option value="en">🇺🇸 English</option>
                     <option value="zh-CN" selected>🇨🇳 简体中文</option>
@@ -31,18 +38,32 @@
                     <option value="ru">🇷🇺 Русский</option>
                     <option value="pt">🇧🇷 Português</option>
                 </select>
-                <a href="#features" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">免费开始</a>
+                <a href="/signup" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">免费开始</a>
             </nav>
+            <select onchange="window.location.href='/lang/'+this.value+'.html'" class="md:hidden border rounded px-2 py-1 text-xs">
+                <option value="ko">🇰🇷 한국어</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="zh-CN">🇨🇳 简体中文</option>
+                <option value="zh-TW">🇹🇼 繁體中文</option>
+                <option value="ja">🇯🇵 日本語</option>
+                <option value="hi">🇮🇳 हिन्दी</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="ar">🇸🇦 العربية</option>
+                <option value="bn">🇧🇩 বাংলা</option>
+                <option value="ru">🇷🇺 Русский</option>
+                <option value="pt">🇧🇷 Português</option>
+            </select>
         </div>
     </header>
 
-    <section class="gradient-bg text-white py-16">
+    <section class="gradient-bg text-white py-8 sm:py-16">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">AI智能<br>通话助手</h1>
-            <p class="text-lg mb-8">AI实时处理电话、语音和消息对话</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#features" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">免费开始</a>
-                <a href="#features" class="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800">观看演示</a>
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">AI智能<br>通话助手</h1>
+            <p class="text-sm sm:text-lg mb-6 sm:mb-8">AI实时处理电话、语音和消息对话</p>
+            <div class="flex flex-row gap-2 sm:gap-4 justify-center max-w-md mx-auto">
+                <a href="/signup" class="flex-1 bg-white text-purple-600 px-4 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 text-xs sm:text-base mobile-btn">免费开始</a>
+                <a href="/demo" class="flex-1 bg-purple-700 text-white px-4 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-purple-800 text-xs sm:text-base mobile-btn">观看演示</a>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 <div><div class="text-3xl font-bold">12+</div><div class="text-sm">支持语言</div></div>
@@ -89,8 +110,244 @@
         </div>
     </footer>
 
+    <!-- 챗봇 위젯 (순수 CSS, FAQ 35개 항목 포함) -->
+    <input type="checkbox" id="chatbot-toggle" class="chatbot-toggle" />
+    <label for="chatbot-toggle" class="chatbot-button">
+        <i class="fas fa-comment-dots"></i>
+    </label>
+    
+    <div class="chatbot-panel">
+        <div class="chatbot-header">
+            <h3>CallMind AI 聊天机器人</h3>
+            <label for="chatbot-toggle" class="chatbot-close">×</label>
+        </div>
+        <div class="chatbot-body">
+            <div class="chatbot-welcome">
+                <p><strong>您好！欢迎使用CallMind AI。</strong></p>
+                <p>请选择常见问题或浏览以下内容：</p>
+            </div>
+            
+            <div class="faq-section">
+                <details class="faq-item"><summary>这项服务是什么？</summary><p>AI通话助手是一项由AI代理接听、记录电话、语音、即时通讯对话，并自动总结、存储、分析通话内容的服务。</p></details>
+                <details class="faq-item"><summary>什么情况下使用比较好？</summary><p>可用于所有需要销售电话、客户咨询、合同协商、国际电话和通话记录管理的情况。</p></details>
+                <details class="faq-item"><summary>AI真的会接听电话吗？</summary><p>是的。AI可以通过虚拟号码直接接听电话，像人一样对话。</p></details>
+                <details class="faq-item"><summary>人在通话时也可以使用吗？</summary><p>可以。用户通话时，AI会同时进行录音、总结和分析。</p></details>
+                <details class="faq-item"><summary>通话内容会自动保存吗？</summary><p>设置了录音同意后，所有通话都会自动保存。</p></details>
+                <details class="faq-item"><summary>通话是如何记录的？</summary><p>语音会实时转换为文字，并与原始语音一起保存。</p></details>
+                <details class="faq-item"><summary>通话总结是什么形式？</summary><p>会自动整理3-5行核心内容摘要以及主要协议事项和行动项。</p></details>
+                <details class="faq-item"><summary>多人通话也能区分吗？</summary><p>是的。说话人分离功能可以识别谁说了什么。</p></details>
+                <details class="faq-item"><summary>情感分析也可以吗？</summary><p>是的。会自动分析愤怒、中立、满意等情感状态。</p></details>
+                <details class="faq-item"><summary>可以重新找到以前的通话吗？</summary><p>可以用自然语言搜索，比如"上个月关于合同的通话"。</p></details>
+                <details class="faq-item"><summary>AI协商助手有什么作用？</summary><p>分析通话中对方的发言，提供协商策略、推荐话术和风险警告。</p></details>
+                <details class="faq-item"><summary>协商时对方能看到AI吗？</summary><p>不能。协商指南仅向用户私密显示。</p></details>
+                <details class="faq-item"><summary>价格协商也能帮忙吗？</summary><p>是的。综合分析价格、日程、条件后提出最优方案。</p></details>
+                <details class="faq-item"><summary>能知道协商成功的可能性吗？</summary><p>通话中会实时提供合同成交概率。</p></details>
+                <details class="faq-item"><summary>可以练习协商吗？</summary><p>可以。实际通话前可以与AI对手进行协商模拟。</p></details>
+                <details class="faq-item"><summary>通话后合同会自动整理吗？</summary><p>是的。可以基于通话内容生成合同摘要或草稿。</p></details>
+                <details class="faq-item"><summary>口头协议也会记录吗？</summary><p>通话中的协议内容会自动提取并与合同条款匹配。</p></details>
+                <details class="faq-item"><summary>可以用语音下达工作指示吗？</summary><p>可以使用"总结这通电话并通过邮件发送"等语音命令。</p></details>
+                <details class="faq-item"><summary>CRM也能联动吗？</summary><p>与Salesforce、HubSpot等主要CRM联动。</p></details>
+                <details class="faq-item"><summary>会议纪要或提案也能制作吗？</summary><p>通话结束后可以自动生成。</p></details>
+                <details class="faq-item"><summary>AI之间通话是什么意思？</summary><p>我们公司的AI和对方公司的AI直接通话预先协调条件。</p></details>
+                <details class="faq-item"><summary>完全不需要人参与吗？</summary><p>只能在预设范围内进行，最终批准需要人参与。</p></details>
+                <details class="faq-item"><summary>多语言协商也可以吗？</summary><p>是的。各个AI可以用不同语言进行实时协商。</p></details>
+                <details class="faq-item"><summary>AI之间的通话记录也保存吗？</summary><p>所有AI↔AI通话都保存为语音、文字、协议日志。</p></details>
+                <details class="faq-item"><summary>支持哪些语言？</summary><p>支持韩语、英语、日语、中文、西班牙语、法语等多种语言。</p></details>
+                <details class="faq-item"><summary>也提供国外号码吗？</summary><p>提供各国虚拟号码(DID)。</p></details>
+                <details class="faq-item"><summary>实时翻译可以吗？</summary><p>可以进行通话中实时翻译和翻译摘要提供。</p></details>
+                <details class="faq-item"><summary>通话录音合法吗？</summary><p>根据各国录音法适用自动提示语。</p></details>
+                <details class="faq-item"><summary>数据安全保存吗？</summary><p>所有数据都经过加密保存。</p></details>
+                <details class="faq-item"><summary>可以作为法律证据使用吗？</summary><p>包含时间戳和哈希值，可作为证据资料使用。</p></details>
+                <details class="faq-item"><summary>GDPR或CCPA也对应吗？</summary><p>是的。遵守全球个人信息保护规定。</p></details>
+                <details class="faq-item"><summary>可以免费使用吗？</summary><p>免费套餐提供基本总结功能。</p></details>
+                <details class="faq-item"><summary>企业套餐如何？</summary><p>根据用户数和功能提供定制套餐。</p></details>
+                <details class="faq-item"><summary>呼叫中心也能应用吗？</summary><p>可以。提供咨询自动化和质量管理功能。</p></details>
+                <details class="faq-item"><summary>要导入该如何开始？</summary><p>注册会员后生成虚拟号码即可立即使用。</p></details>
+                </div>
+            
+            <div class="chatbot-actions">
+                <a href="#features" class="chatbot-cta">免费开始</a>
+            </div>
+        </div>
+    </div>
+
     <style>
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        .chatbot-toggle { display: none; }
+        
+        .chatbot-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            z-index: 1000;
+        }
+        
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        
+        .chatbot-panel {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 400px;
+            max-width: calc(100vw - 48px);
+            height: 600px;
+            max-height: calc(100vh - 100px);
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 999;
+        }
+        
+        .chatbot-toggle:checked ~ .chatbot-panel { display: flex; }
+        .chatbot-toggle:checked ~ .chatbot-button { display: none; }
+        
+        .chatbot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .chatbot-close {
+            font-size: 28px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0 8px;
+        }
+        
+        .chatbot-body {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .chatbot-welcome {
+            background: #f3f4f6;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .chatbot-welcome p {
+            margin: 0 0 6px 0;
+            color: #374151;
+            font-size: 14px;
+        }
+        
+        .chatbot-welcome p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .faq-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .faq-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-item summary {
+            background: white;
+            padding: 12px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #667eea;
+            font-size: 14px;
+            list-style: none;
+            user-select: none;
+        }
+        
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .faq-item summary:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-item p {
+            padding: 12px;
+            margin: 0;
+            background: #f9fafb;
+            color: #4b5563;
+            font-size: 13px;
+            line-height: 1.6;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .chatbot-actions {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .chatbot-cta {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .chatbot-cta:hover {
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot-panel {
+                width: calc(100vw - 32px);
+                height: calc(100vh - 100px);
+                right: 16px;
+                bottom: 16px;
+            }
+            
+            .chatbot-button {
+                bottom: 16px;
+                right: 16px;
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+            }
+        }
     </style>
 </body>
 </html>

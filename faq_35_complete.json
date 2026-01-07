@@ -1,0 +1,1564 @@
+{
+  "en": [
+    {
+      "q": "What is this service?",
+      "a": "AI Call Assistant is a service where AI handles, records, and automatically summarizes, stores, and analyzes phone, voice, and messenger conversations."
+    },
+    {
+      "q": "When should I use it?",
+      "a": "It can be used in all situations requiring sales calls, customer consultations, contract negotiations, international calls, and call record management."
+    },
+    {
+      "q": "Does AI actually answer calls?",
+      "a": "Yes. AI can directly receive calls through a virtual number and converse like a human."
+    },
+    {
+      "q": "Can people also use it during calls?",
+      "a": "Yes. When a user makes a call, AI simultaneously performs recording, summarization, and analysis."
+    },
+    {
+      "q": "Are call contents automatically saved?",
+      "a": "All calls are automatically saved when recording consent is configured."
+    },
+    {
+      "q": "How are calls recorded?",
+      "a": "Voice is converted to text in real-time and stored together with the original audio."
+    },
+    {
+      "q": "What format is the call summary?",
+      "a": "A 3-5 line summary of key content is automatically organized along with main agreements and action items."
+    },
+    {
+      "q": "Are multiple speakers distinguished?",
+      "a": "Yes. The speaker separation feature identifies who said what."
+    },
+    {
+      "q": "Is emotion analysis available?",
+      "a": "Yes. Emotional states such as anger, neutral, and satisfaction are automatically analyzed."
+    },
+    {
+      "q": "Can I find previous calls?",
+      "a": "You can search with natural language like \"call about contract last month\"."
+    },
+    {
+      "q": "What does AI negotiation assistant do?",
+      "a": "It analyzes the other party's statements during calls to provide negotiation strategies, recommended phrases, and risk warnings."
+    },
+    {
+      "q": "Is AI visible to the other party during negotiation?",
+      "a": "No. Negotiation guides are displayed privately only to the user."
+    },
+    {
+      "q": "Does it help with price negotiation?",
+      "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
+    },
+    {
+      "q": "Can I know negotiation success probability?",
+      "a": "Contract success probability is provided in real-time during calls."
+    },
+    {
+      "q": "Is negotiation practice possible?",
+      "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
+    },
+    {
+      "q": "Are contracts automatically organized after calls?",
+      "a": "Yes. Contract summaries or drafts can be created based on call content."
+    },
+    {
+      "q": "Are verbal agreements recorded?",
+      "a": "Agreement content in calls is automatically extracted and matched with contract terms."
+    },
+    {
+      "q": "Can I give work instructions by voice?",
+      "a": "Voice commands like \"summarize this call and send by email\" are possible."
+    },
+    {
+      "q": "Does it integrate with CRM?",
+      "a": "It integrates with major CRMs such as Salesforce and HubSpot."
+    },
+    {
+      "q": "Does it create meeting minutes or proposals?",
+      "a": "They can be automatically generated after a call ends."
+    },
+    {
+      "q": "What does AI-to-AI calling mean?",
+      "a": "Our company's AI and the other company's AI directly call to pre-coordinate conditions."
+    },
+    {
+      "q": "Is human intervention completely unnecessary?",
+      "a": "It's only possible within preset ranges, and human intervention is required for final approval."
+    },
+    {
+      "q": "Is multilingual negotiation possible?",
+      "a": "Yes. Each AI can negotiate in real-time in different languages."
+    },
+    {
+      "q": "Are AI-to-AI call records saved?",
+      "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
+    },
+    {
+      "q": "Which languages are supported?",
+      "a": "Multiple languages including Korean, English, Japanese, Chinese, Spanish, and French are supported."
+    },
+    {
+      "q": "Are international numbers provided?",
+      "a": "Virtual numbers (DID) for each country are provided."
+    },
+    {
+      "q": "Is real-time translation possible?",
+      "a": "Real-time translation during calls and translated summary provision are possible."
+    },
+    {
+      "q": "Is call recording legal?",
+      "a": "Automatic guidance messages are applied according to recording laws in each country."
+    },
+    {
+      "q": "Is data stored securely?",
+      "a": "All data is stored encrypted."
+    },
+    {
+      "q": "Can it be used as legal evidence?",
+      "a": "It can be utilized as evidence material as it includes timestamps and hash values."
+    },
+    {
+      "q": "Does it comply with GDPR or CCPA?",
+      "a": "Yes. It complies with global personal information protection regulations."
+    },
+    {
+      "q": "Can I use it for free?",
+      "a": "Basic summary features are provided in the free plan."
+    },
+    {
+      "q": "What about enterprise pricing?",
+      "a": "Customized pricing is provided according to the number of users and features."
+    },
+    {
+      "q": "Can it be applied to call centers?",
+      "a": "Yes. It provides consultation automation and quality management features."
+    },
+    {
+      "q": "How do I start implementing it?",
+      "a": "You can start using it immediately after signing up and creating a virtual number."
+    }
+  ],
+  "zh-CN": [
+    {
+      "q": "这项服务是什么？",
+      "a": "AI通话助手是一项由AI代理接听、记录电话、语音、即时通讯对话，并自动总结、存储、分析通话内容的服务。"
+    },
+    {
+      "q": "什么情况下使用比较好？",
+      "a": "可用于所有需要销售电话、客户咨询、合同协商、国际电话和通话记录管理的情况。"
+    },
+    {
+      "q": "AI真的会接听电话吗？",
+      "a": "是的。AI可以通过虚拟号码直接接听电话，像人一样对话。"
+    },
+    {
+      "q": "人在通话时也可以使用吗？",
+      "a": "可以。用户通话时，AI会同时进行录音、总结和分析。"
+    },
+    {
+      "q": "通话内容会自动保存吗？",
+      "a": "设置了录音同意后，所有通话都会自动保存。"
+    },
+    {
+      "q": "通话是如何记录的？",
+      "a": "语音会实时转换为文字，并与原始语音一起保存。"
+    },
+    {
+      "q": "通话总结是什么形式？",
+      "a": "会自动整理3-5行核心内容摘要以及主要协议事项和行动项。"
+    },
+    {
+      "q": "多人通话也能区分吗？",
+      "a": "是的。说话人分离功能可以识别谁说了什么。"
+    },
+    {
+      "q": "情感分析也可以吗？",
+      "a": "是的。会自动分析愤怒、中立、满意等情感状态。"
+    },
+    {
+      "q": "可以重新找到以前的通话吗？",
+      "a": "可以用自然语言搜索，比如\"上个月关于合同的通话\"。"
+    },
+    {
+      "q": "AI协商助手有什么作用？",
+      "a": "分析通话中对方的发言，提供协商策略、推荐话术和风险警告。"
+    },
+    {
+      "q": "协商时对方能看到AI吗？",
+      "a": "不能。协商指南仅向用户私密显示。"
+    },
+    {
+      "q": "价格协商也能帮忙吗？",
+      "a": "是的。综合分析价格、日程、条件后提出最优方案。"
+    },
+    {
+      "q": "能知道协商成功的可能性吗？",
+      "a": "通话中会实时提供合同成交概率。"
+    },
+    {
+      "q": "可以练习协商吗？",
+      "a": "可以。实际通话前可以与AI对手进行协商模拟。"
+    },
+    {
+      "q": "通话后合同会自动整理吗？",
+      "a": "是的。可以基于通话内容生成合同摘要或草稿。"
+    },
+    {
+      "q": "口头协议也会记录吗？",
+      "a": "通话中的协议内容会自动提取并与合同条款匹配。"
+    },
+    {
+      "q": "可以用语音下达工作指示吗？",
+      "a": "可以使用\"总结这通电话并通过邮件发送\"等语音命令。"
+    },
+    {
+      "q": "CRM也能联动吗？",
+      "a": "与Salesforce、HubSpot等主要CRM联动。"
+    },
+    {
+      "q": "会议纪要或提案也能制作吗？",
+      "a": "通话结束后可以自动生成。"
+    },
+    {
+      "q": "AI之间通话是什么意思？",
+      "a": "我们公司的AI和对方公司的AI直接通话预先协调条件。"
+    },
+    {
+      "q": "完全不需要人参与吗？",
+      "a": "只能在预设范围内进行，最终批准需要人参与。"
+    },
+    {
+      "q": "多语言协商也可以吗？",
+      "a": "是的。各个AI可以用不同语言进行实时协商。"
+    },
+    {
+      "q": "AI之间的通话记录也保存吗？",
+      "a": "所有AI↔AI通话都保存为语音、文字、协议日志。"
+    },
+    {
+      "q": "支持哪些语言？",
+      "a": "支持韩语、英语、日语、中文、西班牙语、法语等多种语言。"
+    },
+    {
+      "q": "也提供国外号码吗？",
+      "a": "提供各国虚拟号码(DID)。"
+    },
+    {
+      "q": "实时翻译可以吗？",
+      "a": "可以进行通话中实时翻译和翻译摘要提供。"
+    },
+    {
+      "q": "通话录音合法吗？",
+      "a": "根据各国录音法适用自动提示语。"
+    },
+    {
+      "q": "数据安全保存吗？",
+      "a": "所有数据都经过加密保存。"
+    },
+    {
+      "q": "可以作为法律证据使用吗？",
+      "a": "包含时间戳和哈希值，可作为证据资料使用。"
+    },
+    {
+      "q": "GDPR或CCPA也对应吗？",
+      "a": "是的。遵守全球个人信息保护规定。"
+    },
+    {
+      "q": "可以免费使用吗？",
+      "a": "免费套餐提供基本总结功能。"
+    },
+    {
+      "q": "企业套餐如何？",
+      "a": "根据用户数和功能提供定制套餐。"
+    },
+    {
+      "q": "呼叫中心也能应用吗？",
+      "a": "可以。提供咨询自动化和质量管理功能。"
+    },
+    {
+      "q": "要导入该如何开始？",
+      "a": "注册会员后生成虚拟号码即可立即使用。"
+    }
+  ],
+  "zh-TW": [
+    {
+      "q": "這項服務是什麼？",
+      "a": "AI通話助手是一項由AI代理接聽、記錄電話、語音、即時通訊對話，並自動總結、儲存、分析通話內容的服務。"
+    },
+    {
+      "q": "什麼情況下使用比較好？",
+      "a": "可用於所有需要銷售電話、客戶諮詢、合約協商、國際電話和通話記錄管理的情況。"
+    },
+    {
+      "q": "AI真的會接聽電話嗎？",
+      "a": "是的。AI可以透過虛擬號碼直接接聽電話，像人一樣對話。"
+    },
+    {
+      "q": "人在通話時也可以使用嗎？",
+      "a": "可以。用戶通話時，AI會同時進行錄音、總結和分析。"
+    },
+    {
+      "q": "通話內容會自動儲存嗎？",
+      "a": "設定了錄音同意後，所有通話都會自動儲存。"
+    },
+    {
+      "q": "通話是如何記錄的？",
+      "a": "語音會即時轉換為文字，並與原始語音一起儲存。"
+    },
+    {
+      "q": "通話總結是什麼形式？",
+      "a": "會自動整理3-5行核心內容摘要以及主要協議事項和行動項。"
+    },
+    {
+      "q": "多人通話也能區分嗎？",
+      "a": "是的。說話人分離功能可以識別誰說了什麼。"
+    },
+    {
+      "q": "情感分析也可以嗎？",
+      "a": "是的。會自動分析憤怒、中立、滿意等情感狀態。"
+    },
+    {
+      "q": "可以重新找到以前的通話嗎？",
+      "a": "可以用自然語言搜尋，比如「上個月關於合約的通話」。"
+    },
+    {
+      "q": "AI協商助手有什麼作用？",
+      "a": "分析通話中對方的發言，提供協商策略、推薦話術和風險警告。"
+    },
+    {
+      "q": "協商時對方能看到AI嗎？",
+      "a": "不能。協商指南僅向用戶私密顯示。"
+    },
+    {
+      "q": "價格協商也能幫忙嗎？",
+      "a": "是的。綜合分析價格、日程、條件後提出最優方案。"
+    },
+    {
+      "q": "能知道協商成功的可能性嗎？",
+      "a": "通話中會即時提供合約成交機率。"
+    },
+    {
+      "q": "可以練習協商嗎？",
+      "a": "可以。實際通話前可以與AI對手進行協商模擬。"
+    },
+    {
+      "q": "通話後合約會自動整理嗎？",
+      "a": "是的。可以基於通話內容生成合約摘要或草稿。"
+    },
+    {
+      "q": "口頭協議也會記錄嗎？",
+      "a": "通話中的協議內容會自動提取並與合約條款配對。"
+    },
+    {
+      "q": "可以用語音下達工作指示嗎？",
+      "a": "可以使用「總結這通電話並透過郵件傳送」等語音指令。"
+    },
+    {
+      "q": "CRM也能聯動嗎？",
+      "a": "與Salesforce、HubSpot等主要CRM聯動。"
+    },
+    {
+      "q": "會議紀錄或提案也能製作嗎？",
+      "a": "通話結束後可以自動生成。"
+    },
+    {
+      "q": "AI之間通話是什麼意思？",
+      "a": "我們公司的AI和對方公司的AI直接通話預先協調條件。"
+    },
+    {
+      "q": "完全不需要人參與嗎？",
+      "a": "只能在預設範圍內進行，最終批准需要人參與。"
+    },
+    {
+      "q": "多語言協商也可以嗎？",
+      "a": "是的。各個AI可以用不同語言進行即時協商。"
+    },
+    {
+      "q": "AI之間的通話記錄也儲存嗎？",
+      "a": "所有AI↔AI通話都儲存為語音、文字、協議日誌。"
+    },
+    {
+      "q": "支援哪些語言？",
+      "a": "支援韓語、英語、日語、中文、西班牙語、法語等多種語言。"
+    },
+    {
+      "q": "也提供國外號碼嗎？",
+      "a": "提供各國虛擬號碼(DID)。"
+    },
+    {
+      "q": "即時翻譯可以嗎？",
+      "a": "可以進行通話中即時翻譯和翻譯摘要提供。"
+    },
+    {
+      "q": "通話錄音合法嗎？",
+      "a": "根據各國錄音法適用自動提示語。"
+    },
+    {
+      "q": "資料安全儲存嗎？",
+      "a": "所有資料都經過加密儲存。"
+    },
+    {
+      "q": "可以作為法律證據使用嗎？",
+      "a": "包含時間戳記和雜湊值，可作為證據資料使用。"
+    },
+    {
+      "q": "GDPR或CCPA也對應嗎？",
+      "a": "是的。遵守全球個人資訊保護規定。"
+    },
+    {
+      "q": "可以免費使用嗎？",
+      "a": "免費方案提供基本總結功能。"
+    },
+    {
+      "q": "企業方案如何？",
+      "a": "根據用戶數和功能提供客製化方案。"
+    },
+    {
+      "q": "客服中心也能應用嗎？",
+      "a": "可以。提供諮詢自動化和品質管理功能。"
+    },
+    {
+      "q": "要導入該如何開始？",
+      "a": "註冊會員後生成虛擬號碼即可立即使用。"
+    }
+  ],
+  "ja": [
+    {
+      "q": "このサービスは何ですか？",
+      "a": "AI通話アシスタントは、電話・音声・メッセンジャーの会話をAIが代わりに対応または記録し、通話内容を自動要約・保存・分析するサービスです。"
+    },
+    {
+      "q": "どんな状況で使用すればいいですか？",
+      "a": "営業電話、顧客相談、契約協議、海外電話、通話記録管理が必要なすべての状況で活用できます。"
+    },
+    {
+      "q": "AIが実際に電話を受けますか？",
+      "a": "はい。仮想番号を通じてAIが直接電話を受信し、人のように会話できます。"
+    },
+    {
+      "q": "人が通話するときも使用可能ですか？",
+      "a": "可能です。ユーザーが通話するとAIが同時に録音・要約・分析を行います。"
+    },
+    {
+      "q": "通話内容は自動で保存されますか？",
+      "a": "録音同意が設定されている場合、すべての通話が自動保存されます。"
+    },
+    {
+      "q": "通話はどのように記録されますか？",
+      "a": "音声はリアルタイムでテキストに変換され、元の音声と一緒に保存されます。"
+    },
+    {
+      "q": "通話要約はどんな形式ですか？",
+      "a": "コア内容の3～5行要約とともに、主要合意事項、アクションアイテムが自動整理されます。"
+    },
+    {
+      "q": "複数人が通話しても区別されますか？",
+      "a": "はい。話者分離機能で誰が何を言ったか区別されます。"
+    },
+    {
+      "q": "感情分析もできますか？",
+      "a": "はい。怒り、中立、満足などの感情状態を自動分析します。"
+    },
+    {
+      "q": "以前の通話を再度見つけることができますか？",
+      "a": "「先月契約について話した通話」のように自然言語で検索できます。"
+    },
+    {
+      "q": "AI交渉アシスタントはどんな役割をしますか？",
+      "a": "通話中の相手の発言を分析し、交渉戦略、推奨フレーズ、リスク警告を提供します。"
+    },
+    {
+      "q": "交渉中、相手にAIが見えますか？",
+      "a": "いいえ。交渉ガイドはユーザーにのみ非公開で表示されます。"
+    },
+    {
+      "q": "価格交渉も手伝ってくれますか？",
+      "a": "はい。価格・日程・条件を総合分析し、最適な代案を提案します。"
+    },
+    {
+      "q": "交渉成功の可能性も分かりますか？",
+      "a": "通話中にリアルタイムで契約成立確率を提供します。"
+    },
+    {
+      "q": "交渉練習もできますか？",
+      "a": "できます。実際の通話前にAI相手と交渉シミュレーションができます。"
+    },
+    {
+      "q": "通話後、契約整理が自動でできますか？",
+      "a": "はい。通話内容を基に契約要約または下書き生成が可能です。"
+    },
+    {
+      "q": "口頭合意も記録されますか？",
+      "a": "通話内の合意内容が自動抽出され、契約条項とマッチングされます。"
+    },
+    {
+      "q": "音声で業務指示が可能ですか？",
+      "a": "「この通話を要約してメールで送信」のような音声コマンドが可能です。"
+    },
+    {
+      "q": "CRM連携もできますか？",
+      "a": "Salesforce、HubSpotなど主要CRMと連携します。"
+    },
+    {
+      "q": "議事録や提案書も作成してくれますか？",
+      "a": "通話終了後、自動生成できます。"
+    },
+    {
+      "q": "AI同士の通話とはどういう意味ですか？",
+      "a": "当社のAIと相手会社のAIが直接通話して条件を事前調整します。"
+    },
+    {
+      "q": "人が全く介入しなくてもいいですか？",
+      "a": "事前設定範囲内でのみ可能で、最終承認には人の介入が必要です。"
+    },
+    {
+      "q": "多言語交渉もできますか？",
+      "a": "はい。各AIが異なる言語でリアルタイム交渉できます。"
+    },
+    {
+      "q": "AI間の通話記録も保存されますか？",
+      "a": "すべてのAI↔AI通話は音声・テキスト・合意ログとして保存されます。"
+    },
+    {
+      "q": "どの言語をサポートしていますか？",
+      "a": "韓国語、英語、日本語、中国語、スペイン語、フランス語など多言語をサポートします。"
+    },
+    {
+      "q": "海外番号も提供されますか？",
+      "a": "国別仮想番号(DID)を提供します。"
+    },
+    {
+      "q": "リアルタイム翻訳は可能ですか？",
+      "a": "通話中のリアルタイム翻訳および翻訳要約の提供が可能です。"
+    },
+    {
+      "q": "通話録音は合法ですか？",
+      "a": "国別録音法に従って自動案内メントが適用されます。"
+    },
+    {
+      "q": "データは安全に保存されますか？",
+      "a": "すべてのデータは暗号化されて保存されます。"
+    },
+    {
+      "q": "法的証拠として使用できますか？",
+      "a": "タイムスタンプとハッシュ値が含まれ、証拠資料として活用できます。"
+    },
+    {
+      "q": "GDPRやCCPAにも対応しますか？",
+      "a": "はい。グローバル個人情報保護規定を遵守します。"
+    },
+    {
+      "q": "無料でも使用できますか？",
+      "a": "基本要約機能は無料プランで提供されます。"
+    },
+    {
+      "q": "企業向けプランはどうなっていますか？",
+      "a": "ユーザー数と機能に応じてカスタマイズプランが提供されます。"
+    },
+    {
+      "q": "コールセンターにも適用可能ですか？",
+      "a": "可能です。相談自動化および品質管理機能を提供します。"
+    },
+    {
+      "q": "導入するにはどうすればいいですか？",
+      "a": "会員登録後、仮想番号を生成すればすぐ使用できます。"
+    }
+  ],
+  "hi": [
+    {
+      "q": "What is this service?",
+      "a": "AI Call Assistant is a service where AI handles, records, and automatically summarizes, stores, and analyzes phone, voice, and messenger conversations."
+    },
+    {
+      "q": "When should I use it?",
+      "a": "It can be used in all situations requiring sales calls, customer consultations, contract negotiations, international calls, and call record management."
+    },
+    {
+      "q": "Does AI actually answer calls?",
+      "a": "Yes. AI can directly receive calls through a virtual number and converse like a human."
+    },
+    {
+      "q": "Can people also use it during calls?",
+      "a": "Yes. When a user makes a call, AI simultaneously performs recording, summarization, and analysis."
+    },
+    {
+      "q": "Are call contents automatically saved?",
+      "a": "All calls are automatically saved when recording consent is configured."
+    },
+    {
+      "q": "How are calls recorded?",
+      "a": "Voice is converted to text in real-time and stored together with the original audio."
+    },
+    {
+      "q": "What format is the call summary?",
+      "a": "A 3-5 line summary of key content is automatically organized along with main agreements and action items."
+    },
+    {
+      "q": "Are multiple speakers distinguished?",
+      "a": "Yes. The speaker separation feature identifies who said what."
+    },
+    {
+      "q": "Is emotion analysis available?",
+      "a": "Yes. Emotional states such as anger, neutral, and satisfaction are automatically analyzed."
+    },
+    {
+      "q": "Can I find previous calls?",
+      "a": "You can search with natural language like \"call about contract last month\"."
+    },
+    {
+      "q": "What does AI negotiation assistant do?",
+      "a": "It analyzes the other party's statements during calls to provide negotiation strategies, recommended phrases, and risk warnings."
+    },
+    {
+      "q": "Is AI visible to the other party during negotiation?",
+      "a": "No. Negotiation guides are displayed privately only to the user."
+    },
+    {
+      "q": "Does it help with price negotiation?",
+      "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
+    },
+    {
+      "q": "Can I know negotiation success probability?",
+      "a": "Contract success probability is provided in real-time during calls."
+    },
+    {
+      "q": "Is negotiation practice possible?",
+      "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
+    },
+    {
+      "q": "Are contracts automatically organized after calls?",
+      "a": "Yes. Contract summaries or drafts can be created based on call content."
+    },
+    {
+      "q": "Are verbal agreements recorded?",
+      "a": "Agreement content in calls is automatically extracted and matched with contract terms."
+    },
+    {
+      "q": "Can I give work instructions by voice?",
+      "a": "Voice commands like \"summarize this call and send by email\" are possible."
+    },
+    {
+      "q": "Does it integrate with CRM?",
+      "a": "It integrates with major CRMs such as Salesforce and HubSpot."
+    },
+    {
+      "q": "Does it create meeting minutes or proposals?",
+      "a": "They can be automatically generated after a call ends."
+    },
+    {
+      "q": "What does AI-to-AI calling mean?",
+      "a": "Our company's AI and the other company's AI directly call to pre-coordinate conditions."
+    },
+    {
+      "q": "Is human intervention completely unnecessary?",
+      "a": "It's only possible within preset ranges, and human intervention is required for final approval."
+    },
+    {
+      "q": "Is multilingual negotiation possible?",
+      "a": "Yes. Each AI can negotiate in real-time in different languages."
+    },
+    {
+      "q": "Are AI-to-AI call records saved?",
+      "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
+    },
+    {
+      "q": "Which languages are supported?",
+      "a": "Multiple languages including Korean, English, Japanese, Chinese, Spanish, and French are supported."
+    },
+    {
+      "q": "Are international numbers provided?",
+      "a": "Virtual numbers (DID) for each country are provided."
+    },
+    {
+      "q": "Is real-time translation possible?",
+      "a": "Real-time translation during calls and translated summary provision are possible."
+    },
+    {
+      "q": "Is call recording legal?",
+      "a": "Automatic guidance messages are applied according to recording laws in each country."
+    },
+    {
+      "q": "Is data stored securely?",
+      "a": "All data is stored encrypted."
+    },
+    {
+      "q": "Can it be used as legal evidence?",
+      "a": "It can be utilized as evidence material as it includes timestamps and hash values."
+    },
+    {
+      "q": "Does it comply with GDPR or CCPA?",
+      "a": "Yes. It complies with global personal information protection regulations."
+    },
+    {
+      "q": "Can I use it for free?",
+      "a": "Basic summary features are provided in the free plan."
+    },
+    {
+      "q": "What about enterprise pricing?",
+      "a": "Customized pricing is provided according to the number of users and features."
+    },
+    {
+      "q": "Can it be applied to call centers?",
+      "a": "Yes. It provides consultation automation and quality management features."
+    },
+    {
+      "q": "How do I start implementing it?",
+      "a": "You can start using it immediately after signing up and creating a virtual number."
+    }
+  ],
+  "es": [
+    {
+      "q": "What is this service?",
+      "a": "AI Call Assistant is a service where AI handles, records, and automatically summarizes, stores, and analyzes phone, voice, and messenger conversations."
+    },
+    {
+      "q": "When should I use it?",
+      "a": "It can be used in all situations requiring sales calls, customer consultations, contract negotiations, international calls, and call record management."
+    },
+    {
+      "q": "Does AI actually answer calls?",
+      "a": "Yes. AI can directly receive calls through a virtual number and converse like a human."
+    },
+    {
+      "q": "Can people also use it during calls?",
+      "a": "Yes. When a user makes a call, AI simultaneously performs recording, summarization, and analysis."
+    },
+    {
+      "q": "Are call contents automatically saved?",
+      "a": "All calls are automatically saved when recording consent is configured."
+    },
+    {
+      "q": "How are calls recorded?",
+      "a": "Voice is converted to text in real-time and stored together with the original audio."
+    },
+    {
+      "q": "What format is the call summary?",
+      "a": "A 3-5 line summary of key content is automatically organized along with main agreements and action items."
+    },
+    {
+      "q": "Are multiple speakers distinguished?",
+      "a": "Yes. The speaker separation feature identifies who said what."
+    },
+    {
+      "q": "Is emotion analysis available?",
+      "a": "Yes. Emotional states such as anger, neutral, and satisfaction are automatically analyzed."
+    },
+    {
+      "q": "Can I find previous calls?",
+      "a": "You can search with natural language like \"call about contract last month\"."
+    },
+    {
+      "q": "What does AI negotiation assistant do?",
+      "a": "It analyzes the other party's statements during calls to provide negotiation strategies, recommended phrases, and risk warnings."
+    },
+    {
+      "q": "Is AI visible to the other party during negotiation?",
+      "a": "No. Negotiation guides are displayed privately only to the user."
+    },
+    {
+      "q": "Does it help with price negotiation?",
+      "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
+    },
+    {
+      "q": "Can I know negotiation success probability?",
+      "a": "Contract success probability is provided in real-time during calls."
+    },
+    {
+      "q": "Is negotiation practice possible?",
+      "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
+    },
+    {
+      "q": "Are contracts automatically organized after calls?",
+      "a": "Yes. Contract summaries or drafts can be created based on call content."
+    },
+    {
+      "q": "Are verbal agreements recorded?",
+      "a": "Agreement content in calls is automatically extracted and matched with contract terms."
+    },
+    {
+      "q": "Can I give work instructions by voice?",
+      "a": "Voice commands like \"summarize this call and send by email\" are possible."
+    },
+    {
+      "q": "Does it integrate with CRM?",
+      "a": "It integrates with major CRMs such as Salesforce and HubSpot."
+    },
+    {
+      "q": "Does it create meeting minutes or proposals?",
+      "a": "They can be automatically generated after a call ends."
+    },
+    {
+      "q": "What does AI-to-AI calling mean?",
+      "a": "Our company's AI and the other company's AI directly call to pre-coordinate conditions."
+    },
+    {
+      "q": "Is human intervention completely unnecessary?",
+      "a": "It's only possible within preset ranges, and human intervention is required for final approval."
+    },
+    {
+      "q": "Is multilingual negotiation possible?",
+      "a": "Yes. Each AI can negotiate in real-time in different languages."
+    },
+    {
+      "q": "Are AI-to-AI call records saved?",
+      "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
+    },
+    {
+      "q": "Which languages are supported?",
+      "a": "Multiple languages including Korean, English, Japanese, Chinese, Spanish, and French are supported."
+    },
+    {
+      "q": "Are international numbers provided?",
+      "a": "Virtual numbers (DID) for each country are provided."
+    },
+    {
+      "q": "Is real-time translation possible?",
+      "a": "Real-time translation during calls and translated summary provision are possible."
+    },
+    {
+      "q": "Is call recording legal?",
+      "a": "Automatic guidance messages are applied according to recording laws in each country."
+    },
+    {
+      "q": "Is data stored securely?",
+      "a": "All data is stored encrypted."
+    },
+    {
+      "q": "Can it be used as legal evidence?",
+      "a": "It can be utilized as evidence material as it includes timestamps and hash values."
+    },
+    {
+      "q": "Does it comply with GDPR or CCPA?",
+      "a": "Yes. It complies with global personal information protection regulations."
+    },
+    {
+      "q": "Can I use it for free?",
+      "a": "Basic summary features are provided in the free plan."
+    },
+    {
+      "q": "What about enterprise pricing?",
+      "a": "Customized pricing is provided according to the number of users and features."
+    },
+    {
+      "q": "Can it be applied to call centers?",
+      "a": "Yes. It provides consultation automation and quality management features."
+    },
+    {
+      "q": "How do I start implementing it?",
+      "a": "You can start using it immediately after signing up and creating a virtual number."
+    }
+  ],
+  "fr": [
+    {
+      "q": "What is this service?",
+      "a": "AI Call Assistant is a service where AI handles, records, and automatically summarizes, stores, and analyzes phone, voice, and messenger conversations."
+    },
+    {
+      "q": "When should I use it?",
+      "a": "It can be used in all situations requiring sales calls, customer consultations, contract negotiations, international calls, and call record management."
+    },
+    {
+      "q": "Does AI actually answer calls?",
+      "a": "Yes. AI can directly receive calls through a virtual number and converse like a human."
+    },
+    {
+      "q": "Can people also use it during calls?",
+      "a": "Yes. When a user makes a call, AI simultaneously performs recording, summarization, and analysis."
+    },
+    {
+      "q": "Are call contents automatically saved?",
+      "a": "All calls are automatically saved when recording consent is configured."
+    },
+    {
+      "q": "How are calls recorded?",
+      "a": "Voice is converted to text in real-time and stored together with the original audio."
+    },
+    {
+      "q": "What format is the call summary?",
+      "a": "A 3-5 line summary of key content is automatically organized along with main agreements and action items."
+    },
+    {
+      "q": "Are multiple speakers distinguished?",
+      "a": "Yes. The speaker separation feature identifies who said what."
+    },
+    {
+      "q": "Is emotion analysis available?",
+      "a": "Yes. Emotional states such as anger, neutral, and satisfaction are automatically analyzed."
+    },
+    {
+      "q": "Can I find previous calls?",
+      "a": "You can search with natural language like \"call about contract last month\"."
+    },
+    {
+      "q": "What does AI negotiation assistant do?",
+      "a": "It analyzes the other party's statements during calls to provide negotiation strategies, recommended phrases, and risk warnings."
+    },
+    {
+      "q": "Is AI visible to the other party during negotiation?",
+      "a": "No. Negotiation guides are displayed privately only to the user."
+    },
+    {
+      "q": "Does it help with price negotiation?",
+      "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
+    },
+    {
+      "q": "Can I know negotiation success probability?",
+      "a": "Contract success probability is provided in real-time during calls."
+    },
+    {
+      "q": "Is negotiation practice possible?",
+      "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
+    },
+    {
+      "q": "Are contracts automatically organized after calls?",
+      "a": "Yes. Contract summaries or drafts can be created based on call content."
+    },
+    {
+      "q": "Are verbal agreements recorded?",
+      "a": "Agreement content in calls is automatically extracted and matched with contract terms."
+    },
+    {
+      "q": "Can I give work instructions by voice?",
+      "a": "Voice commands like \"summarize this call and send by email\" are possible."
+    },
+    {
+      "q": "Does it integrate with CRM?",
+      "a": "It integrates with major CRMs such as Salesforce and HubSpot."
+    },
+    {
+      "q": "Does it create meeting minutes or proposals?",
+      "a": "They can be automatically generated after a call ends."
+    },
+    {
+      "q": "What does AI-to-AI calling mean?",
+      "a": "Our company's AI and the other company's AI directly call to pre-coordinate conditions."
+    },
+    {
+      "q": "Is human intervention completely unnecessary?",
+      "a": "It's only possible within preset ranges, and human intervention is required for final approval."
+    },
+    {
+      "q": "Is multilingual negotiation possible?",
+      "a": "Yes. Each AI can negotiate in real-time in different languages."
+    },
+    {
+      "q": "Are AI-to-AI call records saved?",
+      "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
+    },
+    {
+      "q": "Which languages are supported?",
+      "a": "Multiple languages including Korean, English, Japanese, Chinese, Spanish, and French are supported."
+    },
+    {
+      "q": "Are international numbers provided?",
+      "a": "Virtual numbers (DID) for each country are provided."
+    },
+    {
+      "q": "Is real-time translation possible?",
+      "a": "Real-time translation during calls and translated summary provision are possible."
+    },
+    {
+      "q": "Is call recording legal?",
+      "a": "Automatic guidance messages are applied according to recording laws in each country."
+    },
+    {
+      "q": "Is data stored securely?",
+      "a": "All data is stored encrypted."
+    },
+    {
+      "q": "Can it be used as legal evidence?",
+      "a": "It can be utilized as evidence material as it includes timestamps and hash values."
+    },
+    {
+      "q": "Does it comply with GDPR or CCPA?",
+      "a": "Yes. It complies with global personal information protection regulations."
+    },
+    {
+      "q": "Can I use it for free?",
+      "a": "Basic summary features are provided in the free plan."
+    },
+    {
+      "q": "What about enterprise pricing?",
+      "a": "Customized pricing is provided according to the number of users and features."
+    },
+    {
+      "q": "Can it be applied to call centers?",
+      "a": "Yes. It provides consultation automation and quality management features."
+    },
+    {
+      "q": "How do I start implementing it?",
+      "a": "You can start using it immediately after signing up and creating a virtual number."
+    }
+  ],
+  "ar": [
+    {
+      "q": "What is this service?",
+      "a": "AI Call Assistant is a service where AI handles, records, and automatically summarizes, stores, and analyzes phone, voice, and messenger conversations."
+    },
+    {
+      "q": "When should I use it?",
+      "a": "It can be used in all situations requiring sales calls, customer consultations, contract negotiations, international calls, and call record management."
+    },
+    {
+      "q": "Does AI actually answer calls?",
+      "a": "Yes. AI can directly receive calls through a virtual number and converse like a human."
+    },
+    {
+      "q": "Can people also use it during calls?",
+      "a": "Yes. When a user makes a call, AI simultaneously performs recording, summarization, and analysis."
+    },
+    {
+      "q": "Are call contents automatically saved?",
+      "a": "All calls are automatically saved when recording consent is configured."
+    },
+    {
+      "q": "How are calls recorded?",
+      "a": "Voice is converted to text in real-time and stored together with the original audio."
+    },
+    {
+      "q": "What format is the call summary?",
+      "a": "A 3-5 line summary of key content is automatically organized along with main agreements and action items."
+    },
+    {
+      "q": "Are multiple speakers distinguished?",
+      "a": "Yes. The speaker separation feature identifies who said what."
+    },
+    {
+      "q": "Is emotion analysis available?",
+      "a": "Yes. Emotional states such as anger, neutral, and satisfaction are automatically analyzed."
+    },
+    {
+      "q": "Can I find previous calls?",
+      "a": "You can search with natural language like \"call about contract last month\"."
+    },
+    {
+      "q": "What does AI negotiation assistant do?",
+      "a": "It analyzes the other party's statements during calls to provide negotiation strategies, recommended phrases, and risk warnings."
+    },
+    {
+      "q": "Is AI visible to the other party during negotiation?",
+      "a": "No. Negotiation guides are displayed privately only to the user."
+    },
+    {
+      "q": "Does it help with price negotiation?",
+      "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
+    },
+    {
+      "q": "Can I know negotiation success probability?",
+      "a": "Contract success probability is provided in real-time during calls."
+    },
+    {
+      "q": "Is negotiation practice possible?",
+      "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
+    },
+    {
+      "q": "Are contracts automatically organized after calls?",
+      "a": "Yes. Contract summaries or drafts can be created based on call content."
+    },
+    {
+      "q": "Are verbal agreements recorded?",
+      "a": "Agreement content in calls is automatically extracted and matched with contract terms."
+    },
+    {
+      "q": "Can I give work instructions by voice?",
+      "a": "Voice commands like \"summarize this call and send by email\" are possible."
+    },
+    {
+      "q": "Does it integrate with CRM?",
+      "a": "It integrates with major CRMs such as Salesforce and HubSpot."
+    },
+    {
+      "q": "Does it create meeting minutes or proposals?",
+      "a": "They can be automatically generated after a call ends."
+    },
+    {
+      "q": "What does AI-to-AI calling mean?",
+      "a": "Our company's AI and the other company's AI directly call to pre-coordinate conditions."
+    },
+    {
+      "q": "Is human intervention completely unnecessary?",
+      "a": "It's only possible within preset ranges, and human intervention is required for final approval."
+    },
+    {
+      "q": "Is multilingual negotiation possible?",
+      "a": "Yes. Each AI can negotiate in real-time in different languages."
+    },
+    {
+      "q": "Are AI-to-AI call records saved?",
+      "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
+    },
+    {
+      "q": "Which languages are supported?",
+      "a": "Multiple languages including Korean, English, Japanese, Chinese, Spanish, and French are supported."
+    },
+    {
+      "q": "Are international numbers provided?",
+      "a": "Virtual numbers (DID) for each country are provided."
+    },
+    {
+      "q": "Is real-time translation possible?",
+      "a": "Real-time translation during calls and translated summary provision are possible."
+    },
+    {
+      "q": "Is call recording legal?",
+      "a": "Automatic guidance messages are applied according to recording laws in each country."
+    },
+    {
+      "q": "Is data stored securely?",
+      "a": "All data is stored encrypted."
+    },
+    {
+      "q": "Can it be used as legal evidence?",
+      "a": "It can be utilized as evidence material as it includes timestamps and hash values."
+    },
+    {
+      "q": "Does it comply with GDPR or CCPA?",
+      "a": "Yes. It complies with global personal information protection regulations."
+    },
+    {
+      "q": "Can I use it for free?",
+      "a": "Basic summary features are provided in the free plan."
+    },
+    {
+      "q": "What about enterprise pricing?",
+      "a": "Customized pricing is provided according to the number of users and features."
+    },
+    {
+      "q": "Can it be applied to call centers?",
+      "a": "Yes. It provides consultation automation and quality management features."
+    },
+    {
+      "q": "How do I start implementing it?",
+      "a": "You can start using it immediately after signing up and creating a virtual number."
+    }
+  ],
+  "bn": [
+    {
+      "q": "What is this service?",
+      "a": "AI Call Assistant is a service where AI handles, records, and automatically summarizes, stores, and analyzes phone, voice, and messenger conversations."
+    },
+    {
+      "q": "When should I use it?",
+      "a": "It can be used in all situations requiring sales calls, customer consultations, contract negotiations, international calls, and call record management."
+    },
+    {
+      "q": "Does AI actually answer calls?",
+      "a": "Yes. AI can directly receive calls through a virtual number and converse like a human."
+    },
+    {
+      "q": "Can people also use it during calls?",
+      "a": "Yes. When a user makes a call, AI simultaneously performs recording, summarization, and analysis."
+    },
+    {
+      "q": "Are call contents automatically saved?",
+      "a": "All calls are automatically saved when recording consent is configured."
+    },
+    {
+      "q": "How are calls recorded?",
+      "a": "Voice is converted to text in real-time and stored together with the original audio."
+    },
+    {
+      "q": "What format is the call summary?",
+      "a": "A 3-5 line summary of key content is automatically organized along with main agreements and action items."
+    },
+    {
+      "q": "Are multiple speakers distinguished?",
+      "a": "Yes. The speaker separation feature identifies who said what."
+    },
+    {
+      "q": "Is emotion analysis available?",
+      "a": "Yes. Emotional states such as anger, neutral, and satisfaction are automatically analyzed."
+    },
+    {
+      "q": "Can I find previous calls?",
+      "a": "You can search with natural language like \"call about contract last month\"."
+    },
+    {
+      "q": "What does AI negotiation assistant do?",
+      "a": "It analyzes the other party's statements during calls to provide negotiation strategies, recommended phrases, and risk warnings."
+    },
+    {
+      "q": "Is AI visible to the other party during negotiation?",
+      "a": "No. Negotiation guides are displayed privately only to the user."
+    },
+    {
+      "q": "Does it help with price negotiation?",
+      "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
+    },
+    {
+      "q": "Can I know negotiation success probability?",
+      "a": "Contract success probability is provided in real-time during calls."
+    },
+    {
+      "q": "Is negotiation practice possible?",
+      "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
+    },
+    {
+      "q": "Are contracts automatically organized after calls?",
+      "a": "Yes. Contract summaries or drafts can be created based on call content."
+    },
+    {
+      "q": "Are verbal agreements recorded?",
+      "a": "Agreement content in calls is automatically extracted and matched with contract terms."
+    },
+    {
+      "q": "Can I give work instructions by voice?",
+      "a": "Voice commands like \"summarize this call and send by email\" are possible."
+    },
+    {
+      "q": "Does it integrate with CRM?",
+      "a": "It integrates with major CRMs such as Salesforce and HubSpot."
+    },
+    {
+      "q": "Does it create meeting minutes or proposals?",
+      "a": "They can be automatically generated after a call ends."
+    },
+    {
+      "q": "What does AI-to-AI calling mean?",
+      "a": "Our company's AI and the other company's AI directly call to pre-coordinate conditions."
+    },
+    {
+      "q": "Is human intervention completely unnecessary?",
+      "a": "It's only possible within preset ranges, and human intervention is required for final approval."
+    },
+    {
+      "q": "Is multilingual negotiation possible?",
+      "a": "Yes. Each AI can negotiate in real-time in different languages."
+    },
+    {
+      "q": "Are AI-to-AI call records saved?",
+      "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
+    },
+    {
+      "q": "Which languages are supported?",
+      "a": "Multiple languages including Korean, English, Japanese, Chinese, Spanish, and French are supported."
+    },
+    {
+      "q": "Are international numbers provided?",
+      "a": "Virtual numbers (DID) for each country are provided."
+    },
+    {
+      "q": "Is real-time translation possible?",
+      "a": "Real-time translation during calls and translated summary provision are possible."
+    },
+    {
+      "q": "Is call recording legal?",
+      "a": "Automatic guidance messages are applied according to recording laws in each country."
+    },
+    {
+      "q": "Is data stored securely?",
+      "a": "All data is stored encrypted."
+    },
+    {
+      "q": "Can it be used as legal evidence?",
+      "a": "It can be utilized as evidence material as it includes timestamps and hash values."
+    },
+    {
+      "q": "Does it comply with GDPR or CCPA?",
+      "a": "Yes. It complies with global personal information protection regulations."
+    },
+    {
+      "q": "Can I use it for free?",
+      "a": "Basic summary features are provided in the free plan."
+    },
+    {
+      "q": "What about enterprise pricing?",
+      "a": "Customized pricing is provided according to the number of users and features."
+    },
+    {
+      "q": "Can it be applied to call centers?",
+      "a": "Yes. It provides consultation automation and quality management features."
+    },
+    {
+      "q": "How do I start implementing it?",
+      "a": "You can start using it immediately after signing up and creating a virtual number."
+    }
+  ],
+  "ru": [
+    {
+      "q": "What is this service?",
+      "a": "AI Call Assistant is a service where AI handles, records, and automatically summarizes, stores, and analyzes phone, voice, and messenger conversations."
+    },
+    {
+      "q": "When should I use it?",
+      "a": "It can be used in all situations requiring sales calls, customer consultations, contract negotiations, international calls, and call record management."
+    },
+    {
+      "q": "Does AI actually answer calls?",
+      "a": "Yes. AI can directly receive calls through a virtual number and converse like a human."
+    },
+    {
+      "q": "Can people also use it during calls?",
+      "a": "Yes. When a user makes a call, AI simultaneously performs recording, summarization, and analysis."
+    },
+    {
+      "q": "Are call contents automatically saved?",
+      "a": "All calls are automatically saved when recording consent is configured."
+    },
+    {
+      "q": "How are calls recorded?",
+      "a": "Voice is converted to text in real-time and stored together with the original audio."
+    },
+    {
+      "q": "What format is the call summary?",
+      "a": "A 3-5 line summary of key content is automatically organized along with main agreements and action items."
+    },
+    {
+      "q": "Are multiple speakers distinguished?",
+      "a": "Yes. The speaker separation feature identifies who said what."
+    },
+    {
+      "q": "Is emotion analysis available?",
+      "a": "Yes. Emotional states such as anger, neutral, and satisfaction are automatically analyzed."
+    },
+    {
+      "q": "Can I find previous calls?",
+      "a": "You can search with natural language like \"call about contract last month\"."
+    },
+    {
+      "q": "What does AI negotiation assistant do?",
+      "a": "It analyzes the other party's statements during calls to provide negotiation strategies, recommended phrases, and risk warnings."
+    },
+    {
+      "q": "Is AI visible to the other party during negotiation?",
+      "a": "No. Negotiation guides are displayed privately only to the user."
+    },
+    {
+      "q": "Does it help with price negotiation?",
+      "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
+    },
+    {
+      "q": "Can I know negotiation success probability?",
+      "a": "Contract success probability is provided in real-time during calls."
+    },
+    {
+      "q": "Is negotiation practice possible?",
+      "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
+    },
+    {
+      "q": "Are contracts automatically organized after calls?",
+      "a": "Yes. Contract summaries or drafts can be created based on call content."
+    },
+    {
+      "q": "Are verbal agreements recorded?",
+      "a": "Agreement content in calls is automatically extracted and matched with contract terms."
+    },
+    {
+      "q": "Can I give work instructions by voice?",
+      "a": "Voice commands like \"summarize this call and send by email\" are possible."
+    },
+    {
+      "q": "Does it integrate with CRM?",
+      "a": "It integrates with major CRMs such as Salesforce and HubSpot."
+    },
+    {
+      "q": "Does it create meeting minutes or proposals?",
+      "a": "They can be automatically generated after a call ends."
+    },
+    {
+      "q": "What does AI-to-AI calling mean?",
+      "a": "Our company's AI and the other company's AI directly call to pre-coordinate conditions."
+    },
+    {
+      "q": "Is human intervention completely unnecessary?",
+      "a": "It's only possible within preset ranges, and human intervention is required for final approval."
+    },
+    {
+      "q": "Is multilingual negotiation possible?",
+      "a": "Yes. Each AI can negotiate in real-time in different languages."
+    },
+    {
+      "q": "Are AI-to-AI call records saved?",
+      "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
+    },
+    {
+      "q": "Which languages are supported?",
+      "a": "Multiple languages including Korean, English, Japanese, Chinese, Spanish, and French are supported."
+    },
+    {
+      "q": "Are international numbers provided?",
+      "a": "Virtual numbers (DID) for each country are provided."
+    },
+    {
+      "q": "Is real-time translation possible?",
+      "a": "Real-time translation during calls and translated summary provision are possible."
+    },
+    {
+      "q": "Is call recording legal?",
+      "a": "Automatic guidance messages are applied according to recording laws in each country."
+    },
+    {
+      "q": "Is data stored securely?",
+      "a": "All data is stored encrypted."
+    },
+    {
+      "q": "Can it be used as legal evidence?",
+      "a": "It can be utilized as evidence material as it includes timestamps and hash values."
+    },
+    {
+      "q": "Does it comply with GDPR or CCPA?",
+      "a": "Yes. It complies with global personal information protection regulations."
+    },
+    {
+      "q": "Can I use it for free?",
+      "a": "Basic summary features are provided in the free plan."
+    },
+    {
+      "q": "What about enterprise pricing?",
+      "a": "Customized pricing is provided according to the number of users and features."
+    },
+    {
+      "q": "Can it be applied to call centers?",
+      "a": "Yes. It provides consultation automation and quality management features."
+    },
+    {
+      "q": "How do I start implementing it?",
+      "a": "You can start using it immediately after signing up and creating a virtual number."
+    }
+  ],
+  "pt": [
+    {
+      "q": "What is this service?",
+      "a": "AI Call Assistant is a service where AI handles, records, and automatically summarizes, stores, and analyzes phone, voice, and messenger conversations."
+    },
+    {
+      "q": "When should I use it?",
+      "a": "It can be used in all situations requiring sales calls, customer consultations, contract negotiations, international calls, and call record management."
+    },
+    {
+      "q": "Does AI actually answer calls?",
+      "a": "Yes. AI can directly receive calls through a virtual number and converse like a human."
+    },
+    {
+      "q": "Can people also use it during calls?",
+      "a": "Yes. When a user makes a call, AI simultaneously performs recording, summarization, and analysis."
+    },
+    {
+      "q": "Are call contents automatically saved?",
+      "a": "All calls are automatically saved when recording consent is configured."
+    },
+    {
+      "q": "How are calls recorded?",
+      "a": "Voice is converted to text in real-time and stored together with the original audio."
+    },
+    {
+      "q": "What format is the call summary?",
+      "a": "A 3-5 line summary of key content is automatically organized along with main agreements and action items."
+    },
+    {
+      "q": "Are multiple speakers distinguished?",
+      "a": "Yes. The speaker separation feature identifies who said what."
+    },
+    {
+      "q": "Is emotion analysis available?",
+      "a": "Yes. Emotional states such as anger, neutral, and satisfaction are automatically analyzed."
+    },
+    {
+      "q": "Can I find previous calls?",
+      "a": "You can search with natural language like \"call about contract last month\"."
+    },
+    {
+      "q": "What does AI negotiation assistant do?",
+      "a": "It analyzes the other party's statements during calls to provide negotiation strategies, recommended phrases, and risk warnings."
+    },
+    {
+      "q": "Is AI visible to the other party during negotiation?",
+      "a": "No. Negotiation guides are displayed privately only to the user."
+    },
+    {
+      "q": "Does it help with price negotiation?",
+      "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
+    },
+    {
+      "q": "Can I know negotiation success probability?",
+      "a": "Contract success probability is provided in real-time during calls."
+    },
+    {
+      "q": "Is negotiation practice possible?",
+      "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
+    },
+    {
+      "q": "Are contracts automatically organized after calls?",
+      "a": "Yes. Contract summaries or drafts can be created based on call content."
+    },
+    {
+      "q": "Are verbal agreements recorded?",
+      "a": "Agreement content in calls is automatically extracted and matched with contract terms."
+    },
+    {
+      "q": "Can I give work instructions by voice?",
+      "a": "Voice commands like \"summarize this call and send by email\" are possible."
+    },
+    {
+      "q": "Does it integrate with CRM?",
+      "a": "It integrates with major CRMs such as Salesforce and HubSpot."
+    },
+    {
+      "q": "Does it create meeting minutes or proposals?",
+      "a": "They can be automatically generated after a call ends."
+    },
+    {
+      "q": "What does AI-to-AI calling mean?",
+      "a": "Our company's AI and the other company's AI directly call to pre-coordinate conditions."
+    },
+    {
+      "q": "Is human intervention completely unnecessary?",
+      "a": "It's only possible within preset ranges, and human intervention is required for final approval."
+    },
+    {
+      "q": "Is multilingual negotiation possible?",
+      "a": "Yes. Each AI can negotiate in real-time in different languages."
+    },
+    {
+      "q": "Are AI-to-AI call records saved?",
+      "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
+    },
+    {
+      "q": "Which languages are supported?",
+      "a": "Multiple languages including Korean, English, Japanese, Chinese, Spanish, and French are supported."
+    },
+    {
+      "q": "Are international numbers provided?",
+      "a": "Virtual numbers (DID) for each country are provided."
+    },
+    {
+      "q": "Is real-time translation possible?",
+      "a": "Real-time translation during calls and translated summary provision are possible."
+    },
+    {
+      "q": "Is call recording legal?",
+      "a": "Automatic guidance messages are applied according to recording laws in each country."
+    },
+    {
+      "q": "Is data stored securely?",
+      "a": "All data is stored encrypted."
+    },
+    {
+      "q": "Can it be used as legal evidence?",
+      "a": "It can be utilized as evidence material as it includes timestamps and hash values."
+    },
+    {
+      "q": "Does it comply with GDPR or CCPA?",
+      "a": "Yes. It complies with global personal information protection regulations."
+    },
+    {
+      "q": "Can I use it for free?",
+      "a": "Basic summary features are provided in the free plan."
+    },
+    {
+      "q": "What about enterprise pricing?",
+      "a": "Customized pricing is provided according to the number of users and features."
+    },
+    {
+      "q": "Can it be applied to call centers?",
+      "a": "Yes. It provides consultation automation and quality management features."
+    },
+    {
+      "q": "How do I start implementing it?",
+      "a": "You can start using it immediately after signing up and creating a virtual number."
+    }
+  ]
+}

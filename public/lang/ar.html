@@ -6,18 +6,25 @@
     <title>CallMind AI - منصة مساعد المكالمات بالذكاء الاصطناعي</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media (max-width: 640px) {
+            .mobile-compact { font-size: 0.875rem; }
+            .mobile-title { font-size: 1rem !important; }
+            .mobile-btn { font-size: 0.75rem; padding: 0.5rem 1rem; }
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <i class="fas fa-phone-volume text-purple-600 text-xl"></i>
-                <span class="font-bold text-xl">CallMind AI</span>
+                <i class="fas fa-phone-volume text-purple-600 text-base sm:text-xl"></i>
+                <span class="font-bold text-base sm:text-xl mobile-title">CallMind AI</span>
             </div>
-            <nav class="flex items-center space-x-6">
+            <nav class="hidden md:flex items-center space-x-6">
                 <a href="#features" class="text-gray-700 hover:text-purple-600">الميزات الأساسية</a>
                 <a href="#industries" class="text-gray-700 hover:text-purple-600">حلول الصناعة</a>
-                <select onchange="window.location.href='/lang/'+this.value+'.html'" class="border rounded px-2 py-1">
+                <select onchange="window.location.href='/lang/'+this.value+'.html'" class="border rounded px-2 py-1 text-sm">
                     <option value="ko">🇰🇷 한국어</option>
                     <option value="en">🇺🇸 English</option>
                     <option value="zh-CN">🇨🇳 简体中文</option>
@@ -31,18 +38,32 @@
                     <option value="ru">🇷🇺 Русский</option>
                     <option value="pt">🇧🇷 Português</option>
                 </select>
-                <a href="#features" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">ابدأ مجانًا</a>
+                <a href="/signup" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">ابدأ مجانًا</a>
             </nav>
+            <select onchange="window.location.href='/lang/'+this.value+'.html'" class="md:hidden border rounded px-2 py-1 text-xs">
+                <option value="ko">🇰🇷 한국어</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="zh-CN">🇨🇳 简体中文</option>
+                <option value="zh-TW">🇹🇼 繁體中文</option>
+                <option value="ja">🇯🇵 日本語</option>
+                <option value="hi">🇮🇳 हिन्दी</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="ar">🇸🇦 العربية</option>
+                <option value="bn">🇧🇩 বাংলা</option>
+                <option value="ru">🇷🇺 Русский</option>
+                <option value="pt">🇧🇷 Português</option>
+            </select>
         </div>
     </header>
 
-    <section class="gradient-bg text-white py-16">
+    <section class="gradient-bg text-white py-8 sm:py-16">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">مساعد المكالمات<br>الذكي بالذكاء الاصطناعي</h1>
-            <p class="text-lg mb-8">الذكاء الاصطناعي يتعامل مع المحادثات الهاتفية والصوتية ومحادثات المراسلة في الوقت الفعلي</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#features" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">ابدأ مجانًا</a>
-                <a href="#features" class="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800">شاهد العرض التوضيحي</a>
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">مساعد المكالمات<br>الذكي بالذكاء الاصطناعي</h1>
+            <p class="text-sm sm:text-lg mb-6 sm:mb-8">الذكاء الاصطناعي يتعامل مع المحادثات الهاتفية والصوتية ومحادثات المراسلة في الوقت الفعلي</p>
+            <div class="flex flex-row gap-2 sm:gap-4 justify-center max-w-md mx-auto">
+                <a href="/signup" class="flex-1 bg-white text-purple-600 px-4 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 text-xs sm:text-base mobile-btn">ابدأ مجانًا</a>
+                <a href="/demo" class="flex-1 bg-purple-700 text-white px-4 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-purple-800 text-xs sm:text-base mobile-btn">مشاهدة العرض</a>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 <div><div class="text-3xl font-bold">12+</div><div class="text-sm">اللغات</div></div>
@@ -89,8 +110,244 @@
         </div>
     </footer>
 
+    <!-- 챗봇 위젯 (순수 CSS, FAQ 35개 항목 포함) -->
+    <input type="checkbox" id="chatbot-toggle" class="chatbot-toggle" />
+    <label for="chatbot-toggle" class="chatbot-button">
+        <i class="fas fa-comment-dots"></i>
+    </label>
+    
+    <div class="chatbot-panel">
+        <div class="chatbot-header">
+            <h3>روبوت CallMind AI</h3>
+            <label for="chatbot-toggle" class="chatbot-close">×</label>
+        </div>
+        <div class="chatbot-body">
+            <div class="chatbot-welcome">
+                <p><strong>مرحبًا! مرحبًا بك في CallMind AI.</strong></p>
+                <p>اختر سؤالاً شائعًا:</p>
+            </div>
+            
+            <div class="faq-section">
+                <details class="faq-item"><summary>What is this service?</summary><p>AI Call Assistant is a service where AI handles, records, and automatically summarizes, stores, and analyzes phone, voice, and messenger conversations.</p></details>
+                <details class="faq-item"><summary>When should I use it?</summary><p>It can be used in all situations requiring sales calls, customer consultations, contract negotiations, international calls, and call record management.</p></details>
+                <details class="faq-item"><summary>Does AI actually answer calls?</summary><p>Yes. AI can directly receive calls through a virtual number and converse like a human.</p></details>
+                <details class="faq-item"><summary>Can people also use it during calls?</summary><p>Yes. When a user makes a call, AI simultaneously performs recording, summarization, and analysis.</p></details>
+                <details class="faq-item"><summary>Are call contents automatically saved?</summary><p>All calls are automatically saved when recording consent is configured.</p></details>
+                <details class="faq-item"><summary>How are calls recorded?</summary><p>Voice is converted to text in real-time and stored together with the original audio.</p></details>
+                <details class="faq-item"><summary>What format is the call summary?</summary><p>A 3-5 line summary of key content is automatically organized along with main agreements and action items.</p></details>
+                <details class="faq-item"><summary>Are multiple speakers distinguished?</summary><p>Yes. The speaker separation feature identifies who said what.</p></details>
+                <details class="faq-item"><summary>Is emotion analysis available?</summary><p>Yes. Emotional states such as anger, neutral, and satisfaction are automatically analyzed.</p></details>
+                <details class="faq-item"><summary>Can I find previous calls?</summary><p>You can search with natural language like "call about contract last month".</p></details>
+                <details class="faq-item"><summary>What does AI negotiation assistant do?</summary><p>It analyzes the other party's statements during calls to provide negotiation strategies, recommended phrases, and risk warnings.</p></details>
+                <details class="faq-item"><summary>Is AI visible to the other party during negotiation?</summary><p>No. Negotiation guides are displayed privately only to the user.</p></details>
+                <details class="faq-item"><summary>Does it help with price negotiation?</summary><p>Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives.</p></details>
+                <details class="faq-item"><summary>Can I know negotiation success probability?</summary><p>Contract success probability is provided in real-time during calls.</p></details>
+                <details class="faq-item"><summary>Is negotiation practice possible?</summary><p>Yes. You can simulate negotiations with an AI counterpart before actual calls.</p></details>
+                <details class="faq-item"><summary>Are contracts automatically organized after calls?</summary><p>Yes. Contract summaries or drafts can be created based on call content.</p></details>
+                <details class="faq-item"><summary>Are verbal agreements recorded?</summary><p>Agreement content in calls is automatically extracted and matched with contract terms.</p></details>
+                <details class="faq-item"><summary>Can I give work instructions by voice?</summary><p>Voice commands like "summarize this call and send by email" are possible.</p></details>
+                <details class="faq-item"><summary>Does it integrate with CRM?</summary><p>It integrates with major CRMs such as Salesforce and HubSpot.</p></details>
+                <details class="faq-item"><summary>Does it create meeting minutes or proposals?</summary><p>They can be automatically generated after a call ends.</p></details>
+                <details class="faq-item"><summary>What does AI-to-AI calling mean?</summary><p>Our company's AI and the other company's AI directly call to pre-coordinate conditions.</p></details>
+                <details class="faq-item"><summary>Is human intervention completely unnecessary?</summary><p>It's only possible within preset ranges, and human intervention is required for final approval.</p></details>
+                <details class="faq-item"><summary>Is multilingual negotiation possible?</summary><p>Yes. Each AI can negotiate in real-time in different languages.</p></details>
+                <details class="faq-item"><summary>Are AI-to-AI call records saved?</summary><p>All AI↔AI calls are saved as voice, text, and agreement logs.</p></details>
+                <details class="faq-item"><summary>Which languages are supported?</summary><p>Multiple languages including Korean, English, Japanese, Chinese, Spanish, and French are supported.</p></details>
+                <details class="faq-item"><summary>Are international numbers provided?</summary><p>Virtual numbers (DID) for each country are provided.</p></details>
+                <details class="faq-item"><summary>Is real-time translation possible?</summary><p>Real-time translation during calls and translated summary provision are possible.</p></details>
+                <details class="faq-item"><summary>Is call recording legal?</summary><p>Automatic guidance messages are applied according to recording laws in each country.</p></details>
+                <details class="faq-item"><summary>Is data stored securely?</summary><p>All data is stored encrypted.</p></details>
+                <details class="faq-item"><summary>Can it be used as legal evidence?</summary><p>It can be utilized as evidence material as it includes timestamps and hash values.</p></details>
+                <details class="faq-item"><summary>Does it comply with GDPR or CCPA?</summary><p>Yes. It complies with global personal information protection regulations.</p></details>
+                <details class="faq-item"><summary>Can I use it for free?</summary><p>Basic summary features are provided in the free plan.</p></details>
+                <details class="faq-item"><summary>What about enterprise pricing?</summary><p>Customized pricing is provided according to the number of users and features.</p></details>
+                <details class="faq-item"><summary>Can it be applied to call centers?</summary><p>Yes. It provides consultation automation and quality management features.</p></details>
+                <details class="faq-item"><summary>How do I start implementing it?</summary><p>You can start using it immediately after signing up and creating a virtual number.</p></details>
+                </div>
+            
+            <div class="chatbot-actions">
+                <a href="#features" class="chatbot-cta">ابدأ مجانًا</a>
+            </div>
+        </div>
+    </div>
+
     <style>
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        .chatbot-toggle { display: none; }
+        
+        .chatbot-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            z-index: 1000;
+        }
+        
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        
+        .chatbot-panel {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 400px;
+            max-width: calc(100vw - 48px);
+            height: 600px;
+            max-height: calc(100vh - 100px);
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 999;
+        }
+        
+        .chatbot-toggle:checked ~ .chatbot-panel { display: flex; }
+        .chatbot-toggle:checked ~ .chatbot-button { display: none; }
+        
+        .chatbot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .chatbot-close {
+            font-size: 28px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0 8px;
+        }
+        
+        .chatbot-body {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .chatbot-welcome {
+            background: #f3f4f6;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .chatbot-welcome p {
+            margin: 0 0 6px 0;
+            color: #374151;
+            font-size: 14px;
+        }
+        
+        .chatbot-welcome p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .faq-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .faq-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-item summary {
+            background: white;
+            padding: 12px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #667eea;
+            font-size: 14px;
+            list-style: none;
+            user-select: none;
+        }
+        
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .faq-item summary:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-item p {
+            padding: 12px;
+            margin: 0;
+            background: #f9fafb;
+            color: #4b5563;
+            font-size: 13px;
+            line-height: 1.6;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .chatbot-actions {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .chatbot-cta {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .chatbot-cta:hover {
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot-panel {
+                width: calc(100vw - 32px);
+                height: calc(100vh - 100px);
+                right: 16px;
+                bottom: 16px;
+            }
+            
+            .chatbot-button {
+                bottom: 16px;
+                right: 16px;
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+            }
+        }
     </style>
 </body>
 </html>

@@ -6,18 +6,25 @@
     <title>CallMind AI - AI 통화비서 플랫폼</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @media (max-width: 640px) {
+            .mobile-compact { font-size: 0.875rem; }
+            .mobile-title { font-size: 1rem !important; }
+            .mobile-btn { font-size: 0.75rem; padding: 0.5rem 1rem; }
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <i class="fas fa-phone-volume text-purple-600 text-xl"></i>
-                <span class="font-bold text-xl">CallMind AI</span>
+                <i class="fas fa-phone-volume text-purple-600 text-base sm:text-xl"></i>
+                <span class="font-bold text-base sm:text-xl mobile-title">CallMind AI</span>
             </div>
-            <nav class="flex items-center space-x-6">
+            <nav class="hidden md:flex items-center space-x-6">
                 <a href="#features" class="text-gray-700 hover:text-purple-600">핵심 기능</a>
                 <a href="#industries" class="text-gray-700 hover:text-purple-600">산업별 특화</a>
-                <select onchange="window.location.href='/lang/'+this.value+'.html'" class="border rounded px-2 py-1">
+                <select onchange="window.location.href='/lang/'+this.value+'.html'" class="border rounded px-2 py-1 text-sm">
                     <option value="ko" selected>🇰🇷 한국어</option>
                     <option value="en">🇺🇸 English</option>
                     <option value="zh-CN">🇨🇳 简体中文</option>
@@ -31,18 +38,32 @@
                     <option value="ru">🇷🇺 Русский</option>
                     <option value="pt">🇧🇷 Português</option>
                 </select>
-                <a href="#features" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">무료로 시작하기</a>
+                <a href="/signup" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">무료로 시작하기</a>
             </nav>
+            <select onchange="window.location.href='/lang/'+this.value+'.html'" class="md:hidden border rounded px-2 py-1 text-xs">
+                <option value="ko" selected>🇰🇷 한국어</option>
+                <option value="en">🇺🇸 English</option>
+                <option value="zh-CN">🇨🇳 简体中文</option>
+                <option value="zh-TW">🇹🇼 繁體中文</option>
+                <option value="ja">🇯🇵 日本語</option>
+                <option value="hi">🇮🇳 हिन्दी</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="ar">🇸🇦 العربية</option>
+                <option value="bn">🇧🇩 বাংলা</option>
+                <option value="ru">🇷🇺 Русский</option>
+                <option value="pt">🇧🇷 Português</option>
+            </select>
         </div>
     </header>
 
-    <section class="gradient-bg text-white py-16">
+    <section class="gradient-bg text-white py-8 sm:py-16">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">AI가 대신하는<br>똑똑한 통화 비서</h1>
-            <p class="text-lg mb-8">전화·음성·메신저 대화를 AI가 실시간으로 응대·요약·기록·분석</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#features" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">무료로 시작하기</a>
-                <a href="#features" class="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800">데모 보기</a>
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">AI가 대신하는<br>똑똑한 통화 비서</h1>
+            <p class="text-sm sm:text-lg mb-6 sm:mb-8">전화·음성·메신저 대화를 AI가 실시간으로 응대·요약·기록·분석</p>
+            <div class="flex flex-row gap-2 sm:gap-4 justify-center max-w-md mx-auto">
+                <a href="/signup" class="flex-1 bg-white text-purple-600 px-4 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 text-xs sm:text-base mobile-btn">무료로 시작하기</a>
+                <a href="/demo" class="flex-1 bg-purple-700 text-white px-4 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold hover:bg-purple-800 text-xs sm:text-base mobile-btn">데모 보기</a>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 <div><div class="text-3xl font-bold">12+</div><div class="text-sm">지원 언어</div></div>
@@ -89,8 +110,244 @@
         </div>
     </footer>
 
+    <!-- 챗봇 위젯 (순수 CSS, FAQ 35개 항목 포함) -->
+    <input type="checkbox" id="chatbot-toggle" class="chatbot-toggle" />
+    <label for="chatbot-toggle" class="chatbot-button">
+        <i class="fas fa-comment-dots"></i>
+    </label>
+    
+    <div class="chatbot-panel">
+        <div class="chatbot-header">
+            <h3>CallMind AI 챗봇</h3>
+            <label for="chatbot-toggle" class="chatbot-close">×</label>
+        </div>
+        <div class="chatbot-body">
+            <div class="chatbot-welcome">
+                <p><strong>안녕하세요! CallMind AI입니다.</strong></p>
+                <p>자주 묻는 질문을 선택하시거나 아래에서 찾아보세요:</p>
+            </div>
+            
+            <div class="faq-section">
+                <details class="faq-item"><summary>이 서비스는 무엇인가요?</summary><p>AI 통화비서는 전화·음성·메신저 대화를 AI가 대신 응대하거나 기록하고, 통화 내용을 자동 요약·저장·분석해주는 서비스입니다.</p></details>
+                <details class="faq-item"><summary>어떤 상황에서 사용하면 좋나요?</summary><p>영업 통화, 고객 상담, 계약 협의, 해외 통화, 통화 기록 관리가 필요한 모든 상황에서 활용할 수 있습니다.</p></details>
+                <details class="faq-item"><summary>AI가 실제 전화를 받아주나요?</summary><p>네. 가상 번호를 통해 AI가 직접 전화를 수신하고 사람처럼 대화할 수 있습니다.</p></details>
+                <details class="faq-item"><summary>사람이 통화할 때도 사용 가능한가요?</summary><p>가능합니다. 사용자가 통화하면 AI가 동시에 녹취·요약·분석을 수행합니다.</p></details>
+                <details class="faq-item"><summary>통화 내용은 자동으로 저장되나요?</summary><p>녹취 동의가 설정된 경우 모든 통화는 자동으로 저장됩니다.</p></details>
+                <details class="faq-item"><summary>통화는 어떻게 기록되나요?</summary><p>음성은 실시간으로 텍스트로 변환되며, 원본 음성과 함께 저장됩니다.</p></details>
+                <details class="faq-item"><summary>통화 요약은 어떤 형태인가요?</summary><p>핵심 내용 3~5줄 요약과 함께 주요 합의사항, 액션 아이템이 자동 정리됩니다.</p></details>
+                <details class="faq-item"><summary>여러 사람이 통화해도 구분되나요?</summary><p>네. 화자 분리 기능으로 누가 어떤 말을 했는지 구분됩니다.</p></details>
+                <details class="faq-item"><summary>감정 분석도 되나요?</summary><p>네. 분노, 중립, 만족 등 감정 상태를 자동 분석합니다.</p></details>
+                <details class="faq-item"><summary>이전 통화를 다시 찾을 수 있나요?</summary><p>“지난달 계약 이야기한 통화”처럼 자연어로 검색할 수 있습니다.</p></details>
+                <details class="faq-item"><summary>AI 협상 비서는 어떤 역할을 하나요?</summary><p>통화 중 상대 발언을 분석해 협상 전략, 추천 멘트, 위험 경고를 제공합니다.</p></details>
+                <details class="faq-item"><summary>협상 중 상대방에게 AI가 보이나요?</summary><p>아닙니다. 협상 가이드는 사용자에게만 비공개로 표시됩니다.</p></details>
+                <details class="faq-item"><summary>가격 협상도 도와주나요?</summary><p>네. 가격·일정·조건을 종합 분석해 최적의 대안을 제안합니다.</p></details>
+                <details class="faq-item"><summary>협상 성공 가능성도 알 수 있나요?</summary><p>통화 중 실시간으로 계약 성사 확률을 제공합니다.</p></details>
+                <details class="faq-item"><summary>협상 연습도 가능한가요?</summary><p>가능합니다. 실제 통화 전 AI 상대와 협상 시뮬레이션을 할 수 있습니다.</p></details>
+                <details class="faq-item"><summary>통화 후 계약 정리가 자동으로 되나요?</summary><p>네. 통화 내용을 기반으로 계약 요약 또는 초안 생성이 가능합니다.</p></details>
+                <details class="faq-item"><summary>구두 합의도 기록되나요?</summary><p>통화 속 합의 내용은 자동으로 추출되어 계약 조항과 매칭됩니다.</p></details>
+                <details class="faq-item"><summary>음성으로 업무 지시가 가능한가요?</summary><p>“이 통화 요약해서 이메일로 보내”처럼 음성 명령이 가능합니다.</p></details>
+                <details class="faq-item"><summary>CRM 연동도 되나요?</summary><p>Salesforce, HubSpot 등 주요 CRM과 연동됩니다.</p></details>
+                <details class="faq-item"><summary>회의록이나 제안서도 만들어주나요?</summary><p>통화 종료 후 자동으로 생성할 수 있습니다.</p></details>
+                <details class="faq-item"><summary>AI끼리 통화한다는 게 무슨 뜻인가요?</summary><p>우리 회사 AI와 상대 회사 AI가 직접 통화해 조건을 사전 조율합니다.</p></details>
+                <details class="faq-item"><summary>사람이 전혀 개입하지 않아도 되나요?</summary><p>사전 설정 범위 내에서만 가능하며, 최종 승인에는 사람이 개입합니다.</p></details>
+                <details class="faq-item"><summary>다국어 협상도 되나요?</summary><p>네. 각 AI가 서로 다른 언어로 실시간 협상할 수 있습니다.</p></details>
+                <details class="faq-item"><summary>AI 간 통화 기록도 저장되나요?</summary><p>모든 AI↔AI 통화는 음성·텍스트·합의 로그로 저장됩니다.</p></details>
+                <details class="faq-item"><summary>어떤 언어를 지원하나요?</summary><p>한국어, 영어, 일본어, 중국어, 스페인어, 프랑스어 등 다국어를 지원합니다.</p></details>
+                <details class="faq-item"><summary>해외 번호도 제공되나요?</summary><p>국가별 가상 번호(DID)를 제공합니다.</p></details>
+                <details class="faq-item"><summary>실시간 번역이 가능한가요?</summary><p>통화 중 실시간 번역 및 번역 요약본 제공이 가능합니다.</p></details>
+                <details class="faq-item"><summary>통화 녹취는 합법인가요?</summary><p>국가별 녹취법에 따라 자동 안내 멘트가 적용됩니다.</p></details>
+                <details class="faq-item"><summary>데이터는 안전하게 저장되나요?</summary><p>모든 데이터는 암호화되어 저장됩니다.</p></details>
+                <details class="faq-item"><summary>법적 증빙으로 사용 가능한가요?</summary><p>타임스탬프와 해시값이 포함되어 증빙 자료로 활용할 수 있습니다.</p></details>
+                <details class="faq-item"><summary>GDPR이나 CCPA도 대응하나요?</summary><p>네. 글로벌 개인정보 보호 규정을 준수합니다.</p></details>
+                <details class="faq-item"><summary>무료로도 사용할 수 있나요?</summary><p>기본 요약 기능은 무료 요금제에서 제공됩니다.</p></details>
+                <details class="faq-item"><summary>기업용 요금제는 어떻게 되나요?</summary><p>사용자 수와 기능에 따라 맞춤형 요금제가 제공됩니다.</p></details>
+                <details class="faq-item"><summary>콜센터에도 적용 가능한가요?</summary><p>가능합니다. 상담 자동화 및 품질 관리 기능을 제공합니다.</p></details>
+                <details class="faq-item"><summary>도입하려면 어떻게 시작하나요?</summary><p>회원가입 후 가상 번호를 생성하면 바로 사용할 수 있습니다.</p></details>
+                </div>
+            
+            <div class="chatbot-actions">
+                <a href="#features" class="chatbot-cta">무료로 시작하기</a>
+            </div>
+        </div>
+    </div>
+
     <style>
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        .chatbot-toggle { display: none; }
+        
+        .chatbot-button {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            z-index: 1000;
+        }
+        
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        
+        .chatbot-panel {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 400px;
+            max-width: calc(100vw - 48px);
+            height: 600px;
+            max-height: calc(100vh - 100px);
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 999;
+        }
+        
+        .chatbot-toggle:checked ~ .chatbot-panel { display: flex; }
+        .chatbot-toggle:checked ~ .chatbot-button { display: none; }
+        
+        .chatbot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .chatbot-close {
+            font-size: 28px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0 8px;
+        }
+        
+        .chatbot-body {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .chatbot-welcome {
+            background: #f3f4f6;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .chatbot-welcome p {
+            margin: 0 0 6px 0;
+            color: #374151;
+            font-size: 14px;
+        }
+        
+        .chatbot-welcome p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .faq-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .faq-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-item summary {
+            background: white;
+            padding: 12px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #667eea;
+            font-size: 14px;
+            list-style: none;
+            user-select: none;
+        }
+        
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .faq-item summary:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-item p {
+            padding: 12px;
+            margin: 0;
+            background: #f9fafb;
+            color: #4b5563;
+            font-size: 13px;
+            line-height: 1.6;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .chatbot-actions {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .chatbot-cta {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .chatbot-cta:hover {
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot-panel {
+                width: calc(100vw - 32px);
+                height: calc(100vh - 100px);
+                right: 16px;
+                bottom: 16px;
+            }
+            
+            .chatbot-button {
+                bottom: 16px;
+                right: 16px;
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+            }
+        }
     </style>
 </body>
 </html>
