@@ -24,7 +24,7 @@
             <nav class="hidden md:flex items-center space-x-6">
                 <a href="#features" class="text-gray-700 hover:text-purple-600">মূল বৈশিষ্ট্য</a>
                 <a href="#industries" class="text-gray-700 hover:text-purple-600">শিল্প সমাধান</a>
-                <select onchange="window.location.href='/lang/'+this.value+'.html'" class="border rounded px-2 py-1 text-sm">
+                <select onchange="window.location.href='/lang/'+this.value" class="border rounded px-2 py-1 text-sm">
                     <option value="ko">🇰🇷 한국어</option>
                     <option value="en">🇺🇸 English</option>
                     <option value="zh-CN">🇨🇳 简体中文</option>
@@ -40,7 +40,7 @@
                 </select>
                 <a href="/signup" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">বিনামূল্যে শুরু করুন</a>
             </nav>
-            <select onchange="window.location.href='/lang/'+this.value+'.html'" class="md:hidden border rounded px-2 py-1 text-xs">
+            <select onchange="window.location.href='/lang/'+this.value" class="md:hidden border rounded px-2 py-1 text-xs">
                 <option value="ko">🇰🇷 한국어</option>
                 <option value="en">🇺🇸 English</option>
                 <option value="zh-CN">🇨🇳 简体中文</option>

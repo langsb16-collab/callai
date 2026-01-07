@@ -7,9 +7,8 @@ const app = new Hono()
 // Enable CORS for API routes
 app.use('/api/*', cors())
 
-// Serve static files from public directory
-app.use('/static/*', serveStatic({ root: './public' }))
-app.use('/lang/*', serveStatic({ root: './public' }))
+// Serve static files - Cloudflare Pages uses root path
+app.use('/*', serveStatic())
 
 // API Routes
 app.get('/api/health', (c) => {
@@ -109,7 +108,7 @@ app.get('/api/industries', (c) => {
 
 // Default route - redirect to Korean homepage
 app.get('/', (c) => {
-  return c.redirect('/lang/ko.html')
+  return c.redirect('/lang/ko')
 })
 
 export default app
