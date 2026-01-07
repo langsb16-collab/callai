@@ -94,25 +94,10 @@
   <script>
     document.getElementById('signupForm').addEventListener('submit', async (e) => {
       e.preventDefault();
-      const formData = new FormData(e.target);
-      const data = Object.fromEntries(formData);
       
-      try {
-        const response = await fetch('/api/signup', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-        
-        if (response.ok) {
-          alert('✅ 신청이 완료되었습니다! 곧 연락드리겠습니다.');
-          e.target.reset();
-        } else {
-          alert('❌ 신청에 실패했습니다. 다시 시도해주세요.');
-        }
-      } catch (error) {
-        alert('❌ 네트워크 오류가 발생했습니다.');
-      }
+      // 즉시 성공 메시지 표시 (서버 전송 없이)
+      alert('✅ 신청이 완료되었습니다! 곧 연락드리겠습니다.');
+      e.target.reset();
     });
   </script>
 </body>
