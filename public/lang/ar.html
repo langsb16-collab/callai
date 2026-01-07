@@ -6,945 +6,82 @@
     <title>CallMind AI - منصة مساعد المكالمات بالذكاء الاصطناعي</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        
-        /* 헤더 축소 */
-        header { padding: 0.5rem 0; }
-        
-        /* 히어로 섹션 축소 */
-        .hero-section { padding: 2rem 0 !important; }
-        .hero-title { font-size: 2rem !important; line-height: 1.2; }
-        .hero-subtitle { font-size: 1rem !important; margin-bottom: 1.5rem !important; }
-        .hero-btn { padding: 0.6rem 1.5rem !important; font-size: 0.875rem !important; }
-        .stat-number { font-size: 1.75rem !important; }
-        .stat-label { font-size: 0.75rem !important; }
-        
-        /* 섹션 제목 축소 */
-        .section-title { font-size: 1.75rem !important; margin-bottom: 0.75rem !important; }
-        .section-subtitle { font-size: 0.95rem !important; }
-        
-        /* 카드 축소 */
-        .industry-card { padding: 1rem !important; }
-        .industry-card h3 { font-size: 1.1rem !important; }
-        .industry-card p { font-size: 0.8rem !important; margin-bottom: 0.5rem !important; }
-        .industry-card li { font-size: 0.75rem !important; }
-        .industry-icon { width: 3rem !important; height: 3rem !important; font-size: 1.25rem !important; }
-        
-        /* 섹션 패딩 축소 */
-        section { padding: 2rem 0 !important; }
-        
-        @media (max-width: 768px) {
-            .hero-title { font-size: 1.5rem !important; }
-            .hero-subtitle { font-size: 0.875rem !important; }
-            .stat-number { font-size: 1.5rem !important; }
-            section { padding: 1.5rem 0 !important; }
-        }
-        
-        /* 챗봇 스타일 - 순수 CSS */
-        .chatbot-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            z-index: 1000;
-            transition: transform 0.2s;
-        }
-        .chatbot-toggle:hover { transform: scale(1.05); }
-        .chatbot-toggle i { color: white; font-size: 24px; }
-        
-        /* 챗봇 패널 - 체크박스로 제어 */
-        #chatbot-checkbox { display: none; }
-        
-        .chatbot-panel {
-            position: fixed;
-            bottom: -100%;
-            right: 0;
-            width: 400px;
-            max-width: 100vw;
-            height: 70vh;
-            background: white;
-            box-shadow: -2px 0 20px rgba(0,0,0,0.3);
-            z-index: 999;
-            transition: bottom 0.3s ease;
-            border-radius: 12px 12px 0 0;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        #chatbot-checkbox:checked ~ .chatbot-panel {
-            bottom: 0;
-        }
-        
-        .chatbot-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem;
-            border-radius: 12px 12px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .chatbot-content {
-            flex: 1;
-            overflow-y: auto;
-            padding: 1rem;
-        }
-        
-        /* FAQ 아코디언 - 순수 CSS */
-        .faq-category {
-            margin-bottom: 1rem;
-        }
-        
-        .faq-category-title {
-            font-weight: bold;
-            color: #764ba2;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .faq-item {
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
-            overflow: hidden;
-        }
-        
-        .faq-checkbox { display: none; }
-        
-        .faq-question {
-            padding: 0.75rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-        
-        .faq-question:hover {
-            background: #f3f4f6;
-        }
-        
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            padding: 0 0.75rem;
-            font-size: 0.75rem;
-            color: #4b5563;
-            background: #f9fafb;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        
-        .faq-checkbox:checked ~ .faq-answer {
-            max-height: 500px;
-            padding: 0.75rem;
-        }
-        
-        .faq-icon {
-            transition: transform 0.3s;
-            font-size: 0.75rem;
-        }
-        
-        .faq-checkbox:checked + label .faq-icon {
-            transform: rotate(180deg);
-        }
-        
-        @media (max-width: 768px) {
-            .chatbot-panel {
-                width: 100vw;
-                height: 75vh;
-            }
-            .chatbot-toggle {
-                width: 52px;
-                height: 52px;
-                bottom: 16px;
-                right: 16px;
-            }
-        }
-    </style>
 </head>
 <body class="bg-gray-50">
     <!-- 헤더 -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 py-2">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-phone-volume text-purple-600 text-lg"></i>
-                    <span class="font-bold text-base text-gray-900">CallMind AI</span>
-                </div>
-                
-                <div class="hidden md:flex space-x-4 text-sm">
-                    <a href="#features" class="text-gray-700 hover:text-purple-600">الميزات الأساسية</a>
-                    <a href="#industries" class="text-gray-700 hover:text-purple-600">산업별 특화</a>
-                    <a href="#pricing" class="text-gray-700 hover:text-purple-600">التسعير</a>
-                </div>
-                
-                <div class="flex items-center space-x-2">
-                    <select class="appearance-none bg-gray-100 border-0 rounded-lg px-2 py-1 pr-6 text-xs cursor-pointer" onchange="window.location.href='/lang/' + this.value + '.html'">
-                        <option value="ko" selected>🇰🇷 한국어</option>
-                        <option value="en">🇺🇸 English</option>
-                        <option value="zh-CN">🇨🇳 简体中文</option>
-                        <option value="zh-TW">🇹🇼 繁體中文</option>
-                        <option value="hi">🇮🇳 हिन्दी</option>
-                        <option value="es">🇪🇸 Español</option>
-                        <option value="fr">🇫🇷 Français</option>
-                        <option value="ar">🇸🇦 العربية</option>
-                        <option value="bn">🇧🇩 বাংলা</option>
-                        <option value="ru">🇷🇺 Русский</option>
-                        <option value="pt">🇧🇷 Português</option>
-                        <option value="ja">🇯🇵 日本語</option>
-                    </select>
-                    <a href="#pricing" class="bg-purple-600 text-white px-3 py-1.5 rounded-lg hover:bg-purple-700 text-xs">ابدأ مجاناً</a>
-                    <a href="#features" class="hero-btn bg-purple-700 text-white rounded-lg font-semibold hover:bg-purple-800 transition w-full sm:w-auto">شاهد العرض التوضيحي</a>
-                </div>
-                
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
-                    <div class="text-center">
-                        <div class="stat-number font-bold">12+</div>
-                        <div class="stat-label text-purple-200">지원 언어</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="stat-number font-bold">99.9%</div>
-                        <div class="stat-label text-purple-200">인식 정확도</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="stat-number font-bold">24/7</div>
-                        <div class="stat-label text-purple-200">무중단 서비스</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="stat-number font-bold">&lt; 1초</div>
-                        <div class="stat-label text-purple-200">응답 속도</div>
-                    </div>
-                </div>
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-phone-volume text-purple-600 text-xl"></i>
+                <span class="font-bold text-xl">CallMind AI</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-gray-700 hover:text-purple-600">الميزات الأساسية</a>
+                <a href="#industries" class="text-gray-700 hover:text-purple-600">حلول الصناعة</a>
+                <a href="#features" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">ابدأ مجانًا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">مساعد المكالمات<br>الذكي بالذكاء الاصطناعي</h1>
+            <p class="text-lg mb-8">الذكاء الاصطناعي يتعامل مع المحادثات الهاتفية والصوتية ومحادثات المراسلة في الوقت الفعلي</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#features" class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">ابدأ مجانًا</a>
+                <a href="#features" class="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800">شاهد العرض التوضيحي</a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+                <div><div class="text-3xl font-bold">12+</div><div class="text-sm">اللغات</div></div>
+                <div><div class="text-3xl font-bold">99.9%</div><div class="text-sm">دقة التعرف</div></div>
+                <div><div class="text-3xl font-bold">24/7</div><div class="text-sm">خدمة غير منقطعة</div></div>
+                <div><div class="text-3xl font-bold">&lt; 1초</div><div class="text-sm">وقت الاستجابة</div></div>
             </div>
         </div>
     </section>
 
     <!-- 핵심 기능 -->
-    <section id="features" class="bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-4">
-                <h2 class="section-title font-bold text-gray-900">핵심 기능</h2>
-                <p class="section-subtitle text-gray-600">통화의 모든 순간을 AI가 관리합니다</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-gradient-to-br from-purple-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center mb-2">
-                        <i class="fas fa-robot text-white text-lg"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-1">AI 통화 응대</h3>
-                    <p class="text-xs text-gray-600">AI가 직접 전화를 받아 자연스럽게 대화합니다</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mb-2">
-                        <i class="fas fa-file-alt text-white text-lg"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-1">자동 녹취·요약</h3>
-                    <p class="text-xs text-gray-600">통화를 실시간 텍스트화하고 핵심 내용을 자동 요약</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-green-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center mb-2">
-                        <i class="fas fa-handshake text-white text-lg"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-1">AI 협상 비서</h3>
-                    <p class="text-xs text-gray-600">실시간 협상 전략 제안과 성공 확률 분석</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-yellow-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center mb-2">
-                        <i class="fas fa-globe text-white text-lg"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-1">다국어 지원</h3>
-                    <p class="text-xs text-gray-600">12개 언어 지원 및 실시간 번역</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-red-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center mb-2">
-                        <i class="fas fa-shield-alt text-white text-lg"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-1">법적 증빙</h3>
-                    <p class="text-xs text-gray-600">타임스탬프와 해시값으로 안전하게 보관</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-indigo-50 to-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center mb-2">
-                        <i class="fas fa-cogs text-white text-lg"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-gray-900 mb-1">업무 자동화</h3>
-                    <p class="text-xs text-gray-600">회의록, 계약서, 제안서 자동 생성</p>
-                </div>
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">الميزات الأساسية</h2>
+            <p class="text-center text-gray-600 mb-12">الذكاء الاصطناعي يدير كل لحظة من مكالماتك</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6"><i class="fas fa-headset text-4xl text-purple-600 mb-4"></i><h3 class="font-bold text-lg mb-2">استجابة المكالمات بالذكاء الاصطناعي</h3><p class="text-gray-600">الذكاء الاصطناعي يجيب على المكالمات ويتحدث بشكل طبيعي</p></div>
+                <div class="text-center p-6"><i class="fas fa-file-alt text-4xl text-purple-600 mb-4"></i><h3 class="font-bold text-lg mb-2">النسخ والملخص التلقائي</h3><p class="text-gray-600">النسخ في الوقت الفعلي والملخص التلقائي</p></div>
+                <div class="text-center p-6"><i class="fas fa-brain text-4xl text-purple-600 mb-4"></i><h3 class="font-bold text-lg mb-2">مساعد التفاوض بالذكاء الاصطناعي</h3><p class="text-gray-600">استراتيجية التفاوض في الوقت الفعلي وتحليل النجاح</p></div>
+                <div class="text-center p-6"><i class="fas fa-globe text-4xl text-purple-600 mb-4"></i><h3 class="font-bold text-lg mb-2">الدعم متعدد اللغات</h3><p class="text-gray-600">12 لغة مدعومة مع ترجمة في الوقت الفعلي</p></div>
+                <div class="text-center p-6"><i class="fas fa-shield-alt text-4xl text-purple-600 mb-4"></i><h3 class="font-bold text-lg mb-2">دليل قانوني</h3><p class="text-gray-600">مخزن بأمان مع الطابع الزمني والتجزئة</p></div>
+                <div class="text-center p-6"><i class="fas fa-cogs text-4xl text-purple-600 mb-4"></i><h3 class="font-bold text-lg mb-2">أتمتة سير العمل</h3><p class="text-gray-600">إنشاء ملاحظات الاجتماع والعقود والمقترحات تلقائيًا</p></div>
             </div>
         </div>
     </section>
 
-    <!-- 산업별 특화 솔루션 -->
-    <section id="industries" class="bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-4">
-                <h2 class="section-title font-bold text-gray-900">산업별 특화 솔루션</h2>
-                <p class="section-subtitle text-gray-600">직군에 최적화된 AI 통화비서</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- 간병인 -->
-                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="industry-icon bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center mb-2">
-                        <i class="fas fa-heart text-white"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-1">الرعاية</h3>
-                    <p class="text-gray-600 mb-2">تلخيص تلقائي لمكالمات مقدمي الرعاية، اكتشاف حالات الطوارئ</p>
-                    <ul class="space-y-1">
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>통화 내용 자동 요약 전송</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>위험 키워드 즉시 알림</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>구두 합의 자동 기록</li>
-                    </ul>
-                </div>
-                
-                <!-- 건설현장 -->
-                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="industry-icon bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-2">
-                        <i class="fas fa-hard-hat text-white"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-1">مواقع البناء</h3>
-                    <p class="text-gray-600 mb-2">الذكاء الاصطناعي يتعامل مع المكالمات أثناء العمل، السلامة أولاً</p>
-                    <ul class="space-y-1">
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>작업 중 자동 응대</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>작업 지시 자동 정리</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>긴급도 자동 판단</li>
-                    </ul>
-                </div>
-                
-                <!-- 택배·배송 -->
-                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="industry-icon bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-2">
-                        <i class="fas fa-truck text-white"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-1">خدمات التوصيل</h3>
-                    <p class="text-gray-600 mb-2">مكالمات آمنة أثناء القيادة، معالجة الاستفسارات المتكررة تلقائياً</p>
-                    <ul class="space-y-1">
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>배송 상태 자동 응답</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>부재 처리 자동 안내</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>배송 분쟁 증빙</li>
-                    </ul>
-                </div>
-                
-                <!-- 자영업 -->
-                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="industry-icon bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-2">
-                        <i class="fas fa-store text-white"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-1">العمل الحر</h3>
-                    <p class="text-gray-600 mb-2">معالجة الحجوزات واستفسارات العملاء تلقائياً</p>
-                    <ul class="space-y-1">
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>24시간 예약 접수</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>메뉴/가격 자동 안내</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>단골 고객 자동 인식</li>
-                    </ul>
-                </div>
-                
-                <!-- 프리랜서·영업 -->
-                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="industry-icon bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mb-2">
-                        <i class="fas fa-briefcase text-white"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-1">العمل الحر</h3>
-                    <p class="text-gray-600 mb-2">تحليل المكالمات، استراتيجية التفاوض، إدارة العملاء</p>
-                    <ul class="space-y-1">
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>협상 전략 실시간 제안</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>고객별 통화 히스토리</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>CRM 자동 연동</li>
-                    </ul>
-                </div>
-                
-                <!-- 공장·제조 -->
-                <div class="industry-card bg-white rounded-xl shadow-md hover:shadow-xl transition cursor-pointer">
-                    <div class="industry-icon bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl flex items-center justify-center mb-2">
-                        <i class="fas fa-industry text-white"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-900 mb-1">التصنيع</h3>
-                    <p class="text-gray-600 mb-2">اكتشاف مشاكل المعدات، تسليم الوردية</p>
-                    <ul class="space-y-1">
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>설비 고장 키워드 감지</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>교대 근무 인수인계</li>
-                        <li class="text-gray-700"><i class="fas fa-check text-green-500 mr-1 text-xs"></i>작업 연속성 유지</li>
-                    </ul>
-                </div>
+    <!-- 산업별 -->
+    <section id="industries" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">حلول الصناعة</h2>
+            <p class="text-center text-gray-600 mb-12">مساعد المكالمات بالذكاء الاصطناعي المحسّن لصناعتك</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow"><i class="fas fa-user-nurse text-3xl text-pink-500 mb-3"></i><h3 class="font-bold mb-2">الرعاية</h3><p class="text-gray-600 text-sm mb-3">تلخيص تلقائي لمكالمات مقدمي الرعاية، اكتشاف حالات الطوارئ</p><ul class="text-sm text-gray-600 space-y-1"><li>✓ إرسال ملخصات المكالمات تلقائيًا</li><li>✓ تنبيهات فورية للكلمات الرئيسية للمخاطر</li><li>✓ تسجيل الاتفاقيات الشفهية تلقائيًا</li></ul></div>
+                <div class="bg-white p-6 rounded-lg shadow"><i class="fas fa-hard-hat text-3xl text-orange-500 mb-3"></i><h3 class="font-bold mb-2">مواقع البناء</h3><p class="text-gray-600 text-sm mb-3">الذكاء الاصطناعي يتعامل مع المكالمات أثناء العمل، السلامة أولاً</p><ul class="text-sm text-gray-600 space-y-1"><li>✓ استجابة تلقائية أثناء العمل</li><li>✓ تنظيم تعليمات العمل تلقائيًا</li><li>✓ تقييم الإلحاح تلقائيًا</li></ul></div>
+                <div class="bg-white p-6 rounded-lg shadow"><i class="fas fa-shipping-fast text-3xl text-blue-500 mb-3"></i><h3 class="font-bold mb-2">خدمات التوصيل</h3><p class="text-gray-600 text-sm mb-3">مكالمات آمنة أثناء القيادة، معالجة الاستفسارات المتكررة تلقائيًا</p><ul class="text-sm text-gray-600 space-y-1"><li>✓ الرد تلقائيًا على حالة التوصيل</li><li>✓ إرشاد معالجة الغياب تلقائيًا</li><li>✓ دليل نزاعات التوصيل</li></ul></div>
+                <div class="bg-white p-6 rounded-lg shadow"><i class="fas fa-store text-3xl text-green-500 mb-3"></i><h3 class="font-bold mb-2">العمل الحر</h3><p class="text-gray-600 text-sm mb-3">معالجة الحجوزات واستفسارات العملاء تلقائيًا</p><ul class="text-sm text-gray-600 space-y-1"><li>✓ معالجة الحجوزات على مدار الساعة</li><li>✓ إبلاغ القائمة/الأسعار تلقائيًا</li><li>✓ التعرف على العملاء المنتظمين تلقائيًا</li></ul></div>
+                <div class="bg-white p-6 rounded-lg shadow"><i class="fas fa-briefcase text-3xl text-purple-500 mb-3"></i><h3 class="font-bold mb-2">العمل الحر</h3><p class="text-gray-600 text-sm mb-3">تحليل المكالمات، استراتيجية التفاوض، إدارة العملاء</p><ul class="text-sm text-gray-600 space-y-1"><li>✓ مقترحات التفاوض في الوقت الفعلي</li><li>✓ سجل مكالمات العملاء</li><li>✓ مزامنة CRM تلقائيًا</li></ul></div>
+                <div class="bg-white p-6 rounded-lg shadow"><i class="fas fa-industry text-3xl text-gray-600 mb-3"></i><h3 class="font-bold mb-2">التصنيع</h3><p class="text-gray-600 text-sm mb-3">اكتشاف مشاكل المعدات، تسليم الوردية</p><ul class="text-sm text-gray-600 space-y-1"><li>✓ اكتشاف كلمات رئيسية لفشل المعدات</li><li>✓ تسليم الوردية</li><li>✓ الحفاظ على استمرارية العمل</li></ul></div>
             </div>
         </div>
     </section>
 
-    <!-- 요금제 -->
-    <section id="pricing" class="bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-4">
-                <h2 class="section-title font-bold text-gray-900">요금제</h2>
-                <p class="section-subtitle text-gray-600">필요에 맞는 플랜을 선택하세요</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-4">
-                <!-- Free -->
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition">
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">Free</h3>
-                    <div class="text-2xl font-bold text-gray-900 mb-2">$0<span class="text-sm text-gray-600">/월</span></div>
-                    <ul class="space-y-1.5 mb-4 text-xs">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>월 30분 통화</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>기본 요약 기능</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>7일 보관</li>
-                    </ul>
-                    <button class="w-full bg-gray-200 text-gray-800 py-2 rounded-lg font-semibold hover:bg-gray-300 transition text-sm">시작하기</button>
-                </div>
-                
-                <!-- Pro -->
-                <div class="bg-white p-4 rounded-xl shadow-lg border-2 border-purple-600 relative">
-                    <div class="absolute -top-2.5 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white px-3 py-0.5 rounded-full text-xs">인기</div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">Pro</h3>
-                    <div class="text-2xl font-bold text-gray-900 mb-2">$15<span class="text-sm text-gray-600">/월</span></div>
-                    <ul class="space-y-1.5 mb-4 text-xs">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>무제한 통화</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>고급 요약·검색</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>감정 분석</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>1년 보관</li>
-                    </ul>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition text-sm">시작하기</button>
-                </div>
-                
-                <!-- Premium -->
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-lg transition">
-                    <h3 class="text-lg font-bold text-gray-900 mb-1">Premium</h3>
-                    <div class="text-2xl font-bold text-gray-900 mb-2">$25<span class="text-sm text-gray-600">/월</span></div>
-                    <ul class="space-y-1.5 mb-4 text-xs">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>Pro의 모든 기능</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>AI 통화 응대</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>협상 AI</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-1.5 text-xs"></i>무제한 보관</li>
-                    </ul>
-                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition text-sm">시작하기</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 푸터 -->
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-6 text-sm">
-                <div>
-                    <div class="flex items-center space-x-2 mb-3">
-                        <i class="fas fa-phone-volume text-purple-400"></i>
-                        <span class="font-bold">CallMind AI</span>
-                    </div>
-                    <p class="text-gray-400 text-xs">AI 기반 통화 비서 플랫폼</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-2 text-sm">제품</h4>
-                    <ul class="space-y-1.5 text-gray-400 text-xs">
-                        <li><a href="#" class="hover:text-white">기능</a></li>
-                        <li><a href="#" class="hover:text-white">요금제</a></li>
-                        <li><a href="#" class="hover:text-white">API</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-2 text-sm">회사</h4>
-                    <ul class="space-y-1.5 text-gray-400 text-xs">
-                        <li><a href="#" class="hover:text-white">소개</a></li>
-                        <li><a href="#" class="hover:text-white">블로그</a></li>
-                        <li><a href="#" class="hover:text-white">채용</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-2 text-sm">지원</h4>
-                    <ul class="space-y-1.5 text-gray-400 text-xs">
-                        <li><a href="#" class="hover:text-white">고객센터</a></li>
-                        <li><a href="#" class="hover:text-white">문서</a></li>
-                        <li><a href="#" class="hover:text-white">개인정보처리방침</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400 text-xs">
-                <p>&copy; 2024 CallMind AI. All rights reserved.</p>
-            </div>
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 CallMind AI. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- 챗봇 토글 버튼 -->
-    <label for="chatbot-checkbox" class="chatbot-toggle">
-        <i class="fas fa-comments"></i>
-    </label>
-
-    <!-- 챗봇 체크박스 (숨김) -->
-    <input type="checkbox" id="chatbot-checkbox">
-
-    <!-- 챗봇 패널 -->
-    <div class="chatbot-panel">
-        <div class="chatbot-header">
-            <div>
-                <div class="font-semibold text-sm">مساعد الأسئلة الشائعة</div>
-                <div class="text-xs text-purple-200">الأسئلة المتداولة</div>
-            </div>
-            <label for="chatbot-checkbox" class="cursor-pointer hover:text-gray-200">
-                <i class="fas fa-times text-lg"></i>
-            </label>
-        </div>
-        
-        <div class="chatbot-content">
-            <!-- 기본 서비스 안내 -->
-            <div class="faq-category">
-                <div class="faq-category-title">
-                    <i class="fas fa-circle mr-1 text-xs"></i>معلومات الخدمة الأساسية
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq1" class="faq-checkbox">
-                    <label for="faq1" class="faq-question">
-                        <span>이 서비스는 무엇인가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        AI 통화비서는 전화·음성·메신저 대화를 AI가 대신 응대하거나 기록하고, 통화 내용을 자동 요약·저장·분석해주는 서비스입니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq2" class="faq-checkbox">
-                    <label for="faq2" class="faq-question">
-                        <span>어떤 상황에서 사용하면 좋나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        영업 통화, 고객 상담, 계약 협의, 해외 통화, 통화 기록 관리가 필요한 모든 상황에서 활용할 수 있습니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq3" class="faq-checkbox">
-                    <label for="faq3" class="faq-question">
-                        <span>AI가 실제 전화를 받아주나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        네. 가상 번호를 통해 AI가 직접 전화를 수신하고 사람처럼 대화할 수 있습니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq4" class="faq-checkbox">
-                    <label for="faq4" class="faq-question">
-                        <span>사람이 통화할 때도 사용 가능한가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        가능합니다. 사용자가 통화하면 AI가 동시에 녹취·요약·분석을 수행합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq5" class="faq-checkbox">
-                    <label for="faq5" class="faq-question">
-                        <span>통화 내용은 자동으로 저장되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        녹취 동의가 설정된 경우 모든 통화는 자동으로 저장됩니다.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 통화 녹취·요약 기능 -->
-            <div class="faq-category">
-                <div class="faq-category-title">
-                    <i class="fas fa-circle mr-1 text-xs"></i>تسجيل المكالمات والتلخيص
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq6" class="faq-checkbox">
-                    <label for="faq6" class="faq-question">
-                        <span>통화는 어떻게 기록되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        음성은 실시간으로 텍스트로 변환되며, 원본 음성과 함께 저장됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq7" class="faq-checkbox">
-                    <label for="faq7" class="faq-question">
-                        <span>통화 요약은 어떤 형태인가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        핵심 내용 3~5줄 요약과 함께 주요 합의사항, 액션 아이템이 자동 정리됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq8" class="faq-checkbox">
-                    <label for="faq8" class="faq-question">
-                        <span>여러 사람이 통화해도 구분되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        네. 화자 분리 기능으로 누가 어떤 말을 했는지 구분됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq9" class="faq-checkbox">
-                    <label for="faq9" class="faq-question">
-                        <span>감정 분석도 되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        네. 분노, 중립, 만족 등 감정 상태를 자동 분석합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq10" class="faq-checkbox">
-                    <label for="faq10" class="faq-question">
-                        <span>이전 통화를 다시 찾을 수 있나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        "지난달 계약 이야기한 통화"처럼 자연어로 검색할 수 있습니다.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- AI 협상 비서 관련 -->
-            <div class="faq-category">
-                <div class="faq-category-title">
-                    <i class="fas fa-circle mr-1 text-xs"></i>مساعد التفاوض بالذكاء الاصطناعي
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq11" class="faq-checkbox">
-                    <label for="faq11" class="faq-question">
-                        <span>AI 협상 비서는 어떤 역할을 하나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        통화 중 상대 발언을 분석해 협상 전략, 추천 멘트, 위험 경고를 제공합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq12" class="faq-checkbox">
-                    <label for="faq12" class="faq-question">
-                        <span>협상 중 상대방에게 AI가 보이나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        아닙니다. 협상 가이드는 사용자에게만 비공개로 표시됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq13" class="faq-checkbox">
-                    <label for="faq13" class="faq-question">
-                        <span>가격 협상도 도와주나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        네. 가격·일정·조건을 종합 분석해 최적의 대안을 제안합니다.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 보안·법적 -->
-            <div class="faq-category">
-                <div class="faq-category-title">
-                    <i class="fas fa-circle mr-1 text-xs"></i>الأمان والقانوني
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq14" class="faq-checkbox">
-                    <label for="faq14" class="faq-question">
-                        <span>통화 녹취는 합법인가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        국가별 녹취법에 따라 자동 안내 멘트가 적용됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq15" class="faq-checkbox">
-                    <label for="faq15" class="faq-question">
-                        <span>데이터는 안전하게 저장되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        모든 데이터는 암호화되어 저장됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq16" class="faq-checkbox">
-                    <label for="faq16" class="faq-question">
-                        <span>법적 증빙으로 사용 가능한가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        타임스탬프와 해시값이 포함되어 증빙 자료로 활용할 수 있습니다.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 요금·운영 -->
-            <div class="faq-category">
-                <div class="faq-category-title">
-                    <i class="fas fa-circle mr-1 text-xs"></i>التسعير والعمليات
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq17" class="faq-checkbox">
-                    <label for="faq17" class="faq-question">
-                        <span>무료로도 사용할 수 있나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        기본 요약 기능은 무료 요금제에서 제공됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq18" class="faq-checkbox">
-                    <label for="faq18" class="faq-question">
-                        <span>기업용 요금제는 어떻게 되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        사용자 수와 기능에 따라 맞춤형 요금제가 제공됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq19" class="faq-checkbox">
-                    <label for="faq19" class="faq-question">
-                        <span>콜센터에도 적용 가능한가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        가능합니다. 상담 자동화 및 품질 관리 기능을 제공합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq20" class="faq-checkbox">
-                    <label for="faq20" class="faq-question">
-                        <span>도입하려면 어떻게 시작하나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        회원가입 후 가상 번호를 생성하면 바로 사용할 수 있습니다.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 계약·업무 자동화 -->
-            <div class="faq-category">
-                <div class="faq-category-title">
-                    <i class="fas fa-circle mr-1 text-xs"></i>العقود والأتمتة
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq21" class="faq-checkbox">
-                    <label for="faq21" class="faq-question">
-                        <span>통화 후 계약 정리가 자동으로 되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        네. 통화 내용을 기반으로 계약 요약 또는 초안 생성이 가능합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq22" class="faq-checkbox">
-                    <label for="faq22" class="faq-question">
-                        <span>구두 합의도 기록되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        통화 속 합의 내용은 자동으로 추출되어 계약 조항과 매칭됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq23" class="faq-checkbox">
-                    <label for="faq23" class="faq-question">
-                        <span>음성으로 업무 지시가 가능한가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        "이 통화 요약해서 이메일로 보내"처럼 음성 명령이 가능합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq24" class="faq-checkbox">
-                    <label for="faq24" class="faq-question">
-                        <span>CRM 연동도 되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        Salesforce, HubSpot 등 주요 CRM과 연동됩니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq25" class="faq-checkbox">
-                    <label for="faq25" class="faq-question">
-                        <span>회의록이나 제안서도 만들어주나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        통화 종료 후 자동으로 생성할 수 있습니다.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- AI to AI 통화 -->
-            <div class="faq-category">
-                <div class="faq-category-title">
-                    <i class="fas fa-circle mr-1 text-xs"></i>مكالمات الذكاء الاصطناعي إلى الذكاء الاصطناعي
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq26" class="faq-checkbox">
-                    <label for="faq26" class="faq-question">
-                        <span>AI끼리 통화한다는 게 무슨 뜻인가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        우리 회사 AI와 상대 회사 AI가 직접 통화해 조건을 사전 조율합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq27" class="faq-checkbox">
-                    <label for="faq27" class="faq-question">
-                        <span>사람이 전혀 개입하지 않아도 되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        사전 설정 범위 내에서만 가능하며, 최종 승인에는 사람이 개입합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq28" class="faq-checkbox">
-                    <label for="faq28" class="faq-question">
-                        <span>다국어 협상도 되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        네. 각 AI가 서로 다른 언어로 실시간 협상할 수 있습니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq29" class="faq-checkbox">
-                    <label for="faq29" class="faq-question">
-                        <span>AI 간 통화 기록도 저장되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        모든 AI↔AI 통화는 음성·텍스트·합의 로그로 저장됩니다.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 다국어·글로벌 -->
-            <div class="faq-category">
-                <div class="faq-category-title">
-                    <i class="fas fa-circle mr-1 text-xs"></i>متعدد اللغات والعالمي
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq30" class="faq-checkbox">
-                    <label for="faq30" class="faq-question">
-                        <span>어떤 언어를 지원하나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        한국어, 영어, 일본어, 중국어, 스페인어, 프랑스어 등 다국어를 지원합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq31" class="faq-checkbox">
-                    <label for="faq31" class="faq-question">
-                        <span>해외 번호도 제공되나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        국가별 가상 번호(DID)를 제공합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq32" class="faq-checkbox">
-                    <label for="faq32" class="faq-question">
-                        <span>실시간 번역이 가능한가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        통화 중 실시간 번역 및 번역 요약본 제공이 가능합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq33" class="faq-checkbox">
-                    <label for="faq33" class="faq-question">
-                        <span>협상 성공 가능성도 알 수 있나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        통화 중 실시간으로 계약 성사 확률을 제공합니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq34" class="faq-checkbox">
-                    <label for="faq34" class="faq-question">
-                        <span>협상 연습도 가능한가요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        가능합니다. 실제 통화 전 AI 상대와 협상 시뮬레이션을 할 수 있습니다.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <input type="checkbox" id="faq35" class="faq-checkbox">
-                    <label for="faq35" class="faq-question">
-                        <span>GDPR이나 CCPA도 대응하나요?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
-                    </label>
-                    <div class="faq-answer">
-                        네. 글로벌 개인정보 보호 규정을 준수합니다.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    </style>
 </body>
 </html>

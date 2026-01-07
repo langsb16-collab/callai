@@ -1,786 +1,722 @@
 {
+  "ko": {
+    "name": "한국어",
+    "page_title": "CallMind AI - AI 통화비서 플랫폼",
+    "hero_title": "AI가 대신하는<br>똑똑한 통화 비서",
+    "hero_subtitle": "전화·음성·메신저 대화를 AI가 실시간으로 응대·요약·기록·분석",
+    "btn_start": "무료로 시작하기",
+    "btn_demo": "데모 보기",
+    "stat1": "지원 언어",
+    "stat2": "인식 정확도",
+    "stat3": "무중단 서비스",
+    "stat4": "응답 속도",
+    "header_core": "핵심 기능",
+    "header_industry": "산업별 특화",
+    "features_title": "핵심 기능",
+    "features_subtitle": "통화의 모든 순간을 AI가 관리합니다",
+    "feat1_title": "AI 통화 응대",
+    "feat1_desc": "AI가 직접 전화를 받아 자연스럽게 대화합니다",
+    "feat2_title": "자동 녹취·요약",
+    "feat2_desc": "통화를 실시간 텍스트화하고 핵심 내용을 자동 요약",
+    "feat3_title": "AI 협상 비서",
+    "feat3_desc": "실시간 협상 전략 제안과 성공 확률 분석",
+    "feat4_title": "다국어 지원",
+    "feat4_desc": "12개 언어 지원 및 실시간 번역",
+    "feat5_title": "법적 증빙",
+    "feat5_desc": "타임스탬프와 해시값으로 안전하게 보관",
+    "feat6_title": "업무 자동화",
+    "feat6_desc": "회의록, 계약서, 제안서 자동 생성",
+    "industries_title": "산업별 특화 솔루션",
+    "industries_subtitle": "직군에 최적화된 AI 통화비서",
+    "ind1_title": "간병인",
+    "ind1_desc": "보호자 통화 자동 요약, 응급 상황 감지",
+    "ind1_f1": "통화 내용 자동 요약 전송",
+    "ind1_f2": "위험 키워드 즉시 알림",
+    "ind1_f3": "구두 합의 자동 기록",
+    "ind2_title": "건설현장",
+    "ind2_desc": "작업 중 통화 대신 AI 응대, 안전 우선",
+    "ind2_f1": "작업 중 자동 응대",
+    "ind2_f2": "작업 지시 자동 정리",
+    "ind2_f3": "긴급도 자동 판단",
+    "ind3_title": "택배·배송",
+    "ind3_desc": "운전 중 안전 통화, 반복 문의 자동 처리",
+    "ind3_f1": "배송 상태 자동 응답",
+    "ind3_f2": "부재 처리 자동 안내",
+    "ind3_f3": "배송 분쟁 증빙",
+    "ind4_title": "자영업",
+    "ind4_desc": "예약 접수, 고객 문의 자동 처리",
+    "ind4_f1": "24시간 예약 접수",
+    "ind4_f2": "메뉴/가격 자동 안내",
+    "ind4_f3": "단골 고객 자동 인식",
+    "ind5_title": "프리랜서·영업",
+    "ind5_desc": "통화 분석, 협상 전략, 고객 관리",
+    "ind5_f1": "협상 전략 실시간 제안",
+    "ind5_f2": "고객별 통화 히스토리",
+    "ind5_f3": "CRM 자동 연동",
+    "ind6_title": "공장·제조",
+    "ind6_desc": "설비 이상 감지, 교대 인수인계",
+    "ind6_f1": "설비 고장 키워드 감지",
+    "ind6_f2": "교대 근무 인수인계",
+    "ind6_f3": "작업 연속성 유지"
+  },
   "en": {
     "name": "English",
     "page_title": "CallMind AI - AI Call Assistant Platform",
-    "hero_title": "AI-Powered Intelligent Call Assistant",
-    "hero_subtitle": "AI answers calls, records, summarizes, and provides instant analysis",
+    "hero_title": "Smart Call Assistant<br>Powered by AI",
+    "hero_subtitle": "AI handles phone, voice, and messenger conversations in real-time",
     "btn_start": "Start Free",
     "btn_demo": "Watch Demo",
-    "header_core": "Core Features",
-    "header_industry": "Industry Solutions",
-    "header_pricing": "Pricing",
     "stat1": "Languages",
     "stat2": "Recognition Accuracy",
     "stat3": "Uninterrupted Service",
     "stat4": "Response Time",
+    "header_core": "Core Features",
+    "header_industry": "Industry Solutions",
     "features_title": "Core Features",
-    "features_subtitle": "The smarter way to manage every call",
-    "feat1_title": "AI Call Handling",
-    "feat1_desc": "AI answers calls and responds like a human",
-    "feat2_title": "Auto Recording & Analysis",
-    "feat2_desc": "Real-time voice-to-text, auto-summarization",
+    "features_subtitle": "AI manages every moment of your calls",
+    "feat1_title": "AI Call Response",
+    "feat1_desc": "AI answers calls and converses naturally",
+    "feat2_title": "Auto Transcription & Summary",
+    "feat2_desc": "Real-time transcription and automatic summary",
     "feat3_title": "AI Negotiation Assistant",
-    "feat3_desc": "Real-time negotiation strategies and risk alerts",
+    "feat3_desc": "Real-time negotiation strategy and success analysis",
     "feat4_title": "Multilingual Support",
-    "feat4_desc": "Supports 12+ languages including Korean, English, Japanese",
+    "feat4_desc": "12 languages supported with real-time translation",
     "feat5_title": "Legal Evidence",
-    "feat5_desc": "Timestamped records as contractual proof",
-    "feat6_title": "Analysis Automation",
-    "feat6_desc": "Sentiment analysis, reporting, CRM integration",
-    "industry_title": "Industry Solutions",
-    "industry_subtitle": "Optimized",
+    "feat5_desc": "Securely stored with timestamp and hash",
+    "feat6_title": "Workflow Automation",
+    "feat6_desc": "Auto-generate meeting notes, contracts, proposals",
+    "industries_title": "Industry Solutions",
+    "industries_subtitle": "AI call assistant optimized for your industry",
     "ind1_title": "Caregiving",
-    "ind1_desc": "Patient report communication, emergency alerts",
+    "ind1_desc": "Auto-summarize caregiver calls, detect emergencies",
+    "ind1_f1": "Auto-send call summaries",
+    "ind1_f2": "Instant alerts for risk keywords",
+    "ind1_f3": "Auto-record verbal agreements",
     "ind2_title": "Construction Sites",
-    "ind2_desc": "Site coordination, material orders",
+    "ind2_desc": "AI handles calls during work, safety first",
+    "ind2_f1": "Auto-response during work",
+    "ind2_f2": "Auto-organize work instructions",
+    "ind2_f3": "Auto-assess urgency",
     "ind3_title": "Delivery Services",
-    "ind3_desc": "Customer requests, location calls",
+    "ind3_desc": "Safe calls while driving, auto-handle repeat inquiries",
+    "ind3_f1": "Auto-respond delivery status",
+    "ind3_f2": "Auto-guide absence handling",
+    "ind3_f3": "Delivery dispute evidence",
     "ind4_title": "Self-Employed",
-    "ind4_desc": "Client consultation, quotation calls",
+    "ind4_desc": "Auto-handle reservations and customer inquiries",
+    "ind4_f1": "24/7 reservation handling",
+    "ind4_f2": "Auto-inform menu/pricing",
+    "ind4_f3": "Auto-recognize regular customers",
     "ind5_title": "Freelancers",
-    "ind5_desc": "Project consultations, contract negotiations",
-    "pricing_title": "Pricing",
-    "pricing_subtitle": "Choose the plan that fits your needs",
-    "footer_tagline": "AI-powered Call Assistant Platform",
-    "chatbot_title": "FAQ Assistant",
-    "chatbot_subtitle": "Frequently Asked Questions",
-    "cat1": "Basic Service Information",
-    "cat2": "Call Recording & Summarization",
-    "cat3": "AI Negotiation Assistant",
-    "cat4": "Security & Legal",
-    "cat5": "Pricing & Operations",
-    "cat6": "Contracts & Automation",
-    "cat7": "AI-to-AI Calls",
-    "cat8": "Multilingual & Global",
-    "faq": [
-      {
-        "q": "What is this service?",
-        "a": "AI Call Assistant is a service where AI answers, records phone calls, voice, and messenger conversations, and automatically summarizes, stores, and analyzes call content."
-      },
-      {
-        "q": "When should I use this?",
-        "a": "It can be used in all situations requiring sales calls, customer service, contract negotiations, international calls, and call record management."
-      },
-      {
-        "q": "Does AI actually answer calls?",
-        "a": "Yes. Through a virtual number, AI can directly receive calls and converse like a human."
-      },
-      {
-        "q": "Can it be used when people are on calls?",
-        "a": "Yes. When a user is on a call, AI simultaneously performs recording, summarization, and analysis."
-      },
-      {
-        "q": "Is call content automatically saved?",
-        "a": "If recording consent is enabled, all calls are automatically saved."
-      },
-      {
-        "q": "How are calls recorded?",
-        "a": "Voice is converted to text in real-time and saved along with the original audio."
-      },
-      {
-        "q": "What format is the call summary?",
-        "a": "A 3-5 line summary of key points along with major agreements and action items are automatically organized."
-      },
-      {
-        "q": "Are multiple speakers distinguished?",
-        "a": "Yes. The speaker separation feature distinguishes who said what."
-      },
-      {
-        "q": "Does it analyze emotions?",
-        "a": "Yes. It automatically analyzes emotional states such as anger, neutral, and satisfaction."
-      },
-      {
-        "q": "Can I search past calls?",
-        "a": "You can search with natural language like \"last month's contract call\"."
-      },
-      {
-        "q": "What does the AI Negotiation Assistant do?",
-        "a": "It analyzes the other party's statements during calls and provides negotiation strategies, recommended phrases, and risk warnings."
-      },
-      {
-        "q": "Does the other party see the AI during negotiation?",
-        "a": "No. Negotiation guides are displayed privately only to the user."
-      },
-      {
-        "q": "Does it help with price negotiation?",
-        "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
-      },
-      {
-        "q": "Is call recording legal?",
-        "a": "Automatic guidance messages are applied according to each country's recording laws."
-      },
-      {
-        "q": "Is data securely stored?",
-        "a": "All data is encrypted and stored."
-      },
-      {
-        "q": "Can it be used as legal evidence?",
-        "a": "It includes timestamps and hash values that can be used as evidence."
-      },
-      {
-        "q": "Can I use it for free?",
-        "a": "Basic summarization features are provided in the free plan."
-      },
-      {
-        "q": "What about enterprise plans?",
-        "a": "Customized plans are provided based on the number of users and features."
-      },
-      {
-        "q": "Can it be applied to call centers?",
-        "a": "Yes. It provides consultation automation and quality management features."
-      },
-      {
-        "q": "How do I get started?",
-        "a": "After signing up, you can start using it immediately by creating a virtual number."
-      },
-      {
-        "q": "Are contracts automatically organized after calls?",
-        "a": "Yes. Contract summaries or drafts can be generated based on call content."
-      },
-      {
-        "q": "Are verbal agreements recorded?",
-        "a": "Agreement content in calls is automatically extracted and matched with contract clauses."
-      },
-      {
-        "q": "Can I give voice commands?",
-        "a": "Voice commands like \"summarize this call and send via email\" are possible."
-      },
-      {
-        "q": "Does it integrate with CRM?",
-        "a": "It integrates with major CRMs such as Salesforce and HubSpot."
-      },
-      {
-        "q": "Can it create meeting minutes or proposals?",
-        "a": "They can be automatically generated after calls end."
-      },
-      {
-        "q": "What does AI-to-AI calling mean?",
-        "a": "Our company's AI and the other company's AI directly communicate to pre-coordinate conditions."
-      },
-      {
-        "q": "Is human intervention not required at all?",
-        "a": "It's only possible within preset ranges, and human intervention is required for final approval."
-      },
-      {
-        "q": "Does multilingual negotiation work?",
-        "a": "Yes. Each AI can negotiate in real-time in different languages."
-      },
-      {
-        "q": "Are AI-to-AI call records saved?",
-        "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
-      },
-      {
-        "q": "What languages are supported?",
-        "a": "Korean, English, Japanese, Chinese, Spanish, French, and more are supported."
-      },
-      {
-        "q": "Are international numbers provided?",
-        "a": "Virtual numbers (DID) are provided by country."
-      },
-      {
-        "q": "Is real-time translation possible?",
-        "a": "Real-time translation during calls and translated summaries are available."
-      },
-      {
-        "q": "Can I see negotiation success probability?",
-        "a": "Contract success probability is provided in real-time during calls."
-      },
-      {
-        "q": "Can I practice negotiations?",
-        "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
-      },
-      {
-        "q": "Is GDPR or CCPA compliant?",
-        "a": "Yes. We comply with global privacy protection regulations."
-      }
-    ]
+    "ind5_desc": "Call analysis, negotiation strategy, customer management",
+    "ind5_f1": "Real-time negotiation proposals",
+    "ind5_f2": "Customer call history",
+    "ind5_f3": "Auto-sync CRM",
+    "ind6_title": "Manufacturing",
+    "ind6_desc": "Detect equipment issues, shift handover",
+    "ind6_f1": "Detect equipment failure keywords",
+    "ind6_f2": "Shift handover",
+    "ind6_f3": "Maintain work continuity"
   },
   "zh-CN": {
     "name": "简体中文",
     "page_title": "CallMind AI - AI通话助手平台",
-    "hero_title": "AI驱动智能通话助手",
-    "hero_subtitle": "AI接听电话、录音、摘要并提供即时分析",
+    "hero_title": "AI智能<br>通话助手",
+    "hero_subtitle": "AI实时处理电话、语音和消息对话",
     "btn_start": "免费开始",
     "btn_demo": "观看演示",
-    "header_core": "核心功能",
-    "header_industry": "行业解决方案",
-    "header_pricing": "价格",
-    "stat1": "语言支持",
+    "stat1": "支持语言",
     "stat2": "识别准确度",
     "stat3": "不间断服务",
     "stat4": "响应速度",
+    "header_core": "核心功能",
+    "header_industry": "行业解决方案",
     "features_title": "核心功能",
-    "features_subtitle": "更智能的通话管理方式",
+    "features_subtitle": "AI管理通话的每一刻",
     "feat1_title": "AI通话应答",
-    "feat1_desc": "AI接听电话并像人一样回应",
-    "feat2_title": "自动录音与分析",
-    "feat2_desc": "实时语音转文本，自动摘要",
+    "feat1_desc": "AI直接接听电话并自然对话",
+    "feat2_title": "自动录音·摘要",
+    "feat2_desc": "实时转录并自动生成摘要",
     "feat3_title": "AI谈判助手",
-    "feat3_desc": "实时谈判策略和风险警报",
+    "feat3_desc": "实时谈判策略建议和成功率分析",
     "feat4_title": "多语言支持",
-    "feat4_desc": "支持韩语、英语、日语等12+种语言",
+    "feat4_desc": "支持12种语言及实时翻译",
     "feat5_title": "法律证据",
-    "feat5_desc": "带时间戳的记录作为合同证明",
-    "feat6_title": "分析自动化",
-    "feat6_desc": "情感分析、报告、CRM集成",
-    "industry_title": "行业解决方案",
-    "industry_subtitle": "优化解决方案",
+    "feat5_desc": "使用时间戳和哈希值安全保存",
+    "feat6_title": "工作流自动化",
+    "feat6_desc": "自动生成会议记录、合同、提案",
+    "industries_title": "行业解决方案",
+    "industries_subtitle": "为您的行业优化的AI通话助手",
     "ind1_title": "护理",
-    "ind1_desc": "患者报告沟通，紧急警报",
+    "ind1_desc": "自动总结护理电话，检测紧急情况",
+    "ind1_f1": "自动发送通话摘要",
+    "ind1_f2": "风险关键词即时警报",
+    "ind1_f3": "自动记录口头协议",
     "ind2_title": "建筑工地",
-    "ind2_desc": "工地协调，材料订单",
+    "ind2_desc": "AI在工作期间处理电话，安全第一",
+    "ind2_f1": "工作期间自动应答",
+    "ind2_f2": "自动整理工作指示",
+    "ind2_f3": "自动评估紧急程度",
     "ind3_title": "配送服务",
-    "ind3_desc": "客户请求，位置通话",
+    "ind3_desc": "驾驶时安全通话，自动处理重复查询",
+    "ind3_f1": "自动响应配送状态",
+    "ind3_f2": "自动指导缺席处理",
+    "ind3_f3": "配送纠纷证据",
     "ind4_title": "自雇",
-    "ind4_desc": "客户咨询，报价通话",
+    "ind4_desc": "自动处理预订和客户查询",
+    "ind4_f1": "24/7预订处理",
+    "ind4_f2": "自动告知菜单/价格",
+    "ind4_f3": "自动识别常客",
     "ind5_title": "自由职业者",
-    "ind5_desc": "项目咨询，合同谈判",
-    "pricing_title": "价格",
-    "pricing_subtitle": "选择适合您的计划",
-    "footer_tagline": "AI驱动的通话助手平台",
-    "chatbot_title": "FAQ助手",
-    "chatbot_subtitle": "常见问题",
-    "cat1": "基本服务信息",
-    "cat2": "通话录音与摘要",
-    "cat3": "AI谈判助手",
-    "cat4": "安全与法律",
-    "cat5": "价格与运营",
-    "cat6": "合同与自动化",
-    "cat7": "AI对AI通话",
-    "cat8": "多语言与全球",
-    "faq": [
-      {
-        "q": "这项服务是什么？",
-        "a": "AI通话助手是一项由AI接听、录音电话、语音和信使对话，并自动摘要、存储和分析通话内容的服务。"
-      },
-      {
-        "q": "什么时候应该使用？",
-        "a": "可用于所有需要销售电话、客户服务、合同谈判、国际电话和通话记录管理的情况。"
-      },
-      {
-        "q": "AI真的接听电话吗？",
-        "a": "是的。通过虚拟号码，AI可以直接接听电话并像人一样交谈。"
-      },
-      {
-        "q": "人们通话时可以使用吗？",
-        "a": "是的。当用户通话时，AI同时执行录音、摘要和分析。"
-      },
-      {
-        "q": "通话内容会自动保存吗？",
-        "a": "如果启用录音同意，所有通话都会自动保存。"
-      },
-      {
-        "q": "通话如何录音？",
-        "a": "语音会实时转换为文本，并与原始音频一起保存。"
-      },
-      {
-        "q": "通话摘要是什么格式？",
-        "a": "关键要点的3-5行摘要，以及主要协议和行动项目会自动整理。"
-      },
-      {
-        "q": "多个说话者会被区分吗？",
-        "a": "是的。说话者分离功能可以区分谁说了什么。"
-      },
-      {
-        "q": "它会分析情感吗？",
-        "a": "是的。它自动分析愤怒、中立和满意等情绪状态。"
-      },
-      {
-        "q": "我可以搜索过去的通话吗？",
-        "a": "您可以用自然语言搜索，例如\"上个月的合同电话\"。"
-      },
-      {
-        "q": "AI谈判助手做什么？",
-        "a": "它在通话期间分析对方的陈述，并提供谈判策略、推荐短语和风险警告。"
-      },
-      {
-        "q": "对方在谈判期间看到AI吗？",
-        "a": "不会。谈判指南仅私下显示给用户。"
-      },
-      {
-        "q": "它帮助价格谈判吗？",
-        "a": "是的。它综合分析价格、时间表和条件，以建议最佳替代方案。"
-      },
-      {
-        "q": "通话录音合法吗？",
-        "a": "根据每个国家的录音法律应用自动指导消息。"
-      },
-      {
-        "q": "数据安全存储吗？",
-        "a": "所有数据都经过加密存储。"
-      },
-      {
-        "q": "可以用作法律证据吗？",
-        "a": "它包含时间戳和哈希值，可用作证据。"
-      },
-      {
-        "q": "我可以免费使用吗？",
-        "a": "免费计划中提供基本摘要功能。"
-      },
-      {
-        "q": "企业计划怎么样？",
-        "a": "根据用户数量和功能提供定制计划。"
-      },
-      {
-        "q": "可以应用于呼叫中心吗？",
-        "a": "是的。它提供咨询自动化和质量管理功能。"
-      },
-      {
-        "q": "如何开始？",
-        "a": "注册后，您可以通过创建虚拟号码立即开始使用。"
-      },
-      {
-        "q": "通话后合同会自动整理吗？",
-        "a": "是的。可以根据通话内容生成合同摘要或草稿。"
-      },
-      {
-        "q": "口头协议会记录吗？",
-        "a": "通话中的协议内容会自动提取并与合同条款匹配。"
-      },
-      {
-        "q": "我可以发出语音命令吗？",
-        "a": "可以使用语音命令，例如\"摘要此通话并通过电子邮件发送\"。"
-      },
-      {
-        "q": "它与CRM集成吗？",
-        "a": "它与Salesforce和HubSpot等主要CRM集成。"
-      },
-      {
-        "q": "它可以创建会议纪要或提案吗？",
-        "a": "通话结束后可以自动生成。"
-      },
-      {
-        "q": "AI对AI通话是什么意思？",
-        "a": "我们公司的AI和对方公司的AI直接沟通以预先协调条件。"
-      },
-      {
-        "q": "完全不需要人工干预吗？",
-        "a": "仅在预设范围内可能，最终批准需要人工干预。"
-      },
-      {
-        "q": "多语言谈判有效吗？",
-        "a": "是的。每个AI可以实时用不同语言进行谈判。"
-      },
-      {
-        "q": "AI对AI通话记录会保存吗？",
-        "a": "所有AI↔AI通话都保存为语音、文本和协议日志。"
-      },
-      {
-        "q": "支持哪些语言？",
-        "a": "支持韩语、英语、日语、中文、西班牙语、法语等。"
-      },
-      {
-        "q": "提供国际号码吗？",
-        "a": "按国家提供虚拟号码（DID）。"
-      },
-      {
-        "q": "可以实时翻译吗？",
-        "a": "通话期间可以实时翻译和提供翻译摘要。"
-      },
-      {
-        "q": "我可以看到谈判成功概率吗？",
-        "a": "通话期间实时提供合同成功概率。"
-      },
-      {
-        "q": "我可以练习谈判吗？",
-        "a": "是的。您可以在实际通话之前与AI对手模拟谈判。"
-      },
-      {
-        "q": "符合GDPR或CCPA吗？",
-        "a": "是的。我们遵守全球隐私保护法规。"
-      }
-    ]
+    "ind5_desc": "通话分析、谈判策略、客户管理",
+    "ind5_f1": "实时谈判建议",
+    "ind5_f2": "客户通话历史",
+    "ind5_f3": "自动同步CRM",
+    "ind6_title": "制造",
+    "ind6_desc": "检测设备问题，交接班",
+    "ind6_f1": "检测设备故障关键词",
+    "ind6_f2": "交接班",
+    "ind6_f3": "保持工作连续性"
   },
   "zh-TW": {
     "name": "繁體中文",
     "page_title": "CallMind AI - AI通話助手平台",
-    "hero_title": "AI驅動智能通話助手",
-    "hero_subtitle": "AI接聽電話、錄音、摘要並提供即時分析",
+    "hero_title": "AI智能<br>通話助手",
+    "hero_subtitle": "AI實時處理電話、語音和消息對話",
     "btn_start": "免費開始",
     "btn_demo": "觀看演示",
-    "header_core": "核心功能",
-    "header_industry": "行業解決方案",
-    "header_pricing": "價格",
-    "stat1": "語言支援",
+    "stat1": "支持語言",
     "stat2": "識別準確度",
     "stat3": "不間斷服務",
     "stat4": "響應速度",
+    "header_core": "核心功能",
+    "header_industry": "行業解決方案",
     "features_title": "核心功能",
-    "features_subtitle": "更智能的通話管理方式",
+    "features_subtitle": "AI管理通話的每一刻",
     "feat1_title": "AI通話應答",
-    "feat1_desc": "AI接聽電話並像人一樣回應",
-    "feat2_title": "自動錄音與分析",
-    "feat2_desc": "實時語音轉文本，自動摘要",
+    "feat1_desc": "AI直接接聽電話並自然對話",
+    "feat2_title": "自動錄音·摘要",
+    "feat2_desc": "實時轉錄並自動生成摘要",
     "feat3_title": "AI談判助手",
-    "feat3_desc": "實時談判策略和風險警報",
-    "feat4_title": "多語言支援",
-    "feat4_desc": "支援韓語、英語、日語等12+種語言",
+    "feat3_desc": "實時談判策略建議和成功率分析",
+    "feat4_title": "多語言支持",
+    "feat4_desc": "支持12種語言及實時翻譯",
     "feat5_title": "法律證據",
-    "feat5_desc": "帶時間戳的記錄作為合同證明",
-    "feat6_title": "分析自動化",
-    "feat6_desc": "情感分析、報告、CRM集成",
-    "industry_title": "行業解決方案",
-    "industry_subtitle": "優化解決方案",
+    "feat5_desc": "使用時間戳和哈希值安全保存",
+    "feat6_title": "工作流自動化",
+    "feat6_desc": "自動生成會議記錄、合同、提案",
+    "industries_title": "行業解決方案",
+    "industries_subtitle": "為您的行業優化的AI通話助手",
     "ind1_title": "護理",
-    "ind1_desc": "患者報告溝通，緊急警報",
+    "ind1_desc": "自動總結護理電話，檢測緊急情況",
+    "ind1_f1": "自動發送通話摘要",
+    "ind1_f2": "風險關鍵詞即時警報",
+    "ind1_f3": "自動記錄口頭協議",
     "ind2_title": "建築工地",
-    "ind2_desc": "工地協調，材料訂單",
+    "ind2_desc": "AI在工作期間處理電話，安全第一",
+    "ind2_f1": "工作期間自動應答",
+    "ind2_f2": "自動整理工作指示",
+    "ind2_f3": "自動評估緊急程度",
     "ind3_title": "配送服務",
-    "ind3_desc": "客戶請求，位置通話",
+    "ind3_desc": "駕駛時安全通話，自動處理重複查詢",
+    "ind3_f1": "自動響應配送狀態",
+    "ind3_f2": "自動指導缺席處理",
+    "ind3_f3": "配送糾紛證據",
     "ind4_title": "自僱",
-    "ind4_desc": "客戶諮詢，報價通話",
+    "ind4_desc": "自動處理預訂和客戶查詢",
+    "ind4_f1": "24/7預訂處理",
+    "ind4_f2": "自動告知菜單/價格",
+    "ind4_f3": "自動識別常客",
     "ind5_title": "自由職業者",
-    "ind5_desc": "項目諮詢，合同談判",
-    "pricing_title": "價格",
-    "pricing_subtitle": "選擇適合您的計劃",
-    "footer_tagline": "AI驅動的通話助手平台",
-    "chatbot_title": "FAQ助手",
-    "chatbot_subtitle": "常見問題",
-    "cat1": "基本服務信息",
-    "cat2": "通話錄音與摘要",
-    "cat3": "AI談判助手",
-    "cat4": "安全與法律",
-    "cat5": "價格與運營",
-    "cat6": "合同與自動化",
-    "cat7": "AI對AI通話",
-    "cat8": "多語言與全球",
-    "faq": [
-      {
-        "q": "這項服務是什麼？",
-        "a": "AI通話助手是一項由AI接聽、錄音電話、語音和信使對話，並自動摘要、存儲和分析通話內容的服務。"
-      },
-      {
-        "q": "什麼時候應該使用？",
-        "a": "可用於所有需要銷售電話、客戶服務、合同談判、國際電話和通話記錄管理的情況。"
-      },
-      {
-        "q": "AI真的接聽電話嗎？",
-        "a": "是的。通過虛擬號碼，AI可以直接接聽電話並像人一樣交談。"
-      },
-      {
-        "q": "人們通話時可以使用嗎？",
-        "a": "是的。當用戶通話時，AI同時執行錄音、摘要和分析。"
-      },
-      {
-        "q": "通話內容會自動保存嗎？",
-        "a": "如果啟用錄音同意，所有通話都會自動保存。"
-      },
-      {
-        "q": "通話如何錄音？",
-        "a": "語音會實時轉換為文本，並與原始音頻一起保存。"
-      },
-      {
-        "q": "通話摘要是什麼格式？",
-        "a": "關鍵要點的3-5行摘要，以及主要協議和行動項目會自動整理。"
-      },
-      {
-        "q": "多個說話者會被區分嗎？",
-        "a": "是的。說話者分離功能可以區分誰說了什麼。"
-      },
-      {
-        "q": "它會分析情感嗎？",
-        "a": "是的。它自動分析憤怒、中立和滿意等情緒狀態。"
-      },
-      {
-        "q": "我可以搜索過去的通話嗎？",
-        "a": "您可以用自然語言搜索，例如\"上個月的合同電話\"。"
-      },
-      {
-        "q": "AI談判助手做什麼？",
-        "a": "它在通話期間分析對方的陳述，並提供談判策略、推薦短語和風險警告。"
-      },
-      {
-        "q": "對方在談判期間看到AI嗎？",
-        "a": "不會。談判指南僅私下顯示給用戶。"
-      },
-      {
-        "q": "它幫助價格談判嗎？",
-        "a": "是的。它綜合分析價格、時間表和條件，以建議最佳替代方案。"
-      },
-      {
-        "q": "通話錄音合法嗎？",
-        "a": "根據每個國家的錄音法律應用自動指導消息。"
-      },
-      {
-        "q": "數據安全存儲嗎？",
-        "a": "所有數據都經過加密存儲。"
-      },
-      {
-        "q": "可以用作法律證據嗎？",
-        "a": "它包含時間戳和哈希值，可用作證據。"
-      },
-      {
-        "q": "我可以免費使用嗎？",
-        "a": "免費計劃中提供基本摘要功能。"
-      },
-      {
-        "q": "企業計劃怎麼樣？",
-        "a": "根據用戶數量和功能提供定制計劃。"
-      },
-      {
-        "q": "可以應用於呼叫中心嗎？",
-        "a": "是的。它提供諮詢自動化和質量管理功能。"
-      },
-      {
-        "q": "如何開始？",
-        "a": "註冊後，您可以通過創建虛擬號碼立即開始使用。"
-      },
-      {
-        "q": "通話後合同會自動整理嗎？",
-        "a": "是的。可以根據通話內容生成合同摘要或草稿。"
-      },
-      {
-        "q": "口頭協議會記錄嗎？",
-        "a": "通話中的協議內容會自動提取並與合同條款匹配。"
-      },
-      {
-        "q": "我可以發出語音命令嗎？",
-        "a": "可以使用語音命令，例如\"摘要此通話並通過電子郵件發送\"。"
-      },
-      {
-        "q": "它與CRM集成嗎？",
-        "a": "它與Salesforce和HubSpot等主要CRM集成。"
-      },
-      {
-        "q": "它可以創建會議紀要或提案嗎？",
-        "a": "通話結束後可以自動生成。"
-      },
-      {
-        "q": "AI對AI通話是什麼意思？",
-        "a": "我們公司的AI和對方公司的AI直接溝通以預先協調條件。"
-      },
-      {
-        "q": "完全不需要人工干預嗎？",
-        "a": "僅在預設範圍內可能，最終批准需要人工干預。"
-      },
-      {
-        "q": "多語言談判有效嗎？",
-        "a": "是的。每個AI可以實時用不同語言進行談判。"
-      },
-      {
-        "q": "AI對AI通話記錄會保存嗎？",
-        "a": "所有AI↔AI通話都保存為語音、文本和協議日誌。"
-      },
-      {
-        "q": "支援哪些語言？",
-        "a": "支援韓語、英語、日語、中文、西班牙語、法語等。"
-      },
-      {
-        "q": "提供國際號碼嗎？",
-        "a": "按國家提供虛擬號碼（DID）。"
-      },
-      {
-        "q": "可以實時翻譯嗎？",
-        "a": "通話期間可以實時翻譯和提供翻譯摘要。"
-      },
-      {
-        "q": "我可以看到談判成功概率嗎？",
-        "a": "通話期間實時提供合同成功概率。"
-      },
-      {
-        "q": "我可以練習談判嗎？",
-        "a": "是的。您可以在實際通話之前與AI對手模擬談判。"
-      },
-      {
-        "q": "符合GDPR或CCPA嗎？",
-        "a": "是的。我們遵守全球隱私保護法規。"
-      }
-    ]
+    "ind5_desc": "通話分析、談判策略、客戶管理",
+    "ind5_f1": "實時談判建議",
+    "ind5_f2": "客戶通話歷史",
+    "ind5_f3": "自動同步CRM",
+    "ind6_title": "製造",
+    "ind6_desc": "檢測設備問題，交接班",
+    "ind6_f1": "檢測設備故障關鍵詞",
+    "ind6_f2": "交接班",
+    "ind6_f3": "保持工作連續性"
   },
   "ja": {
     "name": "日本語",
     "page_title": "CallMind AI - AI通話アシスタントプラットフォーム",
-    "hero_title": "AI搭載インテリジェント通話アシスタント",
-    "hero_subtitle": "AIが通話に応答し、録音、要約、即座の分析を提供",
+    "hero_title": "AIスマート<br>通話アシスタント",
+    "hero_subtitle": "AIが電話、音声、メッセンジャーの会話をリアルタイムで処理",
     "btn_start": "無料で始める",
     "btn_demo": "デモを見る",
-    "header_core": "コア機能",
-    "header_industry": "業界ソリューション",
-    "header_pricing": "料金",
-    "stat1": "言語",
+    "stat1": "対応言語",
     "stat2": "認識精度",
     "stat3": "無停止サービス",
-    "stat4": "応答時間",
+    "stat4": "応答速度",
+    "header_core": "コア機能",
+    "header_industry": "業界ソリューション",
     "features_title": "コア機能",
-    "features_subtitle": "すべての通話をより賢く管理",
-    "feat1_title": "AI通話対応",
-    "feat1_desc": "AIが通話に応答し、人間のように対応",
-    "feat2_title": "自動録音・分析",
-    "feat2_desc": "リアルタイム音声テキスト化、自動要約",
+    "features_subtitle": "AIが通話のあらゆる瞬間を管理",
+    "feat1_title": "AI通話応答",
+    "feat1_desc": "AIが直接電話に出て自然に会話します",
+    "feat2_title": "自動録音・要約",
+    "feat2_desc": "リアルタイム文字起こしと自動要約",
     "feat3_title": "AI交渉アシスタント",
-    "feat3_desc": "リアルタイム交渉戦略とリスク警告",
+    "feat3_desc": "リアルタイム交渉戦略の提案と成功率分析",
     "feat4_title": "多言語サポート",
-    "feat4_desc": "韓国語、英語、日本語など12以上の言語をサポート",
+    "feat4_desc": "12言語対応およびリアルタイム翻訳",
     "feat5_title": "法的証拠",
-    "feat5_desc": "タイムスタンプ付き記録を契約証明として",
-    "feat6_title": "分析自動化",
-    "feat6_desc": "感情分析、レポート、CRM統合",
-    "industry_title": "業界ソリューション",
-    "industry_subtitle": "最適化",
+    "feat5_desc": "タイムスタンプとハッシュで安全に保管",
+    "feat6_title": "ワークフロー自動化",
+    "feat6_desc": "議事録、契約書、提案書を自動生成",
+    "industries_title": "業界ソリューション",
+    "industries_subtitle": "業界に最適化されたAI通話アシスタント",
     "ind1_title": "介護",
-    "ind1_desc": "患者レポート通信、緊急警告",
+    "ind1_desc": "介護者通話を自動要約、緊急事態を検出",
+    "ind1_f1": "通話要約の自動送信",
+    "ind1_f2": "リスクキーワードの即時アラート",
+    "ind1_f3": "口頭合意の自動記録",
     "ind2_title": "建設現場",
-    "ind2_desc": "現場調整、資材注文",
+    "ind2_desc": "AI が作業中の通話を処理、安全第一",
+    "ind2_f1": "作業中の自動応答",
+    "ind2_f2": "作業指示の自動整理",
+    "ind2_f3": "緊急度の自動評価",
     "ind3_title": "配送サービス",
-    "ind3_desc": "顧客リクエスト、位置通話",
+    "ind3_desc": "運転中の安全な通話、繰り返しの問い合わせを自動処理",
+    "ind3_f1": "配送状態の自動応答",
+    "ind3_f2": "不在処理の自動案内",
+    "ind3_f3": "配送紛争の証拠",
     "ind4_title": "自営業",
-    "ind4_desc": "クライアント相談、見積通話",
+    "ind4_desc": "予約受付と顧客問い合わせを自動処理",
+    "ind4_f1": "24/7予約処理",
+    "ind4_f2": "メニュー/価格の自動案内",
+    "ind4_f3": "常連客の自動認識",
     "ind5_title": "フリーランサー",
-    "ind5_desc": "プロジェクト相談、契約交渉",
-    "pricing_title": "料金",
-    "pricing_subtitle": "ニーズに合ったプランを選択",
-    "footer_tagline": "AI搭載通話アシスタントプラットフォーム",
-    "chatbot_title": "FAQアシスタント",
-    "chatbot_subtitle": "よくある質問",
-    "cat1": "基本サービス情報",
-    "cat2": "通話録音・要約",
-    "cat3": "AI交渉アシスタント",
-    "cat4": "セキュリティ・法律",
-    "cat5": "料金・運用",
-    "cat6": "契約・自動化",
-    "cat7": "AI対AI通話",
-    "cat8": "多言語・グローバル",
-    "faq": [
-      {
-        "q": "このサービスは何ですか？",
-        "a": "AI通話アシスタントは、AIが電話、音声、メッセンジャーの会話に応答、録音し、通話内容を自動的に要約、保存、分析するサービスです。"
-      },
-      {
-        "q": "いつ使用すべきですか？",
-        "a": "営業電話、カスタマーサービス、契約交渉、国際電話、通話記録管理が必要なすべての状況で使用できます。"
-      },
-      {
-        "q": "AIは実際に電話に応答しますか？",
-        "a": "はい。仮想番号を通じて、AIは直接電話を受けて人間のように会話できます。"
-      },
-      {
-        "q": "人が通話中でも使用できますか？",
-        "a": "はい。ユーザーが通話中の場合、AIは同時に録音、要約、分析を実行します。"
-      },
-      {
-        "q": "通話内容は自動的に保存されますか？",
-        "a": "録音同意が有効になっている場合、すべての通話は自動的に保存されます。"
-      },
-      {
-        "q": "通話はどのように録音されますか？",
-        "a": "音声はリアルタイムでテキストに変換され、元の音声とともに保存されます。"
-      },
-      {
-        "q": "通話要約はどのような形式ですか？",
-        "a": "重要なポイントの3〜5行の要約と、主要な合意事項とアクション項目が自動的に整理されます。"
-      },
-      {
-        "q": "複数の話者は区別されますか？",
-        "a": "はい。話者分離機能により、誰が何を言ったかが区別されます。"
-      },
-      {
-        "q": "感情を分析しますか？",
-        "a": "はい。怒り、中立、満足などの感情状態を自動的に分析します。"
-      },
-      {
-        "q": "過去の通話を検索できますか？",
-        "a": "「先月の契約通話」のような自然言語で検索できます。"
-      },
-      {
-        "q": "AI交渉アシスタントは何をしますか？",
-        "a": "通話中に相手の発言を分析し、交渉戦略、推奨フレーズ、リスク警告を提供します。"
-      },
-      {
-        "q": "交渉中に相手にAIが見えますか？",
-        "a": "いいえ。交渉ガイドはユーザーにのみプライベートで表示されます。"
-      },
-      {
-        "q": "価格交渉を支援しますか？",
-        "a": "はい。価格、スケジュール、条件を総合的に分析して最適な代替案を提案します。"
-      },
-      {
-        "q": "通話録音は合法ですか？",
-        "a": "各国の録音法に従って自動ガイダンスメッセージが適用されます。"
-      },
-      {
-        "q": "データは安全に保存されますか？",
-        "a": "すべてのデータは暗号化されて保存されます。"
-      },
-      {
-        "q": "法的証拠として使用できますか？",
-        "a": "タイムスタンプとハッシュ値が含まれており、証拠として使用できます。"
-      },
-      {
-        "q": "無料で使用できますか？",
-        "a": "基本要約機能は無料プランで提供されます。"
-      },
-      {
-        "q": "エンタープライズプランはどうですか？",
-        "a": "ユーザー数と機能に基づいてカスタマイズされたプランが提供されます。"
-      },
-      {
-        "q": "コールセンターに適用できますか？",
-        "a": "はい。相談自動化と品質管理機能を提供します。"
-      },
-      {
-        "q": "始めるにはどうすればよいですか？",
-        "a": "サインアップ後、仮想番号を作成することですぐに使用を開始できます。"
-      },
-      {
-        "q": "通話後に契約は自動的に整理されますか？",
-        "a": "はい。通話内容に基づいて契約要約または草案を生成できます。"
-      },
-      {
-        "q": "口頭合意は記録されますか？",
-        "a": "通話中の合意内容は自動的に抽出され、契約条項と照合されます。"
-      },
-      {
-        "q": "音声コマンドを出せますか？",
-        "a": "「この通話を要約してメールで送信」のような音声コマンドが可能です。"
-      },
-      {
-        "q": "CRMと統合されますか？",
-        "a": "SalesforceやHubSpotなどの主要CRMと統合されます。"
-      },
-      {
-        "q": "会議議事録や提案書を作成できますか？",
-        "a": "通話終了後に自動的に生成できます。"
-      },
-      {
-        "q": "AI対AI通話とはどういう意味ですか？",
-        "a": "当社のAIと相手企業のAIが直接通信して条件を事前調整します。"
-      },
-      {
-        "q": "人間の介入は全く必要ありませんか？",
-        "a": "プリセット範囲内でのみ可能で、最終承認には人間の介入が必要です。"
-      },
-      {
-        "q": "多言語交渉は機能しますか？",
-        "a": "はい。各AIは異なる言語でリアルタイムに交渉できます。"
-      },
-      {
-        "q": "AI対AI通話記録は保存されますか？",
-        "a": "すべてのAI↔AI通話は音声、テキスト、合意ログとして保存されます。"
-      },
-      {
-        "q": "どの言語がサポートされていますか？",
-        "a": "韓国語、英語、日本語、中国語、スペイン語、フランス語などがサポートされています。"
-      },
-      {
-        "q": "国際番号は提供されますか？",
-        "a": "国別に仮想番号（DID）が提供されます。"
-      },
-      {
-        "q": "リアルタイム翻訳は可能ですか？",
-        "a": "通話中のリアルタイム翻訳と翻訳要約が利用可能です。"
-      },
-      {
-        "q": "交渉成功確率を見ることができますか？",
-        "a": "通話中にリアルタイムで契約成功確率が提供されます。"
-      },
-      {
-        "q": "交渉の練習ができますか？",
-        "a": "はい。実際の通話前にAI相手と交渉シミュレーションができます。"
-      },
-      {
-        "q": "GDPRまたはCCPAに準拠していますか？",
-        "a": "はい。グローバルプライバシー保護規制に準拠しています。"
-      }
-    ]
+    "ind5_desc": "通話分析、交渉戦略、顧客管理",
+    "ind5_f1": "リアルタイム交渉提案",
+    "ind5_f2": "顧客通話履歴",
+    "ind5_f3": "CRMの自動同期",
+    "ind6_title": "製造",
+    "ind6_desc": "設備問題の検出、シフト引継ぎ",
+    "ind6_f1": "設備故障キーワードの検出",
+    "ind6_f2": "シフト引継ぎ",
+    "ind6_f3": "作業継続性の維持"
+  },
+  "hi": {
+    "name": "हिन्दी",
+    "page_title": "CallMind AI - AI कॉल सहायक प्लेटफॉर्म",
+    "hero_title": "AI स्मार्ट<br>कॉल सहायक",
+    "hero_subtitle": "AI फोन, वॉयस और मैसेंजर वार्तालाप को रियल-टाइम में संभालता है",
+    "btn_start": "मुफ्त शुरू करें",
+    "btn_demo": "डेमो देखें",
+    "stat1": "भाषाएं",
+    "stat2": "पहचान सटीकता",
+    "stat3": "निर्बाध सेवा",
+    "stat4": "प्रतिक्रिया समय",
+    "header_core": "मुख्य विशेषताएं",
+    "header_industry": "उद्योग समाधान",
+    "features_title": "मुख्य विशेषताएं",
+    "features_subtitle": "AI आपकी कॉल के हर पल को प्रबंधित करता है",
+    "feat1_title": "AI कॉल रिस्पांस",
+    "feat1_desc": "AI कॉल का जवाब देता है और स्वाभाविक रूप से बातचीत करता है",
+    "feat2_title": "स्वचालित ट्रांसक्रिप्शन और सारांश",
+    "feat2_desc": "रियल-टाइम ट्रांसक्रिप्शन और स्वचालित सारांश",
+    "feat3_title": "AI बातचीत सहायक",
+    "feat3_desc": "रियल-टाइम बातचीत रणनीति और सफलता विश्लेषण",
+    "feat4_title": "बहुभाषी समर्थन",
+    "feat4_desc": "रियल-टाइम अनुवाद के साथ 12 भाषाएं समर्थित",
+    "feat5_title": "कानूनी साक्ष्य",
+    "feat5_desc": "टाइमस्टैम्प और हैश के साथ सुरक्षित रूप से संग्रहीत",
+    "feat6_title": "कार्यप्रवाह स्वचालन",
+    "feat6_desc": "मीटिंग नोट्स, अनुबंध, प्रस्ताव स्वतः उत्पन्न करें",
+    "industries_title": "उद्योग समाधान",
+    "industries_subtitle": "आपके उद्योग के लिए अनुकूलित AI कॉल सहायक",
+    "ind1_title": "देखभाल",
+    "ind1_desc": "देखभालकर्ता कॉल का स्वतः सारांश, आपात स्थिति का पता लगाएं",
+    "ind1_f1": "कॉल सारांश स्वतः भेजें",
+    "ind1_f2": "जोखिम कीवर्ड के लिए तत्काल अलर्ट",
+    "ind1_f3": "मौखिक समझौतों को स्वतः रिकॉर्ड करें",
+    "ind2_title": "निर्माण स्थल",
+    "ind2_desc": "काम के दौरान AI कॉल संभालता है, सुरक्षा पहले",
+    "ind2_f1": "काम के दौरान स्वतः प्रतिक्रिया",
+    "ind2_f2": "कार्य निर्देशों को स्वतः व्यवस्थित करें",
+    "ind2_f3": "तात्कालिकता का स्वतः मूल्यांकन",
+    "ind3_title": "डिलीवरी सेवाएं",
+    "ind3_desc": "ड्राइविंग के दौरान सुरक्षित कॉल, दोहराई जाने वाली पूछताछ को स्वतः संभालें",
+    "ind3_f1": "डिलीवरी स्थिति का स्वतः जवाब",
+    "ind3_f2": "अनुपस्थिति प्रबंधन का स्वतः मार्गदर्शन",
+    "ind3_f3": "डिलीवरी विवाद साक्ष्य",
+    "ind4_title": "स्व-नियोजित",
+    "ind4_desc": "आरक्षण और ग्राहक पूछताछ को स्वतः संभालें",
+    "ind4_f1": "24/7 आरक्षण प्रबंधन",
+    "ind4_f2": "मेनू/कीमत का स्वतः सूचन",
+    "ind4_f3": "नियमित ग्राहकों को स्वतः पहचानें",
+    "ind5_title": "फ्रीलांसर",
+    "ind5_desc": "कॉल विश्लेषण, बातचीत रणनीति, ग्राहक प्रबंधन",
+    "ind5_f1": "रियल-टाइम बातचीत प्रस्ताव",
+    "ind5_f2": "ग्राहक कॉल इतिहास",
+    "ind5_f3": "CRM स्वतः सिंक करें",
+    "ind6_title": "विनिर्माण",
+    "ind6_desc": "उपकरण समस्याओं का पता लगाएं, शिफ्ट हैंडओवर",
+    "ind6_f1": "उपकरण विफलता कीवर्ड का पता लगाएं",
+    "ind6_f2": "शिफ्ट हैंडओवर",
+    "ind6_f3": "कार्य निरंतरता बनाए रखें"
+  },
+  "es": {
+    "name": "Español",
+    "page_title": "CallMind AI - Plataforma de Asistente de Llamadas AI",
+    "hero_title": "Asistente de Llamadas<br>Inteligente con AI",
+    "hero_subtitle": "AI maneja conversaciones telefónicas, de voz y mensajería en tiempo real",
+    "btn_start": "Comenzar Gratis",
+    "btn_demo": "Ver Demo",
+    "stat1": "Idiomas",
+    "stat2": "Precisión de Reconocimiento",
+    "stat3": "Servicio Ininterrumpido",
+    "stat4": "Tiempo de Respuesta",
+    "header_core": "Características Principales",
+    "header_industry": "Soluciones Industriales",
+    "features_title": "Características Principales",
+    "features_subtitle": "AI gestiona cada momento de sus llamadas",
+    "feat1_title": "Respuesta de Llamadas AI",
+    "feat1_desc": "AI responde llamadas y conversa naturalmente",
+    "feat2_title": "Transcripción y Resumen Automático",
+    "feat2_desc": "Transcripción en tiempo real y resumen automático",
+    "feat3_title": "Asistente de Negociación AI",
+    "feat3_desc": "Estrategia de negociación en tiempo real y análisis de éxito",
+    "feat4_title": "Soporte Multilingüe",
+    "feat4_desc": "12 idiomas compatibles con traducción en tiempo real",
+    "feat5_title": "Evidencia Legal",
+    "feat5_desc": "Almacenado de forma segura con marca de tiempo y hash",
+    "feat6_title": "Automatización de Flujo de Trabajo",
+    "feat6_desc": "Generar automáticamente notas de reunión, contratos, propuestas",
+    "industries_title": "Soluciones Industriales",
+    "industries_subtitle": "Asistente de llamadas AI optimizado para su industria",
+    "ind1_title": "Cuidado",
+    "ind1_desc": "Resumir automáticamente llamadas de cuidadores, detectar emergencias",
+    "ind1_f1": "Enviar automáticamente resúmenes de llamadas",
+    "ind1_f2": "Alertas instantáneas para palabras clave de riesgo",
+    "ind1_f3": "Registrar automáticamente acuerdos verbales",
+    "ind2_title": "Sitios de Construcción",
+    "ind2_desc": "AI maneja llamadas durante el trabajo, seguridad primero",
+    "ind2_f1": "Respuesta automática durante el trabajo",
+    "ind2_f2": "Organizar automáticamente instrucciones de trabajo",
+    "ind2_f3": "Evaluar automáticamente la urgencia",
+    "ind3_title": "Servicios de Entrega",
+    "ind3_desc": "Llamadas seguras mientras conduce, manejar automáticamente consultas repetidas",
+    "ind3_f1": "Responder automáticamente estado de entrega",
+    "ind3_f2": "Guiar automáticamente manejo de ausencias",
+    "ind3_f3": "Evidencia de disputas de entrega",
+    "ind4_title": "Autónomos",
+    "ind4_desc": "Manejar automáticamente reservas y consultas de clientes",
+    "ind4_f1": "Manejo de reservas 24/7",
+    "ind4_f2": "Informar automáticamente menú/precios",
+    "ind4_f3": "Reconocer automáticamente clientes regulares",
+    "ind5_title": "Autónomos",
+    "ind5_desc": "Análisis de llamadas, estrategia de negociación, gestión de clientes",
+    "ind5_f1": "Propuestas de negociación en tiempo real",
+    "ind5_f2": "Historial de llamadas de clientes",
+    "ind5_f3": "Sincronizar automáticamente CRM",
+    "ind6_title": "Manufactura",
+    "ind6_desc": "Detectar problemas de equipo, cambio de turno",
+    "ind6_f1": "Detectar palabras clave de falla de equipo",
+    "ind6_f2": "Cambio de turno",
+    "ind6_f3": "Mantener continuidad de trabajo"
+  },
+  "fr": {
+    "name": "Français",
+    "page_title": "CallMind AI - Plateforme d'Assistant d'Appels AI",
+    "hero_title": "Assistant d'Appels<br>Intelligent avec AI",
+    "hero_subtitle": "L'IA gère les conversations téléphoniques, vocales et de messagerie en temps réel",
+    "btn_start": "Commencer Gratuitement",
+    "btn_demo": "Voir la Démo",
+    "stat1": "Langues",
+    "stat2": "Précision de Reconnaissance",
+    "stat3": "Service Ininterrompu",
+    "stat4": "Temps de Réponse",
+    "header_core": "Fonctionnalités Principales",
+    "header_industry": "Solutions Industrielles",
+    "features_title": "Fonctionnalités Principales",
+    "features_subtitle": "L'IA gère chaque instant de vos appels",
+    "feat1_title": "Réponse d'Appels AI",
+    "feat1_desc": "L'IA répond aux appels et converse naturellement",
+    "feat2_title": "Transcription et Résumé Automatiques",
+    "feat2_desc": "Transcription en temps réel et résumé automatique",
+    "feat3_title": "Assistant de Négociation AI",
+    "feat3_desc": "Stratégie de négociation en temps réel et analyse de succès",
+    "feat4_title": "Support Multilingue",
+    "feat4_desc": "12 langues prises en charge avec traduction en temps réel",
+    "feat5_title": "Preuve Légale",
+    "feat5_desc": "Stocké en toute sécurité avec horodatage et hachage",
+    "feat6_title": "Automatisation du Flux de Travail",
+    "feat6_desc": "Générer automatiquement notes de réunion, contrats, propositions",
+    "industries_title": "Solutions Industrielles",
+    "industries_subtitle": "Assistant d'appels AI optimisé pour votre industrie",
+    "ind1_title": "Soins",
+    "ind1_desc": "Résumer automatiquement les appels des soignants, détecter les urgences",
+    "ind1_f1": "Envoyer automatiquement des résumés d'appels",
+    "ind1_f2": "Alertes instantanées pour mots-clés à risque",
+    "ind1_f3": "Enregistrer automatiquement les accords verbaux",
+    "ind2_title": "Chantiers de Construction",
+    "ind2_desc": "L'IA gère les appels pendant le travail, sécurité d'abord",
+    "ind2_f1": "Réponse automatique pendant le travail",
+    "ind2_f2": "Organiser automatiquement les instructions de travail",
+    "ind2_f3": "Évaluer automatiquement l'urgence",
+    "ind3_title": "Services de Livraison",
+    "ind3_desc": "Appels sécurisés en conduisant, gérer automatiquement les demandes répétées",
+    "ind3_f1": "Répondre automatiquement statut de livraison",
+    "ind3_f2": "Guider automatiquement gestion d'absence",
+    "ind3_f3": "Preuve de litiges de livraison",
+    "ind4_title": "Travailleurs Indépendants",
+    "ind4_desc": "Gérer automatiquement les réservations et les demandes des clients",
+    "ind4_f1": "Gestion de réservations 24/7",
+    "ind4_f2": "Informer automatiquement menu/prix",
+    "ind4_f3": "Reconnaître automatiquement clients réguliers",
+    "ind5_title": "Freelancers",
+    "ind5_desc": "Analyse des appels, stratégie de négociation, gestion des clients",
+    "ind5_f1": "Propositions de négociation en temps réel",
+    "ind5_f2": "Historique d'appels clients",
+    "ind5_f3": "Synchroniser automatiquement CRM",
+    "ind6_title": "Fabrication",
+    "ind6_desc": "Détecter les problèmes d'équipement, passation de relève",
+    "ind6_f1": "Détecter mots-clés de panne d'équipement",
+    "ind6_f2": "Passation de relève",
+    "ind6_f3": "Maintenir continuité de travail"
+  },
+  "ar": {
+    "name": "العربية",
+    "page_title": "CallMind AI - منصة مساعد المكالمات بالذكاء الاصطناعي",
+    "hero_title": "مساعد المكالمات<br>الذكي بالذكاء الاصطناعي",
+    "hero_subtitle": "الذكاء الاصطناعي يتعامل مع المحادثات الهاتفية والصوتية ومحادثات المراسلة في الوقت الفعلي",
+    "btn_start": "ابدأ مجانًا",
+    "btn_demo": "شاهد العرض التوضيحي",
+    "stat1": "اللغات",
+    "stat2": "دقة التعرف",
+    "stat3": "خدمة غير منقطعة",
+    "stat4": "وقت الاستجابة",
+    "header_core": "الميزات الأساسية",
+    "header_industry": "حلول الصناعة",
+    "features_title": "الميزات الأساسية",
+    "features_subtitle": "الذكاء الاصطناعي يدير كل لحظة من مكالماتك",
+    "feat1_title": "استجابة المكالمات بالذكاء الاصطناعي",
+    "feat1_desc": "الذكاء الاصطناعي يجيب على المكالمات ويتحدث بشكل طبيعي",
+    "feat2_title": "النسخ والملخص التلقائي",
+    "feat2_desc": "النسخ في الوقت الفعلي والملخص التلقائي",
+    "feat3_title": "مساعد التفاوض بالذكاء الاصطناعي",
+    "feat3_desc": "استراتيجية التفاوض في الوقت الفعلي وتحليل النجاح",
+    "feat4_title": "الدعم متعدد اللغات",
+    "feat4_desc": "12 لغة مدعومة مع ترجمة في الوقت الفعلي",
+    "feat5_title": "دليل قانوني",
+    "feat5_desc": "مخزن بأمان مع الطابع الزمني والتجزئة",
+    "feat6_title": "أتمتة سير العمل",
+    "feat6_desc": "إنشاء ملاحظات الاجتماع والعقود والمقترحات تلقائيًا",
+    "industries_title": "حلول الصناعة",
+    "industries_subtitle": "مساعد المكالمات بالذكاء الاصطناعي المحسّن لصناعتك",
+    "ind1_title": "الرعاية",
+    "ind1_desc": "تلخيص تلقائي لمكالمات مقدمي الرعاية، اكتشاف حالات الطوارئ",
+    "ind1_f1": "إرسال ملخصات المكالمات تلقائيًا",
+    "ind1_f2": "تنبيهات فورية للكلمات الرئيسية للمخاطر",
+    "ind1_f3": "تسجيل الاتفاقيات الشفهية تلقائيًا",
+    "ind2_title": "مواقع البناء",
+    "ind2_desc": "الذكاء الاصطناعي يتعامل مع المكالمات أثناء العمل، السلامة أولاً",
+    "ind2_f1": "استجابة تلقائية أثناء العمل",
+    "ind2_f2": "تنظيم تعليمات العمل تلقائيًا",
+    "ind2_f3": "تقييم الإلحاح تلقائيًا",
+    "ind3_title": "خدمات التوصيل",
+    "ind3_desc": "مكالمات آمنة أثناء القيادة، معالجة الاستفسارات المتكررة تلقائيًا",
+    "ind3_f1": "الرد تلقائيًا على حالة التوصيل",
+    "ind3_f2": "إرشاد معالجة الغياب تلقائيًا",
+    "ind3_f3": "دليل نزاعات التوصيل",
+    "ind4_title": "العمل الحر",
+    "ind4_desc": "معالجة الحجوزات واستفسارات العملاء تلقائيًا",
+    "ind4_f1": "معالجة الحجوزات على مدار الساعة",
+    "ind4_f2": "إبلاغ القائمة/الأسعار تلقائيًا",
+    "ind4_f3": "التعرف على العملاء المنتظمين تلقائيًا",
+    "ind5_title": "العمل الحر",
+    "ind5_desc": "تحليل المكالمات، استراتيجية التفاوض، إدارة العملاء",
+    "ind5_f1": "مقترحات التفاوض في الوقت الفعلي",
+    "ind5_f2": "سجل مكالمات العملاء",
+    "ind5_f3": "مزامنة CRM تلقائيًا",
+    "ind6_title": "التصنيع",
+    "ind6_desc": "اكتشاف مشاكل المعدات، تسليم الوردية",
+    "ind6_f1": "اكتشاف كلمات رئيسية لفشل المعدات",
+    "ind6_f2": "تسليم الوردية",
+    "ind6_f3": "الحفاظ على استمرارية العمل"
+  },
+  "bn": {
+    "name": "বাংলা",
+    "page_title": "CallMind AI - AI কল সহায়ক প্ল্যাটফর্ম",
+    "hero_title": "AI স্মার্ট<br>কল সহায়ক",
+    "hero_subtitle": "AI ফোন, ভয়েস এবং মেসেঞ্জার কথোপকথন রিয়েল-টাইমে পরিচালনা করে",
+    "btn_start": "বিনামূল্যে শুরু করুন",
+    "btn_demo": "ডেমো দেখুন",
+    "stat1": "ভাষা",
+    "stat2": "স্বীকৃতি নির্ভুলতা",
+    "stat3": "নিরবচ্ছিন্ন সেবা",
+    "stat4": "প্রতিক্রিয়া সময়",
+    "header_core": "মূল বৈশিষ্ট্য",
+    "header_industry": "শিল্প সমাধান",
+    "features_title": "মূল বৈশিষ্ট্য",
+    "features_subtitle": "AI আপনার কলের প্রতিটি মুহূর্ত পরিচালনা করে",
+    "feat1_title": "AI কল প্রতিক্রিয়া",
+    "feat1_desc": "AI কল উত্তর দেয় এবং স্বাভাবিকভাবে কথোপকথন করে",
+    "feat2_title": "স্বয়ংক্রিয় ট্রান্সক্রিপশন এবং সারাংশ",
+    "feat2_desc": "রিয়েল-টাইম ট্রান্সক্রিপশন এবং স্বয়ংক্রিয় সারাংশ",
+    "feat3_title": "AI আলোচনা সহায়ক",
+    "feat3_desc": "রিয়েল-টাইম আলোচনা কৌশল এবং সাফল্য বিশ্লেষণ",
+    "feat4_title": "বহুভাষিক সমর্থন",
+    "feat4_desc": "রিয়েল-টাইম অনুবাদ সহ 12টি ভাষা সমর্থিত",
+    "feat5_title": "আইনি প্রমাণ",
+    "feat5_desc": "টাইমস্ট্যাম্প এবং হ্যাশ সহ নিরাপদে সংরক্ষিত",
+    "feat6_title": "কর্মপ্রবাহ অটোমেশন",
+    "feat6_desc": "মিটিং নোট, চুক্তি, প্রস্তাব স্বয়ংক্রিয়ভাবে তৈরি করুন",
+    "industries_title": "শিল্প সমাধান",
+    "industries_subtitle": "আপনার শিল্পের জন্য অনুকূলিত AI কল সহায়ক",
+    "ind1_title": "যত্ন",
+    "ind1_desc": "যত্নশীল কলের স্বতঃ সারাংশ, জরুরী অবস্থা সনাক্ত করুন",
+    "ind1_f1": "কল সারাংশ স্বয়ংক্রিয়ভাবে পাঠান",
+    "ind1_f2": "ঝুঁকি কীওয়ার্ডের জন্য তাত্ক্ষণিক সতর্কতা",
+    "ind1_f3": "মৌখিক চুক্তি স্বয়ংক্রিয়ভাবে রেকর্ড করুন",
+    "ind2_title": "নির্মাণ সাইট",
+    "ind2_desc": "কাজের সময় AI কল পরিচালনা করে, নিরাপত্তা প্রথম",
+    "ind2_f1": "কাজের সময় স্বয়ংক্রিয় প্রতিক্রিয়া",
+    "ind2_f2": "কাজের নির্দেশাবলী স্বয়ংক্রিয়ভাবে সংগঠিত করুন",
+    "ind2_f3": "জরুরিতা স্বয়ংক্রিয়ভাবে মূল্যায়ন করুন",
+    "ind3_title": "ডেলিভারি সেবা",
+    "ind3_desc": "গাড়ি চালানোর সময় নিরাপদ কল, পুনরাবৃত্তি জিজ্ঞাসা স্বয়ংক্রিয়ভাবে পরিচালনা করুন",
+    "ind3_f1": "ডেলিভারি স্থিতি স্বয়ংক্রিয়ভাবে প্রতিক্রিয়া",
+    "ind3_f2": "অনুপস্থিতি পরিচালনা স্বয়ংক্রিয়ভাবে নির্দেশনা",
+    "ind3_f3": "ডেলিভারি বিরোধ প্রমাণ",
+    "ind4_title": "স্ব-কর্মসংস্থান",
+    "ind4_desc": "স্বয়ংক্রিয়ভাবে রিজার্ভেশন এবং গ্রাহক জিজ্ঞাসা পরিচালনা করুন",
+    "ind4_f1": "24/7 রিজার্ভেশন পরিচালনা",
+    "ind4_f2": "মেনু/মূল্য স্বয়ংক্রিয়ভাবে অবহিত করুন",
+    "ind4_f3": "নিয়মিত গ্রাহকদের স্বয়ংক্রিয়ভাবে চিনুন",
+    "ind5_title": "ফ্রিল্যান্সার",
+    "ind5_desc": "কল বিশ্লেষণ, আলোচনা কৌশল, গ্রাহক ব্যবস্থাপনা",
+    "ind5_f1": "রিয়েল-টাইম আলোচনা প্রস্তাব",
+    "ind5_f2": "গ্রাহক কল ইতিহাস",
+    "ind5_f3": "CRM স্বয়ংক্রিয়ভাবে সিঙ্ক করুন",
+    "ind6_title": "উৎপাদন",
+    "ind6_desc": "সরঞ্জাম সমস্যা সনাক্ত করুন, শিফট হস্তান্তর",
+    "ind6_f1": "সরঞ্জাম ব্যর্থতা কীওয়ার্ড সনাক্ত করুন",
+    "ind6_f2": "শিফট হস্তান্তর",
+    "ind6_f3": "কাজের ধারাবাহিকতা বজায় রাখুন"
+  },
+  "ru": {
+    "name": "Русский",
+    "page_title": "CallMind AI - Платформа AI-ассистента звонков",
+    "hero_title": "Умный помощник<br>для звонков на базе AI",
+    "hero_subtitle": "AI обрабатывает телефонные, голосовые и мессенджер разговоры в режиме реального времени",
+    "btn_start": "Начать бесплатно",
+    "btn_demo": "Смотреть демо",
+    "stat1": "Языки",
+    "stat2": "Точность распознавания",
+    "stat3": "Непрерывный сервис",
+    "stat4": "Время отклика",
+    "header_core": "Основные функции",
+    "header_industry": "Отраслевые решения",
+    "features_title": "Основные функции",
+    "features_subtitle": "AI управляет каждым моментом ваших звонков",
+    "feat1_title": "AI-ответ на звонки",
+    "feat1_desc": "AI отвечает на звонки и естественно беседует",
+    "feat2_title": "Автоматическая транскрипция и резюме",
+    "feat2_desc": "Транскрипция в реальном времени и автоматическое резюме",
+    "feat3_title": "AI-ассистент переговоров",
+    "feat3_desc": "Стратегия переговоров в реальном времени и анализ успеха",
+    "feat4_title": "Многоязычная поддержка",
+    "feat4_desc": "Поддержка 12 языков с переводом в реальном времени",
+    "feat5_title": "Юридические доказательства",
+    "feat5_desc": "Безопасно хранится с меткой времени и хешем",
+    "feat6_title": "Автоматизация рабочего процесса",
+    "feat6_desc": "Автоматическое создание протоколов встреч, контрактов, предложений",
+    "industries_title": "Отраслевые решения",
+    "industries_subtitle": "AI-ассистент звонков, оптимизированный для вашей отрасли",
+    "ind1_title": "Уход",
+    "ind1_desc": "Автоматическое резюмирование звонков опекунов, обнаружение чрезвычайных ситуаций",
+    "ind1_f1": "Автоматическая отправка резюме звонков",
+    "ind1_f2": "Мгновенные предупреждения для ключевых слов риска",
+    "ind1_f3": "Автоматическая запись устных соглашений",
+    "ind2_title": "Строительные площадки",
+    "ind2_desc": "AI обрабатывает звонки во время работы, безопасность прежде всего",
+    "ind2_f1": "Автоматический ответ во время работы",
+    "ind2_f2": "Автоматическая организация рабочих инструкций",
+    "ind2_f3": "Автоматическая оценка срочности",
+    "ind3_title": "Службы доставки",
+    "ind3_desc": "Безопасные звонки за рулем, автоматическая обработка повторяющихся запросов",
+    "ind3_f1": "Автоматический ответ на статус доставки",
+    "ind3_f2": "Автоматическое руководство по обработке отсутствия",
+    "ind3_f3": "Доказательства споров о доставке",
+    "ind4_title": "Самозанятые",
+    "ind4_desc": "Автоматическая обработка бронирований и запросов клиентов",
+    "ind4_f1": "Обработка бронирований 24/7",
+    "ind4_f2": "Автоматическое информирование меню/цен",
+    "ind4_f3": "Автоматическое распознавание постоянных клиентов",
+    "ind5_title": "Фрилансеры",
+    "ind5_desc": "Анализ звонков, стратегия переговоров, управление клиентами",
+    "ind5_f1": "Предложения по переговорам в реальном времени",
+    "ind5_f2": "История звонков клиентов",
+    "ind5_f3": "Автоматическая синхронизация CRM",
+    "ind6_title": "Производство",
+    "ind6_desc": "Обнаружение проблем с оборудованием, передача смены",
+    "ind6_f1": "Обнаружение ключевых слов неисправности оборудования",
+    "ind6_f2": "Передача смены",
+    "ind6_f3": "Поддержание непрерывности работы"
+  },
+  "pt": {
+    "name": "Português",
+    "page_title": "CallMind AI - Plataforma de Assistente de Chamadas AI",
+    "hero_title": "Assistente de Chamadas<br>Inteligente com AI",
+    "hero_subtitle": "AI lida com conversas telefônicas, de voz e de mensagens em tempo real",
+    "btn_start": "Começar Grátis",
+    "btn_demo": "Ver Demo",
+    "stat1": "Idiomas",
+    "stat2": "Precisão de Reconhecimento",
+    "stat3": "Serviço Ininterrupto",
+    "stat4": "Tempo de Resposta",
+    "header_core": "Recursos Principais",
+    "header_industry": "Soluções Industriais",
+    "features_title": "Recursos Principais",
+    "features_subtitle": "AI gerencia cada momento de suas chamadas",
+    "feat1_title": "Resposta de Chamadas AI",
+    "feat1_desc": "AI responde chamadas e conversa naturalmente",
+    "feat2_title": "Transcrição e Resumo Automáticos",
+    "feat2_desc": "Transcrição em tempo real e resumo automático",
+    "feat3_title": "Assistente de Negociação AI",
+    "feat3_desc": "Estratégia de negociação em tempo real e análise de sucesso",
+    "feat4_title": "Suporte Multilíngue",
+    "feat4_desc": "12 idiomas suportados com tradução em tempo real",
+    "feat5_title": "Evidência Legal",
+    "feat5_desc": "Armazenado com segurança com carimbo de tempo e hash",
+    "feat6_title": "Automação de Fluxo de Trabalho",
+    "feat6_desc": "Gerar automaticamente notas de reunião, contratos, propostas",
+    "industries_title": "Soluções Industriais",
+    "industries_subtitle": "Assistente de chamadas AI otimizado para sua indústria",
+    "ind1_title": "Cuidados",
+    "ind1_desc": "Resumir automaticamente chamadas de cuidadores, detectar emergências",
+    "ind1_f1": "Enviar automaticamente resumos de chamadas",
+    "ind1_f2": "Alertas instantâneos para palavras-chave de risco",
+    "ind1_f3": "Registrar automaticamente acordos verbais",
+    "ind2_title": "Canteiros de Obras",
+    "ind2_desc": "AI lida com chamadas durante o trabalho, segurança em primeiro lugar",
+    "ind2_f1": "Resposta automática durante o trabalho",
+    "ind2_f2": "Organizar automaticamente instruções de trabalho",
+    "ind2_f3": "Avaliar automaticamente a urgência",
+    "ind3_title": "Serviços de Entrega",
+    "ind3_desc": "Chamadas seguras ao dirigir, lidar automaticamente com consultas repetidas",
+    "ind3_f1": "Responder automaticamente status de entrega",
+    "ind3_f2": "Orientar automaticamente tratamento de ausências",
+    "ind3_f3": "Evidência de disputas de entrega",
+    "ind4_title": "Autônomos",
+    "ind4_desc": "Lidar automaticamente com reservas e consultas de clientes",
+    "ind4_f1": "Gerenciamento de reservas 24/7",
+    "ind4_f2": "Informar automaticamente menu/preços",
+    "ind4_f3": "Reconhecer automaticamente clientes regulares",
+    "ind5_title": "Freelancers",
+    "ind5_desc": "Análise de chamadas, estratégia de negociação, gerenciamento de clientes",
+    "ind5_f1": "Propostas de negociação em tempo real",
+    "ind5_f2": "Histórico de chamadas de clientes",
+    "ind5_f3": "Sincronizar automaticamente CRM",
+    "ind6_title": "Manufatura",
+    "ind6_desc": "Detectar problemas de equipamento, passagem de turno",
+    "ind6_f1": "Detectar palavras-chave de falha de equipamento",
+    "ind6_f2": "Passagem de turno",
+    "ind6_f3": "Manter continuidade de trabalho"
   }
 }
