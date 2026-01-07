@@ -1,0 +1,870 @@
+{
+  "ko": {
+    "name": "한국어",
+    "page_title": "CallMind AI - AI 통화비서 플랫폼",
+    "hero_title": "AI가 대신하는<br>똑똑한 통화 비서",
+    "hero_subtitle": "전화·음성·메신저 대화를 AI가 실시간으로 응대·요약·기록·분석",
+    "btn_start": "무료로 시작하기",
+    "btn_demo": "데모 보기",
+    "header_core": "핵심 기능",
+    "header_industry": "산업별 특화",
+    "header_pricing": "요금제",
+    "stat1": "지원 언어",
+    "stat2": "인식 정확도",
+    "stat3": "무중단 서비스",
+    "stat4": "응답 속도",
+    "chatbot_title": "FAQ 도우미",
+    "chatbot_subtitle": "자주 묻는 질문",
+    "cat1": "기본 서비스 안내",
+    "cat2": "통화 녹취·요약 기능",
+    "cat3": "AI 협상 비서 관련",
+    "cat4": "보안·법적",
+    "cat5": "요금·운영",
+    "cat6": "계약·업무 자동화",
+    "cat7": "AI to AI 통화",
+    "cat8": "다국어·글로벌"
+  },
+  "en": {
+    "name": "English",
+    "page_title": "CallMind AI - AI Call Assistant Platform",
+    "hero_title": "AI-Powered<br>Intelligent Call Assistant",
+    "hero_subtitle": "AI answers calls, records, summarizes, and provides instant analysis",
+    "btn_start": "Start Free",
+    "btn_demo": "Watch Demo",
+    "header_core": "Core Features",
+    "header_industry": "Industry Solutions",
+    "header_pricing": "Pricing",
+    "stat1": "Languages",
+    "stat2": "Recognition Accuracy",
+    "stat3": "Uninterrupted Service",
+    "stat4": "Response Time",
+    "chatbot_title": "FAQ Assistant",
+    "chatbot_subtitle": "Frequently Asked Questions",
+    "cat1": "Basic Service Information",
+    "cat2": "Call Recording & Summarization",
+    "cat3": "AI Negotiation Assistant",
+    "cat4": "Security & Legal",
+    "cat5": "Pricing & Operations",
+    "cat6": "Contracts & Automation",
+    "cat7": "AI-to-AI Calls",
+    "cat8": "Multilingual & Global",
+    "faq": [
+      {
+        "q": "What is this service?",
+        "a": "AI Call Assistant is a service where AI answers, records phone calls, voice, and messenger conversations, and automatically summarizes, stores, and analyzes call content."
+      },
+      {
+        "q": "When should I use this?",
+        "a": "It can be used in all situations requiring sales calls, customer service, contract negotiations, international calls, and call record management."
+      },
+      {
+        "q": "Does AI actually answer calls?",
+        "a": "Yes. Through a virtual number, AI can directly receive calls and converse like a human."
+      },
+      {
+        "q": "Can it be used when people are on calls?",
+        "a": "Yes. When a user is on a call, AI simultaneously performs recording, summarization, and analysis."
+      },
+      {
+        "q": "Is call content automatically saved?",
+        "a": "If recording consent is enabled, all calls are automatically saved."
+      },
+      {
+        "q": "How are calls recorded?",
+        "a": "Voice is converted to text in real-time and saved along with the original audio."
+      },
+      {
+        "q": "What format is the call summary?",
+        "a": "A 3-5 line summary of key points along with major agreements and action items are automatically organized."
+      },
+      {
+        "q": "Are multiple speakers distinguished?",
+        "a": "Yes. The speaker separation feature distinguishes who said what."
+      },
+      {
+        "q": "Does it analyze emotions?",
+        "a": "Yes. It automatically analyzes emotional states such as anger, neutral, and satisfaction."
+      },
+      {
+        "q": "Can I search past calls?",
+        "a": "You can search with natural language like \"last month's contract call\"."
+      },
+      {
+        "q": "What does the AI Negotiation Assistant do?",
+        "a": "It analyzes the other party's statements during calls and provides negotiation strategies, recommended phrases, and risk warnings."
+      },
+      {
+        "q": "Does the other party see the AI during negotiation?",
+        "a": "No. Negotiation guides are displayed privately only to the user."
+      },
+      {
+        "q": "Does it help with price negotiation?",
+        "a": "Yes. It comprehensively analyzes price, schedule, and conditions to suggest optimal alternatives."
+      },
+      {
+        "q": "Is call recording legal?",
+        "a": "Automatic guidance messages are applied according to each country's recording laws."
+      },
+      {
+        "q": "Is data securely stored?",
+        "a": "All data is encrypted and stored."
+      },
+      {
+        "q": "Can it be used as legal evidence?",
+        "a": "It includes timestamps and hash values that can be used as evidence."
+      },
+      {
+        "q": "Can I use it for free?",
+        "a": "Basic summarization features are provided in the free plan."
+      },
+      {
+        "q": "What about enterprise plans?",
+        "a": "Customized plans are provided based on the number of users and features."
+      },
+      {
+        "q": "Can it be applied to call centers?",
+        "a": "Yes. It provides consultation automation and quality management features."
+      },
+      {
+        "q": "How do I get started?",
+        "a": "After signing up, you can start using it immediately by creating a virtual number."
+      },
+      {
+        "q": "Are contracts automatically organized after calls?",
+        "a": "Yes. Contract summaries or drafts can be generated based on call content."
+      },
+      {
+        "q": "Are verbal agreements recorded?",
+        "a": "Agreement content in calls is automatically extracted and matched with contract clauses."
+      },
+      {
+        "q": "Can I give voice commands?",
+        "a": "Voice commands like \"summarize this call and send via email\" are possible."
+      },
+      {
+        "q": "Does it integrate with CRM?",
+        "a": "It integrates with major CRMs such as Salesforce and HubSpot."
+      },
+      {
+        "q": "Can it create meeting minutes or proposals?",
+        "a": "They can be automatically generated after calls end."
+      },
+      {
+        "q": "What does AI-to-AI calling mean?",
+        "a": "Our company's AI and the other company's AI directly communicate to pre-coordinate conditions."
+      },
+      {
+        "q": "Is human intervention not required at all?",
+        "a": "It's only possible within preset ranges, and human intervention is required for final approval."
+      },
+      {
+        "q": "Does multilingual negotiation work?",
+        "a": "Yes. Each AI can negotiate in real-time in different languages."
+      },
+      {
+        "q": "Are AI-to-AI call records saved?",
+        "a": "All AI↔AI calls are saved as voice, text, and agreement logs."
+      },
+      {
+        "q": "What languages are supported?",
+        "a": "Korean, English, Japanese, Chinese, Spanish, French, and more are supported."
+      },
+      {
+        "q": "Are international numbers provided?",
+        "a": "Virtual numbers (DID) are provided by country."
+      },
+      {
+        "q": "Is real-time translation possible?",
+        "a": "Real-time translation during calls and translated summaries are available."
+      },
+      {
+        "q": "Can I see negotiation success probability?",
+        "a": "Contract success probability is provided in real-time during calls."
+      },
+      {
+        "q": "Can I practice negotiations?",
+        "a": "Yes. You can simulate negotiations with an AI counterpart before actual calls."
+      },
+      {
+        "q": "Is GDPR or CCPA compliant?",
+        "a": "Yes. We comply with global privacy protection regulations."
+      }
+    ]
+  },
+  "zh-CN": {
+    "name": "简体中文",
+    "page_title": "CallMind AI - AI通话助手平台",
+    "hero_title": "AI驱动<br>智能通话助手",
+    "hero_subtitle": "AI接听电话、录音、摘要并提供即时分析",
+    "btn_start": "免费开始",
+    "btn_demo": "观看演示",
+    "header_core": "核心功能",
+    "header_industry": "行业解决方案",
+    "header_pricing": "价格",
+    "stat1": "语言支持",
+    "stat2": "识别准确度",
+    "stat3": "不间断服务",
+    "stat4": "响应速度",
+    "chatbot_title": "FAQ助手",
+    "chatbot_subtitle": "常见问题",
+    "cat1": "基本服务信息",
+    "cat2": "通话录音与摘要",
+    "cat3": "AI谈判助手",
+    "cat4": "安全与法律",
+    "cat5": "价格与运营",
+    "cat6": "合同与自动化",
+    "cat7": "AI对AI通话",
+    "cat8": "多语言与全球",
+    "faq": [
+      {
+        "q": "这项服务是什么？",
+        "a": "AI通话助手是一项由AI接听、录音电话、语音和信使对话，并自动摘要、存储和分析通话内容的服务。"
+      },
+      {
+        "q": "什么时候应该使用？",
+        "a": "可用于所有需要销售电话、客户服务、合同谈判、国际电话和通话记录管理的情况。"
+      },
+      {
+        "q": "AI真的接听电话吗？",
+        "a": "是的。通过虚拟号码，AI可以直接接听电话并像人一样交谈。"
+      },
+      {
+        "q": "人们通话时可以使用吗？",
+        "a": "是的。当用户通话时，AI同时执行录音、摘要和分析。"
+      },
+      {
+        "q": "通话内容会自动保存吗？",
+        "a": "如果启用录音同意，所有通话都会自动保存。"
+      },
+      {
+        "q": "通话如何录音？",
+        "a": "语音会实时转换为文本，并与原始音频一起保存。"
+      },
+      {
+        "q": "通话摘要是什么格式？",
+        "a": "关键要点的3-5行摘要，以及主要协议和行动项目会自动整理。"
+      },
+      {
+        "q": "多个说话者会被区分吗？",
+        "a": "是的。说话者分离功能可以区分谁说了什么。"
+      },
+      {
+        "q": "它会分析情感吗？",
+        "a": "是的。它自动分析愤怒、中立和满意等情绪状态。"
+      },
+      {
+        "q": "我可以搜索过去的通话吗？",
+        "a": "您可以用自然语言搜索，例如\"上个月的合同电话\"。"
+      },
+      {
+        "q": "AI谈判助手做什么？",
+        "a": "它在通话期间分析对方的陈述，并提供谈判策略、推荐短语和风险警告。"
+      },
+      {
+        "q": "对方在谈判期间看到AI吗？",
+        "a": "不会。谈判指南仅私下显示给用户。"
+      },
+      {
+        "q": "它帮助价格谈判吗？",
+        "a": "是的。它综合分析价格、时间表和条件，以建议最佳替代方案。"
+      },
+      {
+        "q": "通话录音合法吗？",
+        "a": "根据每个国家的录音法律应用自动指导消息。"
+      },
+      {
+        "q": "数据安全存储吗？",
+        "a": "所有数据都经过加密存储。"
+      },
+      {
+        "q": "可以用作法律证据吗？",
+        "a": "它包含时间戳和哈希值，可用作证据。"
+      },
+      {
+        "q": "我可以免费使用吗？",
+        "a": "免费计划中提供基本摘要功能。"
+      },
+      {
+        "q": "企业计划怎么样？",
+        "a": "根据用户数量和功能提供定制计划。"
+      },
+      {
+        "q": "可以应用于呼叫中心吗？",
+        "a": "是的。它提供咨询自动化和质量管理功能。"
+      },
+      {
+        "q": "如何开始？",
+        "a": "注册后，您可以通过创建虚拟号码立即开始使用。"
+      },
+      {
+        "q": "通话后合同会自动整理吗？",
+        "a": "是的。可以根据通话内容生成合同摘要或草稿。"
+      },
+      {
+        "q": "口头协议会记录吗？",
+        "a": "通话中的协议内容会自动提取并与合同条款匹配。"
+      },
+      {
+        "q": "我可以发出语音命令吗？",
+        "a": "可以使用语音命令，例如\"摘要此通话并通过电子邮件发送\"。"
+      },
+      {
+        "q": "它与CRM集成吗？",
+        "a": "它与Salesforce和HubSpot等主要CRM集成。"
+      },
+      {
+        "q": "它可以创建会议纪要或提案吗？",
+        "a": "通话结束后可以自动生成。"
+      },
+      {
+        "q": "AI对AI通话是什么意思？",
+        "a": "我们公司的AI和对方公司的AI直接沟通以预先协调条件。"
+      },
+      {
+        "q": "完全不需要人工干预吗？",
+        "a": "仅在预设范围内可能，最终批准需要人工干预。"
+      },
+      {
+        "q": "多语言谈判有效吗？",
+        "a": "是的。每个AI可以实时用不同语言进行谈判。"
+      },
+      {
+        "q": "AI对AI通话记录会保存吗？",
+        "a": "所有AI↔AI通话都保存为语音、文本和协议日志。"
+      },
+      {
+        "q": "支持哪些语言？",
+        "a": "支持韩语、英语、日语、中文、西班牙语、法语等。"
+      },
+      {
+        "q": "提供国际号码吗？",
+        "a": "按国家提供虚拟号码（DID）。"
+      },
+      {
+        "q": "可以实时翻译吗？",
+        "a": "通话期间可以实时翻译和提供翻译摘要。"
+      },
+      {
+        "q": "我可以看到谈判成功概率吗？",
+        "a": "通话期间实时提供合同成功概率。"
+      },
+      {
+        "q": "我可以练习谈判吗？",
+        "a": "是的。您可以在实际通话之前与AI对手模拟谈判。"
+      },
+      {
+        "q": "符合GDPR或CCPA吗？",
+        "a": "是的。我们遵守全球隐私保护法规。"
+      }
+    ]
+  },
+  "zh-TW": {
+    "name": "繁體中文",
+    "page_title": "CallMind AI - AI通話助手平台",
+    "hero_title": "AI驅動<br>智能通話助手",
+    "hero_subtitle": "AI接聽電話、錄音、摘要並提供即時分析",
+    "btn_start": "免費開始",
+    "btn_demo": "觀看演示",
+    "header_core": "核心功能",
+    "header_industry": "行業解決方案",
+    "header_pricing": "價格",
+    "stat1": "語言支援",
+    "stat2": "識別準確度",
+    "stat3": "不間斷服務",
+    "stat4": "響應速度",
+    "chatbot_title": "FAQ助手",
+    "chatbot_subtitle": "常見問題",
+    "cat1": "基本服務信息",
+    "cat2": "通話錄音與摘要",
+    "cat3": "AI談判助手",
+    "cat4": "安全與法律",
+    "cat5": "價格與運營",
+    "cat6": "合同與自動化",
+    "cat7": "AI對AI通話",
+    "cat8": "多語言與全球",
+    "faq": [
+      {
+        "q": "這項服務是什麼？",
+        "a": "AI通話助手是一項由AI接聽、錄音電話、語音和信使對話，並自動摘要、存儲和分析通話內容的服務。"
+      },
+      {
+        "q": "什麼時候應該使用？",
+        "a": "可用於所有需要銷售電話、客戶服務、合同談判、國際電話和通話記錄管理的情況。"
+      },
+      {
+        "q": "AI真的接聽電話嗎？",
+        "a": "是的。通過虛擬號碼，AI可以直接接聽電話並像人一樣交談。"
+      },
+      {
+        "q": "人們通話時可以使用嗎？",
+        "a": "是的。當用戶通話時，AI同時執行錄音、摘要和分析。"
+      },
+      {
+        "q": "通話內容會自動保存嗎？",
+        "a": "如果啟用錄音同意，所有通話都會自動保存。"
+      },
+      {
+        "q": "通話如何錄音？",
+        "a": "語音會實時轉換為文本，並與原始音頻一起保存。"
+      },
+      {
+        "q": "通話摘要是什麼格式？",
+        "a": "關鍵要點的3-5行摘要，以及主要協議和行動項目會自動整理。"
+      },
+      {
+        "q": "多個說話者會被區分嗎？",
+        "a": "是的。說話者分離功能可以區分誰說了什麼。"
+      },
+      {
+        "q": "它會分析情感嗎？",
+        "a": "是的。它自動分析憤怒、中立和滿意等情緒狀態。"
+      },
+      {
+        "q": "我可以搜索過去的通話嗎？",
+        "a": "您可以用自然語言搜索，例如\"上個月的合同電話\"。"
+      },
+      {
+        "q": "AI談判助手做什麼？",
+        "a": "它在通話期間分析對方的陳述，並提供談判策略、推薦短語和風險警告。"
+      },
+      {
+        "q": "對方在談判期間看到AI嗎？",
+        "a": "不會。談判指南僅私下顯示給用戶。"
+      },
+      {
+        "q": "它幫助價格談判嗎？",
+        "a": "是的。它綜合分析價格、時間表和條件，以建議最佳替代方案。"
+      },
+      {
+        "q": "通話錄音合法嗎？",
+        "a": "根據每個國家的錄音法律應用自動指導消息。"
+      },
+      {
+        "q": "數據安全存儲嗎？",
+        "a": "所有數據都經過加密存儲。"
+      },
+      {
+        "q": "可以用作法律證據嗎？",
+        "a": "它包含時間戳和哈希值，可用作證據。"
+      },
+      {
+        "q": "我可以免費使用嗎？",
+        "a": "免費計劃中提供基本摘要功能。"
+      },
+      {
+        "q": "企業計劃怎麼樣？",
+        "a": "根據用戶數量和功能提供定制計劃。"
+      },
+      {
+        "q": "可以應用於呼叫中心嗎？",
+        "a": "是的。它提供諮詢自動化和質量管理功能。"
+      },
+      {
+        "q": "如何開始？",
+        "a": "註冊後，您可以通過創建虛擬號碼立即開始使用。"
+      },
+      {
+        "q": "通話後合同會自動整理嗎？",
+        "a": "是的。可以根據通話內容生成合同摘要或草稿。"
+      },
+      {
+        "q": "口頭協議會記錄嗎？",
+        "a": "通話中的協議內容會自動提取並與合同條款匹配。"
+      },
+      {
+        "q": "我可以發出語音命令嗎？",
+        "a": "可以使用語音命令，例如\"摘要此通話並通過電子郵件發送\"。"
+      },
+      {
+        "q": "它與CRM集成嗎？",
+        "a": "它與Salesforce和HubSpot等主要CRM集成。"
+      },
+      {
+        "q": "它可以創建會議紀要或提案嗎？",
+        "a": "通話結束後可以自動生成。"
+      },
+      {
+        "q": "AI對AI通話是什麼意思？",
+        "a": "我們公司的AI和對方公司的AI直接溝通以預先協調條件。"
+      },
+      {
+        "q": "完全不需要人工干預嗎？",
+        "a": "僅在預設範圍內可能，最終批准需要人工干預。"
+      },
+      {
+        "q": "多語言談判有效嗎？",
+        "a": "是的。每個AI可以實時用不同語言進行談判。"
+      },
+      {
+        "q": "AI對AI通話記錄會保存嗎？",
+        "a": "所有AI↔AI通話都保存為語音、文本和協議日誌。"
+      },
+      {
+        "q": "支援哪些語言？",
+        "a": "支援韓語、英語、日語、中文、西班牙語、法語等。"
+      },
+      {
+        "q": "提供國際號碼嗎？",
+        "a": "按國家提供虛擬號碼（DID）。"
+      },
+      {
+        "q": "可以實時翻譯嗎？",
+        "a": "通話期間可以實時翻譯和提供翻譯摘要。"
+      },
+      {
+        "q": "我可以看到談判成功概率嗎？",
+        "a": "通話期間實時提供合同成功概率。"
+      },
+      {
+        "q": "我可以練習談判嗎？",
+        "a": "是的。您可以在實際通話之前與AI對手模擬談判。"
+      },
+      {
+        "q": "符合GDPR或CCPA嗎？",
+        "a": "是的。我們遵守全球隱私保護法規。"
+      }
+    ]
+  },
+  "ja": {
+    "name": "日本語",
+    "page_title": "CallMind AI - AI通話アシスタントプラットフォーム",
+    "hero_title": "AI搭載<br>インテリジェント通話アシスタント",
+    "hero_subtitle": "AIが通話に応答し、録音、要約、即座の分析を提供",
+    "btn_start": "無料で始める",
+    "btn_demo": "デモを見る",
+    "header_core": "コア機能",
+    "header_industry": "業界ソリューション",
+    "header_pricing": "料金",
+    "stat1": "言語",
+    "stat2": "認識精度",
+    "stat3": "無停止サービス",
+    "stat4": "応答時間",
+    "chatbot_title": "FAQアシスタント",
+    "chatbot_subtitle": "よくある質問",
+    "cat1": "基本サービス情報",
+    "cat2": "通話録音・要約",
+    "cat3": "AI交渉アシスタント",
+    "cat4": "セキュリティ・法律",
+    "cat5": "料金・運用",
+    "cat6": "契約・自動化",
+    "cat7": "AI対AI通話",
+    "cat8": "多言語・グローバル",
+    "faq": [
+      {
+        "q": "このサービスは何ですか？",
+        "a": "AI通話アシスタントは、AIが電話、音声、メッセンジャーの会話に応答、録音し、通話内容を自動的に要約、保存、分析するサービスです。"
+      },
+      {
+        "q": "いつ使用すべきですか？",
+        "a": "営業電話、カスタマーサービス、契約交渉、国際電話、通話記録管理が必要なすべての状況で使用できます。"
+      },
+      {
+        "q": "AIは実際に電話に応答しますか？",
+        "a": "はい。仮想番号を通じて、AIは直接電話を受けて人間のように会話できます。"
+      },
+      {
+        "q": "人が通話中でも使用できますか？",
+        "a": "はい。ユーザーが通話中の場合、AIは同時に録音、要約、分析を実行します。"
+      },
+      {
+        "q": "通話内容は自動的に保存されますか？",
+        "a": "録音同意が有効になっている場合、すべての通話は自動的に保存されます。"
+      },
+      {
+        "q": "通話はどのように録音されますか？",
+        "a": "音声はリアルタイムでテキストに変換され、元の音声とともに保存されます。"
+      },
+      {
+        "q": "通話要約はどのような形式ですか？",
+        "a": "重要なポイントの3〜5行の要約と、主要な合意事項とアクション項目が自動的に整理されます。"
+      },
+      {
+        "q": "複数の話者は区別されますか？",
+        "a": "はい。話者分離機能により、誰が何を言ったかが区別されます。"
+      },
+      {
+        "q": "感情を分析しますか？",
+        "a": "はい。怒り、中立、満足などの感情状態を自動的に分析します。"
+      },
+      {
+        "q": "過去の通話を検索できますか？",
+        "a": "「先月の契約通話」のような自然言語で検索できます。"
+      },
+      {
+        "q": "AI交渉アシスタントは何をしますか？",
+        "a": "通話中に相手の発言を分析し、交渉戦略、推奨フレーズ、リスク警告を提供します。"
+      },
+      {
+        "q": "交渉中に相手にAIが見えますか？",
+        "a": "いいえ。交渉ガイドはユーザーにのみプライベートで表示されます。"
+      },
+      {
+        "q": "価格交渉を支援しますか？",
+        "a": "はい。価格、スケジュール、条件を総合的に分析して最適な代替案を提案します。"
+      },
+      {
+        "q": "通話録音は合法ですか？",
+        "a": "各国の録音法に従って自動ガイダンスメッセージが適用されます。"
+      },
+      {
+        "q": "データは安全に保存されますか？",
+        "a": "すべてのデータは暗号化されて保存されます。"
+      },
+      {
+        "q": "法的証拠として使用できますか？",
+        "a": "タイムスタンプとハッシュ値が含まれており、証拠として使用できます。"
+      },
+      {
+        "q": "無料で使用できますか？",
+        "a": "基本要約機能は無料プランで提供されます。"
+      },
+      {
+        "q": "エンタープライズプランはどうですか？",
+        "a": "ユーザー数と機能に基づいてカスタマイズされたプランが提供されます。"
+      },
+      {
+        "q": "コールセンターに適用できますか？",
+        "a": "はい。相談自動化と品質管理機能を提供します。"
+      },
+      {
+        "q": "始めるにはどうすればよいですか？",
+        "a": "サインアップ後、仮想番号を作成することですぐに使用を開始できます。"
+      },
+      {
+        "q": "通話後に契約は自動的に整理されますか？",
+        "a": "はい。通話内容に基づいて契約要約または草案を生成できます。"
+      },
+      {
+        "q": "口頭合意は記録されますか？",
+        "a": "通話中の合意内容は自動的に抽出され、契約条項と照合されます。"
+      },
+      {
+        "q": "音声コマンドを出せますか？",
+        "a": "「この通話を要約してメールで送信」のような音声コマンドが可能です。"
+      },
+      {
+        "q": "CRMと統合されますか？",
+        "a": "SalesforceやHubSpotなどの主要CRMと統合されます。"
+      },
+      {
+        "q": "会議議事録や提案書を作成できますか？",
+        "a": "通話終了後に自動的に生成できます。"
+      },
+      {
+        "q": "AI対AI通話とはどういう意味ですか？",
+        "a": "当社のAIと相手企業のAIが直接通信して条件を事前調整します。"
+      },
+      {
+        "q": "人間の介入は全く必要ありませんか？",
+        "a": "プリセット範囲内でのみ可能で、最終承認には人間の介入が必要です。"
+      },
+      {
+        "q": "多言語交渉は機能しますか？",
+        "a": "はい。各AIは異なる言語でリアルタイムに交渉できます。"
+      },
+      {
+        "q": "AI対AI通話記録は保存されますか？",
+        "a": "すべてのAI↔AI通話は音声、テキスト、合意ログとして保存されます。"
+      },
+      {
+        "q": "どの言語がサポートされていますか？",
+        "a": "韓国語、英語、日本語、中国語、スペイン語、フランス語などがサポートされています。"
+      },
+      {
+        "q": "国際番号は提供されますか？",
+        "a": "国別に仮想番号（DID）が提供されます。"
+      },
+      {
+        "q": "リアルタイム翻訳は可能ですか？",
+        "a": "通話中のリアルタイム翻訳と翻訳要約が利用可能です。"
+      },
+      {
+        "q": "交渉成功確率を見ることができますか？",
+        "a": "通話中にリアルタイムで契約成功確率が提供されます。"
+      },
+      {
+        "q": "交渉の練習ができますか？",
+        "a": "はい。実際の通話前にAI相手と交渉シミュレーションができます。"
+      },
+      {
+        "q": "GDPRまたはCCPAに準拠していますか？",
+        "a": "はい。グローバルプライバシー保護規制に準拠しています。"
+      }
+    ]
+  },
+  "hi": {
+    "name": "हिन्दी",
+    "page_title": "CallMind AI - एआई कॉल सहायक प्लेटफ़ॉर्म",
+    "hero_title": "एआई-संचालित<br>इंटेलिजेंट कॉल सहायक",
+    "hero_subtitle": "एआई कॉल का जवाब देता है, रिकॉर्ड करता है, सारांश देता है और तत्काल विश्लेषण प्रदान करता है",
+    "btn_start": "मुफ्त शुरू करें",
+    "btn_demo": "डेमो देखें",
+    "header_core": "मुख्य विशेषताएं",
+    "header_industry": "उद्योग समाधान",
+    "header_pricing": "मूल्य निर्धारण",
+    "stat1": "भाषाएं",
+    "stat2": "पहचान सटीकता",
+    "stat3": "निर्बाध सेवा",
+    "stat4": "प्रतिक्रिया समय",
+    "chatbot_title": "FAQ सहायक",
+    "chatbot_subtitle": "अक्सर पूछे जाने वाले प्रश्न",
+    "cat1": "बुनियादी सेवा जानकारी",
+    "cat2": "कॉल रिकॉर्डिंग और सारांश",
+    "cat3": "एआई वार्ता सहायक",
+    "cat4": "सुरक्षा और कानूनी",
+    "cat5": "मूल्य निर्धारण और संचालन",
+    "cat6": "अनुबंध और स्वचालन",
+    "cat7": "एआई से एआई कॉल",
+    "cat8": "बहुभाषी और वैश्विक"
+  },
+  "es": {
+    "name": "Español",
+    "page_title": "CallMind AI - Plataforma de Asistente de Llamadas con IA",
+    "hero_title": "Asistente de Llamadas<br>Inteligente con IA",
+    "hero_subtitle": "La IA responde llamadas, graba, resume y proporciona análisis instantáneo",
+    "btn_start": "Comenzar Gratis",
+    "btn_demo": "Ver Demo",
+    "header_core": "Características Principales",
+    "header_industry": "Soluciones Industriales",
+    "header_pricing": "Precios",
+    "stat1": "Idiomas",
+    "stat2": "Precisión de Reconocimiento",
+    "stat3": "Servicio Ininterrumpido",
+    "stat4": "Tiempo de Respuesta",
+    "chatbot_title": "Asistente FAQ",
+    "chatbot_subtitle": "Preguntas Frecuentes",
+    "cat1": "Información Básica del Servicio",
+    "cat2": "Grabación y Resumen de Llamadas",
+    "cat3": "Asistente de Negociación con IA",
+    "cat4": "Seguridad y Legal",
+    "cat5": "Precios y Operaciones",
+    "cat6": "Contratos y Automatización",
+    "cat7": "Llamadas IA a IA",
+    "cat8": "Multilingüe y Global"
+  },
+  "fr": {
+    "name": "Français",
+    "page_title": "CallMind AI - Plateforme d'Assistant d'Appel IA",
+    "hero_title": "Assistant d'Appel<br>Intelligent Alimenté par l'IA",
+    "hero_subtitle": "L'IA répond aux appels, enregistre, résume et fournit une analyse instantanée",
+    "btn_start": "Commencer Gratuitement",
+    "btn_demo": "Voir la Démo",
+    "header_core": "Fonctionnalités Principales",
+    "header_industry": "Solutions Sectorielles",
+    "header_pricing": "Tarifs",
+    "stat1": "Langues",
+    "stat2": "Précision de Reconnaissance",
+    "stat3": "Service Ininterrompu",
+    "stat4": "Temps de Réponse",
+    "chatbot_title": "Assistant FAQ",
+    "chatbot_subtitle": "Questions Fréquemment Posées",
+    "cat1": "Informations de Base sur le Service",
+    "cat2": "Enregistrement et Résumé d'Appels",
+    "cat3": "Assistant de Négociation IA",
+    "cat4": "Sécurité et Juridique",
+    "cat5": "Tarifs et Opérations",
+    "cat6": "Contrats et Automatisation",
+    "cat7": "Appels IA à IA",
+    "cat8": "Multilingue et Mondial"
+  },
+  "ar": {
+    "name": "العربية",
+    "page_title": "CallMind AI - منصة مساعد المكالمات بالذكاء الاصطناعي",
+    "hero_title": "مساعد مكالمات<br>ذكي مدعوم بالذكاء الاصطناعي",
+    "hero_subtitle": "يرد الذكاء الاصطناعي على المكالمات ويسجل ويلخص ويوفر تحليلاً فورياً",
+    "btn_start": "ابدأ مجاناً",
+    "btn_demo": "شاهد العرض التوضيحي",
+    "header_core": "الميزات الأساسية",
+    "header_industry": "حلول الصناعة",
+    "header_pricing": "التسعير",
+    "stat1": "اللغات",
+    "stat2": "دقة التعرف",
+    "stat3": "خدمة غير منقطعة",
+    "stat4": "وقت الاستجابة",
+    "chatbot_title": "مساعد الأسئلة الشائعة",
+    "chatbot_subtitle": "الأسئلة المتداولة",
+    "cat1": "معلومات الخدمة الأساسية",
+    "cat2": "تسجيل المكالمات والتلخيص",
+    "cat3": "مساعد التفاوض بالذكاء الاصطناعي",
+    "cat4": "الأمان والقانوني",
+    "cat5": "التسعير والعمليات",
+    "cat6": "العقود والأتمتة",
+    "cat7": "مكالمات الذكاء الاصطناعي إلى الذكاء الاصطناعي",
+    "cat8": "متعدد اللغات والعالمي"
+  },
+  "bn": {
+    "name": "বাংলা",
+    "page_title": "CallMind AI - এআই কল সহায়ক প্ল্যাটফর্ম",
+    "hero_title": "এআই-চালিত<br>বুদ্ধিমান কল সহায়ক",
+    "hero_subtitle": "এআই কল উত্তর দেয়, রেকর্ড করে, সারসংক্ষেপ করে এবং তাৎক্ষণিক বিশ্লেষণ প্রদান করে",
+    "btn_start": "বিনামূল্যে শুরু করুন",
+    "btn_demo": "ডেমো দেখুন",
+    "header_core": "মূল বৈশিষ্ট্য",
+    "header_industry": "শিল্প সমাধান",
+    "header_pricing": "মূল্য নির্ধারণ",
+    "stat1": "ভাষা",
+    "stat2": "স্বীকৃতি নির্ভুলতা",
+    "stat3": "নিরবচ্ছিন্ন সেবা",
+    "stat4": "প্রতিক্রিয়া সময়",
+    "chatbot_title": "FAQ সহায়ক",
+    "chatbot_subtitle": "প্রায়শই জিজ্ঞাসিত প্রশ্ন",
+    "cat1": "মৌলিক সেবা তথ্য",
+    "cat2": "কল রেকর্ডিং এবং সারসংক্ষেপ",
+    "cat3": "এআই আলোচনা সহায়ক",
+    "cat4": "নিরাপত্তা এবং আইনি",
+    "cat5": "মূল্য নির্ধারণ এবং পরিচালনা",
+    "cat6": "চুক্তি এবং স্বয়ংক্রিয়করণ",
+    "cat7": "এআই থেকে এআই কল",
+    "cat8": "বহুভাষিক এবং বৈশ্বিক"
+  },
+  "ru": {
+    "name": "Русский",
+    "page_title": "CallMind AI - Платформа голосового помощника с ИИ",
+    "hero_title": "Интеллектуальный<br>голосовой помощник с ИИ",
+    "hero_subtitle": "ИИ отвечает на звонки, записывает, резюмирует и предоставляет мгновенный анализ",
+    "btn_start": "Начать бесплатно",
+    "btn_demo": "Смотреть демо",
+    "header_core": "Основные функции",
+    "header_industry": "Отраслевые решения",
+    "header_pricing": "Цены",
+    "stat1": "Языки",
+    "stat2": "Точность распознавания",
+    "stat3": "Непрерывная служба",
+    "stat4": "Время отклика",
+    "chatbot_title": "Помощник FAQ",
+    "chatbot_subtitle": "Часто задаваемые вопросы",
+    "cat1": "Основная информация об услугах",
+    "cat2": "Запись и резюме звонков",
+    "cat3": "ИИ помощник по переговорам",
+    "cat4": "Безопасность и юридические вопросы",
+    "cat5": "Цены и операции",
+    "cat6": "Контракты и автоматизация",
+    "cat7": "Звонки ИИ к ИИ",
+    "cat8": "Многоязычный и глобальный"
+  },
+  "pt": {
+    "name": "Português",
+    "page_title": "CallMind AI - Plataforma de Assistente de Chamadas com IA",
+    "hero_title": "Assistente de Chamadas<br>Inteligente com IA",
+    "hero_subtitle": "A IA atende chamadas, grava, resume e fornece análise instantânea",
+    "btn_start": "Comece Grátis",
+    "btn_demo": "Ver Demonstração",
+    "header_core": "Recursos Principais",
+    "header_industry": "Soluções Industriais",
+    "header_pricing": "Preços",
+    "stat1": "Idiomas",
+    "stat2": "Precisão de Reconhecimento",
+    "stat3": "Serviço Ininterrupto",
+    "stat4": "Tempo de Resposta",
+    "chatbot_title": "Assistente FAQ",
+    "chatbot_subtitle": "Perguntas Frequentes",
+    "cat1": "Informações Básicas do Serviço",
+    "cat2": "Gravação e Resumo de Chamadas",
+    "cat3": "Assistente de Negociação com IA",
+    "cat4": "Segurança e Jurídico",
+    "cat5": "Preços e Operações",
+    "cat6": "Contratos e Automação",
+    "cat7": "Chamadas IA para IA",
+    "cat8": "Multilíngue e Global"
+  }
+}
