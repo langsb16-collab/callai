@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CallMind AI - AI Call Assistant Platform</title>
+    <title>CallMind AI - AI 통화비서 플랫폼</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -188,14 +188,14 @@
                 </div>
                 
                 <div class="hidden md:flex space-x-4 text-sm">
-                    <a href="#features" class="text-gray-700 hover:text-purple-600">Core Features</a>
-                    <a href="#industries" class="text-gray-700 hover:text-purple-600">Industry Solutions</a>
-                    <a href="#pricing" class="text-gray-700 hover:text-purple-600">Pricing</a>
+                    <a href="#features" class="text-gray-700 hover:text-purple-600">핵심 기능</a>
+                    <a href="#industries" class="text-gray-700 hover:text-purple-600">산업별 특화</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-purple-600">요금제</a>
                 </div>
                 
                 <div class="flex items-center space-x-2">
                     <select class="appearance-none bg-gray-100 border-0 rounded-lg px-2 py-1 pr-6 text-xs cursor-pointer" onchange="window.location.href='/lang/' + this.value + '.html'">
-                        <option value="ko" selected>🇺🇸 English</option>
+                        <option value="ko" selected>🇰🇷 한국어</option>
                         <option value="en">🇺🇸 English</option>
                         <option value="zh-CN">🇨🇳 简体中文</option>
                         <option value="zh-TW">🇹🇼 繁體中文</option>
@@ -236,19 +236,19 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
                     <div class="text-center">
                         <div class="stat-number font-bold">12+</div>
-                        <div class="stat-label text-purple-200">Languages</div>
+                        <div class="stat-label text-purple-200">지원 언어</div>
                     </div>
                     <div class="text-center">
                         <div class="stat-number font-bold">99.9%</div>
-                        <div class="stat-label text-purple-200">Accuracy</div>
+                        <div class="stat-label text-purple-200">인식 정확도</div>
                     </div>
                     <div class="text-center">
                         <div class="stat-number font-bold">24/7</div>
-                        <div class="stat-label text-purple-200">24/7 Service</div>
+                        <div class="stat-label text-purple-200">무중단 서비스</div>
                     </div>
                     <div class="text-center">
                         <div class="stat-number font-bold">&lt; 1초</div>
-                        <div class="stat-label text-purple-200">Response Time</div>
+                        <div class="stat-label text-purple-200">응답 속도</div>
                     </div>
                 </div>
             </div>
@@ -259,7 +259,7 @@
     <section id="features" class="bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-4">
-                <h2 class="section-title font-bold text-gray-900">Core Features</h2>
+                <h2 class="section-title font-bold text-gray-900">핵심 기능</h2>
                 <p class="section-subtitle text-gray-600">통화의 모든 순간을 AI가 관리합니다</p>
             </div>
             
@@ -415,7 +415,7 @@
     <section id="pricing" class="bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-4">
-                <h2 class="section-title font-bold text-gray-900">Pricing</h2>
+                <h2 class="section-title font-bold text-gray-900">요금제</h2>
                 <p class="section-subtitle text-gray-600">필요에 맞는 플랜을 선택하세요</p>
             </div>
             
@@ -477,7 +477,7 @@
                     <h4 class="font-semibold mb-2 text-sm">제품</h4>
                     <ul class="space-y-1.5 text-gray-400 text-xs">
                         <li><a href="#" class="hover:text-white">기능</a></li>
-                        <li><a href="#" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white">요금제</a></li>
                         <li><a href="#" class="hover:text-white">API</a></li>
                     </ul>
                 </div>
@@ -534,7 +534,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq1" class="faq-checkbox">
                     <label for="faq1" class="faq-question">
-                        <span>What is this service?</span>
+                        <span>이 서비스는 무엇인가요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -545,7 +545,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq2" class="faq-checkbox">
                     <label for="faq2" class="faq-question">
-                        <span>In what situations is it useful?</span>
+                        <span>어떤 상황에서 사용하면 좋나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -556,7 +556,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq3" class="faq-checkbox">
                     <label for="faq3" class="faq-question">
-                        <span>Does AI actually answer calls?</span>
+                        <span>AI가 실제 전화를 받아주나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -567,7 +567,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq4" class="faq-checkbox">
                     <label for="faq4" class="faq-question">
-                        <span>Can it be used when people make calls?</span>
+                        <span>사람이 통화할 때도 사용 가능한가요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -578,7 +578,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq5" class="faq-checkbox">
                     <label for="faq5" class="faq-question">
-                        <span>Is call content automatically saved?</span>
+                        <span>통화 내용은 자동으로 저장되나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -596,7 +596,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq6" class="faq-checkbox">
                     <label for="faq6" class="faq-question">
-                        <span>How are calls recorded?</span>
+                        <span>통화는 어떻게 기록되나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -607,7 +607,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq7" class="faq-checkbox">
                     <label for="faq7" class="faq-question">
-                        <span>What format is the call summary?</span>
+                        <span>통화 요약은 어떤 형태인가요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -618,7 +618,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq8" class="faq-checkbox">
                     <label for="faq8" class="faq-question">
-                        <span>Can multiple speakers be distinguished?</span>
+                        <span>여러 사람이 통화해도 구분되나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -658,7 +658,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq11" class="faq-checkbox">
                     <label for="faq11" class="faq-question">
-                        <span>What role does the AI negotiation assistant play?</span>
+                        <span>AI 협상 비서는 어떤 역할을 하나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -669,7 +669,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq12" class="faq-checkbox">
                     <label for="faq12" class="faq-question">
-                        <span>Is AI visible to the other party during negotiations?</span>
+                        <span>협상 중 상대방에게 AI가 보이나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -680,7 +680,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq13" class="faq-checkbox">
                     <label for="faq13" class="faq-question">
-                        <span>Does it help with price negotiations?</span>
+                        <span>가격 협상도 도와주나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -698,7 +698,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq14" class="faq-checkbox">
                     <label for="faq14" class="faq-question">
-                        <span>Is call recording legal?</span>
+                        <span>통화 녹취는 합법인가요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -709,7 +709,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq15" class="faq-checkbox">
                     <label for="faq15" class="faq-question">
-                        <span>Is data stored securely?</span>
+                        <span>데이터는 안전하게 저장되나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -720,7 +720,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq16" class="faq-checkbox">
                     <label for="faq16" class="faq-question">
-                        <span>Can it be used as legal evidence?</span>
+                        <span>법적 증빙으로 사용 가능한가요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -738,7 +738,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq17" class="faq-checkbox">
                     <label for="faq17" class="faq-question">
-                        <span>Can it be used for free?</span>
+                        <span>무료로도 사용할 수 있나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -749,7 +749,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq18" class="faq-checkbox">
                     <label for="faq18" class="faq-question">
-                        <span>What about enterprise pricing?</span>
+                        <span>기업용 요금제는 어떻게 되나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -760,7 +760,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq19" class="faq-checkbox">
                     <label for="faq19" class="faq-question">
-                        <span>Can it be applied to call centers?</span>
+                        <span>콜센터에도 적용 가능한가요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
@@ -771,7 +771,7 @@
                 <div class="faq-item">
                     <input type="checkbox" id="faq20" class="faq-checkbox">
                     <label for="faq20" class="faq-question">
-                        <span>How do I get started?</span>
+                        <span>도입하려면 어떻게 시작하나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
