@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# 각 언어별 번역 사전
+translations = {
+    'zh-CN': {  # 중국어 간체
+        'lang': 'zh-CN',
+        'title': 'CallMind AI - AI通话助手平台',
+        'subtitle': 'AI代理的智能通话助手',
+        'description': 'AI实时应答、总结、记录和分析电话、语音和消息对话',
+        'btn_start': '免费开始',
+        'btn_demo': '查看演示',
+        'lang_name': '简体中文',
+        'flag': '🇨🇳',
+        'stats_lang': '支持语言',
+        'stats_accuracy': '识别准确度',
+        'stats_available': '全天候服务',
+        'stats_response': '响应速度',
+        'features_title': '核心功能',
+        'features_subtitle': '所有您需要的通话AI功能',
+        'industries_title': '行业特化解决方案',
+        'industries_subtitle': '为每个行业量身定制的AI助手',
+        'pricing_title': '价格方案',
+        'pricing_subtitle': '选择适合您的方案',
+        'faq_title': 'FAQ助手',
+        'faq_subtitle': '常见问题',
+        'nav_features': '核心功能',
+        'nav_industries': '行业解决方案',
+        'nav_pricing': '价格方案',
+        'faq_cat1': '基本服务指南',
+        'faq_cat2': '通话录音・总结',
+        'faq_cat3': 'AI协商助手相关',
+        'faq_cat4': '安全・法律',
+        'faq_cat5': '费用・运营',
+        'footer': '© 2024 CallMind AI. 版权所有.',
+    },
+    'zh-TW': {  # 中국어 번체
+        'lang': 'zh-TW',
+        'title': 'CallMind AI - AI通話助手平臺',
+        'subtitle': 'AI代理的智能通話助手',
+        'description': 'AI實時應答、總結、記錄和分析電話、語音和消息對話',
+        'btn_start': '免費開始',
+        'btn_demo': '查看演示',
+        'lang_name': '繁體中文',
+        'flag': '🇹🇼',
+        'stats_lang': '支持語言',
+        'stats_accuracy': '識別準確度',
+        'stats_available': '全天候服務',
+        'stats_response': '響應速度',
+        'features_title': '核心功能',
+        'features_subtitle': '所有您需要的通話AI功能',
+        'industries_title': '行業特化解決方案',
+        'industries_subtitle': '為每個行業量身定制的AI助手',
+        'pricing_title': '價格方案',
+        'pricing_subtitle': '選擇適合您的方案',
+        'faq_title': 'FAQ助手',
+        'faq_subtitle': '常見問題',
+        'nav_features': '核心功能',
+        'nav_industries': '行業解決方案',
+        'nav_pricing': '價格方案',
+        'faq_cat1': '基本服務指南',
+        'faq_cat2': '通話錄音・總結',
+        'faq_cat3': 'AI協商助手相關',
+        'faq_cat4': '安全・法律',
+        'faq_cat5': '費用・運營',
+        'footer': '© 2024 CallMind AI. 版權所有.',
+    }
+}
+
+print("Translation data prepared for zh-CN and zh-TW")
+print(f"zh-CN title: {translations['zh-CN']['title']}")
+print(f"zh-TW title: {translations['zh-TW']['title']}")

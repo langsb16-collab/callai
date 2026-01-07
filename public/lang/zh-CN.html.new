@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CallMind AI - AI通话助手平台</title>
+    <title>CallMind AI - AI 통화비서 플랫폼</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -188,14 +188,14 @@
                 </div>
                 
                 <div class="hidden md:flex space-x-4 text-sm">
-                    <a href="#features" class="text-gray-700 hover:text-purple-600">核心功能</a>
-                    <a href="#industries" class="text-gray-700 hover:text-purple-600">行业解决方案</a>
-                    <a href="#pricing" class="text-gray-700 hover:text-purple-600">价格方案</a>
+                    <a href="#features" class="text-gray-700 hover:text-purple-600">핵심 기능</a>
+                    <a href="#industries" class="text-gray-700 hover:text-purple-600">산업별 특화</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-purple-600">요금제</a>
                 </div>
                 
                 <div class="flex items-center space-x-2">
                     <select class="appearance-none bg-gray-100 border-0 rounded-lg px-2 py-1 pr-6 text-xs cursor-pointer" onchange="window.location.href='/lang/' + this.value + '.html'">
-                        <option value="ko" selected>🇨🇳 简体中文</option>
+                        <option value="ko" selected>🇰🇷 한국어</option>
                         <option value="en">🇺🇸 English</option>
                         <option value="zh-CN">🇨🇳 简体中文</option>
                         <option value="zh-TW">🇹🇼 繁體中文</option>
@@ -222,7 +222,7 @@
                     AI가 대신하는<br/>똑똑한 통화 비서
                 </h1>
                 <p class="hero-subtitle text-purple-100">
-                    AI实时应答、总结、记录和分析电话、语音和消息对话
+                    전화·음성·메신저 대화를 AI가 실시간으로 응대·요약·기록·분석
                 </p>
                 <div class="flex flex-col sm:flex-row gap-2 justify-center items-center mb-4">
                     <button class="hero-btn bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition w-full sm:w-auto">
@@ -255,11 +255,11 @@
         </div>
     </section>
 
-    <!-- 核心功能 -->
+    <!-- 핵심 기능 -->
     <section id="features" class="bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-4">
-                <h2 class="section-title font-bold text-gray-900">核心功能</h2>
+                <h2 class="section-title font-bold text-gray-900">핵심 기능</h2>
                 <p class="section-subtitle text-gray-600">통화의 모든 순간을 AI가 관리합니다</p>
             </div>
             
@@ -315,11 +315,11 @@
         </div>
     </section>
 
-    <!-- 行业解决方案 솔루션 -->
+    <!-- 산업별 특화 솔루션 -->
     <section id="industries" class="bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-4">
-                <h2 class="section-title font-bold text-gray-900">行业解决方案 솔루션</h2>
+                <h2 class="section-title font-bold text-gray-900">산업별 특화 솔루션</h2>
                 <p class="section-subtitle text-gray-600">직군에 최적화된 AI 통화비서</p>
             </div>
             
@@ -411,11 +411,11 @@
         </div>
     </section>
 
-    <!-- 价格方案 -->
+    <!-- 요금제 -->
     <section id="pricing" class="bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-4">
-                <h2 class="section-title font-bold text-gray-900">价格方案</h2>
+                <h2 class="section-title font-bold text-gray-900">요금제</h2>
                 <p class="section-subtitle text-gray-600">필요에 맞는 플랜을 선택하세요</p>
             </div>
             
@@ -477,7 +477,7 @@
                     <h4 class="font-semibold mb-2 text-sm">제품</h4>
                     <ul class="space-y-1.5 text-gray-400 text-xs">
                         <li><a href="#" class="hover:text-white">기능</a></li>
-                        <li><a href="#" class="hover:text-white">价格方案</a></li>
+                        <li><a href="#" class="hover:text-white">요금제</a></li>
                         <li><a href="#" class="hover:text-white">API</a></li>
                     </ul>
                 </div>
@@ -525,10 +525,10 @@
         </div>
         
         <div class="chatbot-content">
-            <!-- 基本服务指南 -->
+            <!-- 기본 서비스 안내 -->
             <div class="faq-category">
                 <div class="faq-category-title">
-                    <i class="fas fa-info-circle mr-1 text-xs"></i>基本服务指南
+                    <i class="fas fa-info-circle mr-1 text-xs"></i>기본 서비스 안내
                 </div>
                 
                 <div class="faq-item">
@@ -587,10 +587,10 @@
                 </div>
             </div>
             
-            <!-- 通话录音・总结 기능 -->
+            <!-- 통화 녹취·요약 기능 -->
             <div class="faq-category">
                 <div class="faq-category-title">
-                    <i class="fas fa-microphone mr-1 text-xs"></i>通话录音・总结 기능
+                    <i class="fas fa-microphone mr-1 text-xs"></i>통화 녹취·요약 기능
                 </div>
                 
                 <div class="faq-item">
@@ -649,10 +649,10 @@
                 </div>
             </div>
             
-            <!-- AI协商助手相关 -->
+            <!-- AI 협상 비서 관련 -->
             <div class="faq-category">
                 <div class="faq-category-title">
-                    <i class="fas fa-handshake mr-1 text-xs"></i>AI协商助手相关
+                    <i class="fas fa-handshake mr-1 text-xs"></i>AI 협상 비서 관련
                 </div>
                 
                 <div class="faq-item">
@@ -689,10 +689,10 @@
                 </div>
             </div>
             
-            <!-- 安全・法律 -->
+            <!-- 보안·법적 -->
             <div class="faq-category">
                 <div class="faq-category-title">
-                    <i class="fas fa-shield-alt mr-1 text-xs"></i>安全・法律
+                    <i class="fas fa-shield-alt mr-1 text-xs"></i>보안·법적
                 </div>
                 
                 <div class="faq-item">
@@ -729,10 +729,10 @@
                 </div>
             </div>
             
-            <!-- 费用・运营 -->
+            <!-- 요금·운영 -->
             <div class="faq-category">
                 <div class="faq-category-title">
-                    <i class="fas fa-dollar-sign mr-1 text-xs"></i>费用・运营
+                    <i class="fas fa-dollar-sign mr-1 text-xs"></i>요금·운영
                 </div>
                 
                 <div class="faq-item">
@@ -742,18 +742,18 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
-                        기본 요약 기능은 무료 价格方案에서 제공됩니다.
+                        기본 요약 기능은 무료 요금제에서 제공됩니다.
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <input type="checkbox" id="faq18" class="faq-checkbox">
                     <label for="faq18" class="faq-question">
-                        <span>기업용 价格方案는 어떻게 되나요?</span>
+                        <span>기업용 요금제는 어떻게 되나요?</span>
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </label>
                     <div class="faq-answer">
-                        사용자 수와 기능에 따라 맞춤형 价格方案가 제공됩니다.
+                        사용자 수와 기능에 따라 맞춤형 요금제가 제공됩니다.
                     </div>
                 </div>
                 
