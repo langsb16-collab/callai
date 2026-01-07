@@ -8,22 +8,34 @@
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
-    <!-- 헤더 -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-phone-volume text-purple-600 text-xl"></i>
                 <span class="font-bold text-xl">CallMind AI</span>
             </div>
-            <nav class="hidden md:flex items-center space-x-6">
+            <nav class="flex items-center space-x-6">
                 <a href="#features" class="text-gray-700 hover:text-purple-600">मुख्य विशेषताएं</a>
                 <a href="#industries" class="text-gray-700 hover:text-purple-600">उद्योग समाधान</a>
+                <select onchange="window.location.href='/lang/'+this.value+'.html'" class="border rounded px-2 py-1">
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="zh-CN">🇨🇳 简体中文</option>
+                    <option value="zh-TW">🇹🇼 繁體中文</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                    <option value="hi" selected>🇮🇳 हिन्दी</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="bn">🇧🇩 বাংলা</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="pt">🇧🇷 Português</option>
+                </select>
                 <a href="#features" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">मुफ्त शुरू करें</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero -->
     <section class="gradient-bg text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">AI स्मार्ट<br>कॉल सहायक</h1>
@@ -41,7 +53,6 @@
         </div>
     </section>
 
-    <!-- 핵심 기능 -->
     <section id="features" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-4">मुख्य विशेषताएं</h2>
@@ -57,7 +68,6 @@
         </div>
     </section>
 
-    <!-- 산업별 -->
     <section id="industries" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-4">उद्योग समाधान</h2>
@@ -73,7 +83,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 CallMind AI. All rights reserved.</p>
